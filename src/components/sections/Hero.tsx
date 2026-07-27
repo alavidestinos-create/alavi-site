@@ -3,6 +3,13 @@ import { siteConfig } from "@/config/site";
 import { images } from "@/content/images";
 import { Button } from "@/components/ui/Button";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import { Reveal } from "@/components/ui/Reveal";
+
+const trustItems = [
+  { label: "Atendimento personalizado", stars: true },
+  { label: "Planejamento exclusivo", stars: false },
+  { label: "Suporte antes, durante e depois da viagem", stars: false },
+];
 
 export function Hero() {
   return (
@@ -41,6 +48,29 @@ export function Hero() {
         >
           ou fale agora pelo WhatsApp →
         </a>
+
+        <Reveal delay={200}>
+          <div
+            className="mt-12 flex flex-col gap-3 border-t border-white/15 pt-6 sm:mt-14 sm:flex-row sm:items-center sm:gap-0 sm:pt-7"
+            aria-label="Diferenciais da ALAVI"
+          >
+            {trustItems.map((item, index) => (
+              <div key={item.label} className="flex items-center">
+                {index > 0 && (
+                  <span aria-hidden="true" className="mx-6 hidden h-4 w-px bg-white/25 sm:block" />
+                )}
+                <p className="text-sm font-medium tracking-wide text-white/90">
+                  {item.stars && (
+                    <span aria-hidden="true" className="mr-2 tracking-tight text-white/90">
+                      ★★★★★
+                    </span>
+                  )}
+                  {item.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   );
