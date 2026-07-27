@@ -9,49 +9,51 @@ interface RevealProps {
   delay?: number;
 }
 
+type AnimateState = "visible" | "pending" | "animating";
+
 /**
  * Fade-in + translate suave quando o elemento entra na viewport.
- * Sem JavaScript (ou com prefers-reduced-motion), o conteúdo permanece
- * sempre visível — ver regra em globals.css.
+ *
+ * Importante: o conteúdo nasce SEMPRE visível por padrão (tanto no HTML
+ * gerado pelo servidor quanto antes de qualquer JavaScript rodar). A
+ * animação é aplicada apenas como um efeito progressivo opcional — só entra
+ * em estado "escondido antes de animar" depois que o próprio JavaScript, já
+ * rodando no navegador, confirma que o elemento está fora da tela. Isso
+ * evita que uma conexão lenta, hidratação atrasada ou qualquer falha de JS
+ * deixe seções inteiras invisíveis permanentemente (bug real já visto em
+ * produção).
  */
 export function Reveal({ children, className, delay = 0 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
+  const [state, setState] = useState<AnimateState>("visible");
 
   useEffect(() => {
     const node = ref.current;
-    if (!node) return;
+    if (!node || typeof IntersectionObserver === "undefined") return;
 
-    // Se o elemento já está visível (ou quase) no momento em que o
-    // componente monta — comum em telas pequenas, links com âncora ou
-    // conexões lentas, quando o JS termina de carregar depois de o usuário
-    // já ter rolado a página — mostra o conteúdo imediatamente, sem
-    // depender do IntersectionObserver disparar a tempo.
     const rect = node.getBoundingClientRect();
-    const alreadyInView = rect.top < window.innerHeight && rect.bottom > 0;
-    if (alreadyInView) {
-      setVisible(true);
-      return;
-    }
+    const alreadyInView = rect.top < window.innerHeight * 1.1 && rect.bottom > 0;
+    if (alreadyInView) return; // já visível, sem necessidade de animar
+
+    setState("pending");
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setVisible(true);
+            setState("animating");
             observer.disconnect();
           }
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -10% 0px" }
+      { threshold: 0.05, rootMargin: "0px 0px -5% 0px" }
     );
 
     observer.observe(node);
 
-    // Rede de segurança: garante que o conteúdo nunca fique escondido
-    // permanentemente, mesmo se o observer não disparar por algum motivo
-    // (rolagem muito rápida, aba em segundo plano, navegador incomum).
-    const fallback = window.setTimeout(() => setVisible(true), 1800);
+    // Rede de segurança: garante que o conteúdo nunca fique escondido por
+    // muito tempo, mesmo se o observer não disparar por algum motivo.
+    const fallback = window.setTimeout(() => setState("animating"), 1200);
 
     return () => {
       observer.disconnect();
@@ -62,8 +64,12 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
   return (
     <div
       ref={ref}
-      className={cn("reveal-init", visible && "reveal-in", className)}
-      style={visible ? { animationDelay: `${delay}ms` } : undefined}
+      className={cn(
+        state === "pending" && "reveal-init",
+        state === "animating" && "reveal-in",
+        className
+      )}
+      style={state === "animating" ? { animationDelay: `${delay}ms` } : undefined}
     >
       {children}
     </div>

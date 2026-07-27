@@ -42,7 +42,9 @@ body {
 }
 
 /* Reveal-on-scroll: aplicado via componente Reveal (IntersectionObserver).
-   Sem JS ou com prefers-reduced-motion, o conteúdo permanece sempre visível. */
+   A classe .reveal-init só é adicionada pelo próprio JavaScript, depois de
+   confirmar que o elemento está fora da tela — nunca por padrão. Isso
+   garante que, sem JS (ou antes dele rodar), o conteúdo já nasce visível. */
 .reveal-init {
   opacity: 0;
   transform: translateY(24px);
