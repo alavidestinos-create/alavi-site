@@ -12,6 +12,7 @@ const iconPaths: Record<Service["icon"], string> = {
   transfer: "M3 12h13M13 6l6 6-6 6M21 6H8",
   experience: "M12 3l2.5 5 5.5.8-4 4 1 5.5L12 16l-5 2.3 1-5.5-4-4 5.5-.8z",
   concierge: "M4 20h16M6 20v-3a6 6 0 1112 0v3M12 4v3",
+  executive: "M4 19l7-15 7 15M6.5 14h9M12 4v2",
 };
 
 interface ServiceCardProps {

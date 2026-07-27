@@ -89,3 +89,35 @@ manter Next.js 14.2.35 por enquanto (risco residual baixo dado que os
 vetores principais não se aplicam a este projeto) e publicar. Revisar essa
 decisão periodicamente e considerar a atualização para Next.js 15/16 numa
 janela de manutenção futura, com testes completos.
+
+## Explore Destinos + Guia do Viajante (27/07/2026)
+
+Reconstrução da seção de Destinos e substituição do Blog pelo Guia do
+Viajante, com arquitetura orientada a dados:
+
+- **Dados em JSON** (`src/data/destinations.json`, `articles.json`,
+  `faq.json`, `parks.json`), carregados por wrappers TypeScript em
+  `src/content/` que resolvem `imageKey` para a URL real da imagem
+  (`src/content/images.ts`). Adicionar um novo destino exige apenas uma
+  imagem verificada + um objeto no JSON — nenhum componente precisa mudar.
+- **Sem preços, hotéis, passagens ou pacotes** em nenhum campo de destino
+  (regra explícita do briefing — a ALAVI vende consultoria personalizada).
+  "Onde se hospedar"/"Onde fazer compras"/"Restaurantes" descrevem áreas e
+  estilos, nunca estabelecimentos específicos com valor.
+- **Sem Framer Motion**: o briefing pediu "animações leves", mas o projeto
+  já tinha `Reveal.tsx` (fade/translate via IntersectionObserver, sem
+  dependência, respeita `prefers-reduced-motion`) cobrindo exatamente esse
+  papel. Como o ambiente de build não tinha acesso ao registry do npm para
+  validar a instalação, e um dos limites explícitos do projeto é não
+  introduzir dependências desnecessárias, optei por reutilizar o `Reveal`
+  existente em todos os novos componentes em vez de adicionar uma
+  biblioteca nova.
+- **Mapa por iframe público do Google Maps** (`?output=embed`, sem chave de
+  API) em vez de uma lib de mapas — leve e sem custo/dependência.
+- **Rota do Blog renomeada para `/guia-do-viajante`**, com redirects 301
+  (`/blog` → `/guia-do-viajante`, `/blog/:slug` → `/guia-do-viajante/:slug`)
+  configurados em `next.config.mjs` para não quebrar links já indexados. Os
+  arquivos antigos em `src/app/blog/` não puderam ser apagados pelo
+  ambiente (permissão negada pelo sync do OneDrive) — ficaram no repositório
+  como código morto, inofensivo, pois o redirect intercepta a rota antes de
+  renderizar a página antiga. Podem ser removidos manualmente mais tarde.

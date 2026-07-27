@@ -13,7 +13,8 @@ export interface Service {
     | "shield"
     | "transfer"
     | "experience"
-    | "concierge";
+    | "concierge"
+    | "executive";
 }
 
 /**
@@ -29,6 +30,14 @@ export const services: Service[] = [
     description:
       "Buscamos as melhores opções de voos nacionais e internacionais para o seu roteiro, considerando conexões, horários e companhias aéreas. Você recebe alternativas comparadas antes de decidir.",
     icon: "plane",
+  },
+  {
+    slug: "classe-executiva",
+    name: "Classe Executiva",
+    shortDescription: "Mais conforto em voos longos, com uso estratégico de pontos e milhas.",
+    description:
+      "Avaliamos a disponibilidade de assentos em classe executiva com pontos e milhas, orientamos sobre transferências entre programas e buscamos as melhores oportunidades de emissão para o seu roteiro.",
+    icon: "executive",
   },
   {
     slug: "hospedagens",

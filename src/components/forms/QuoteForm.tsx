@@ -5,6 +5,7 @@ import { emptyQuoteFormData, type QuoteFormData } from "@/types/quote";
 import { validateQuoteForm, type QuoteFormErrors } from "@/lib/validation";
 import { buildQuoteWhatsAppMessage, buildWhatsAppUrl } from "@/lib/whatsapp";
 import { trackEvent } from "@/lib/analytics";
+import { formatCurrencyInput } from "@/lib/utils";
 import { FieldWrapper, fieldClasses } from "@/components/forms/FormField";
 import Link from "next/link";
 
@@ -34,6 +35,12 @@ export function QuoteForm() {
       return;
     }
 
+    // Abre uma aba em branco de forma síncrona (ainda dentro do clique do
+    // usuário) e só preenche o destino depois que o envio terminar. Isso
+    // evita que o navegador bloqueie a abertura como pop-up, já que a
+    // chamada assíncrona ao servidor aconteceria depois do gesto de clique.
+    const whatsAppTab = window.open("", "_blank");
+
     setState("submitting");
 
     try {
@@ -44,8 +51,12 @@ export function QuoteForm() {
       });
 
       if (response.status === 501) {
-        // Nenhum endpoint de destino configurado ainda: fluxo esperado
-        // enquanto ORCAMENTO_WEBHOOK_URL não é definido.
+        // Nenhum destino configurado ainda: fluxo esperado enquanto o
+        // e-mail/webhook não estão definidos. Mesmo assim, abre o WhatsApp
+        // com a mensagem pronta para o cliente não perder o pedido.
+        if (whatsAppTab) {
+          whatsAppTab.location.href = buildWhatsAppUrl(buildQuoteWhatsAppMessage(data));
+        }
         setState("unavailable");
         trackEvent("quote_form_submit", { result: "unavailable" });
         return;
@@ -55,9 +66,13 @@ export function QuoteForm() {
         throw new Error("submit_failed");
       }
 
+      if (whatsAppTab) {
+        whatsAppTab.location.href = buildWhatsAppUrl(buildQuoteWhatsAppMessage(data));
+      }
       setState("success");
       trackEvent("quote_form_submit", { result: "success" });
     } catch {
+      whatsAppTab?.close();
       setState("error");
       trackEvent("quote_form_submit", { result: "error" });
     }
@@ -414,9 +429,11 @@ export function QuoteForm() {
           <input
             id="estimatedBudget"
             type="text"
+            inputMode="numeric"
+            placeholder="R$ 0,00"
             className={fieldClasses()}
             value={data.estimatedBudget}
-            onChange={(e) => update("estimatedBudget", e.target.value)}
+            onChange={(e) => update("estimatedBudget", formatCurrencyInput(e.target.value))}
           />
         </FieldWrapper>
         <FieldWrapper label="Observações" htmlFor="notes">

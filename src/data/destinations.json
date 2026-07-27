@@ -1,0 +1,439 @@
+[
+  {
+    "slug": "orlando",
+    "flag": "🇺🇸",
+    "name": "Orlando",
+    "country": "Estados Unidos",
+    "region": "Flórida",
+    "shortDescription": "Parques temáticos, magia e compras em um dos destinos favoritos das famílias brasileiras.",
+    "imageKey": "destinoOrlando",
+    "summary": "Orlando é o destino mais procurado por famílias brasileiras — e não é à toa. Entre os parques da Disney e da Universal, dias de compras e passeios para todas as idades, a cidade concentra experiências para casais, famílias com crianças e grupos de amigos em um único roteiro.",
+    "bestTime": "Os meses de fevereiro, maio, setembro e início de dezembro costumam ter menos movimento nos parques. Já janeiro, julho e as festas de fim de ano são períodos de alta temporada, com filas maiores.",
+    "climate": "Clima subtropical, com verões quentes e úmidos (junho a setembro, com chuvas rápidas no fim da tarde) e invernos amenos (dezembro a fevereiro, com noites mais frescas).",
+    "recommendedDuration": "7 a 10 dias, para conhecer com calma os principais parques sem correria.",
+    "attractions": [
+      "Magic Kingdom, Epcot, Hollywood Studios e Animal Kingdom (Disney)",
+      "Islands of Adventure, Universal Studios e Epic Universe (Universal)",
+      "ICON Park e a roda-gigante The Wheel",
+      "SeaWorld Orlando e Discovery Cove",
+      "Passeios de compras em outlets e shoppings da região"
+    ],
+    "whereToStay": [
+      "Área turística de Lake Buena Vista, próxima aos parques Disney",
+      "International Drive, com fácil acesso a atrações, compras e restaurantes",
+      "Regiões mais tranquilas ao redor de Dr. Phillips, para quem busca sossego fora dos parques"
+    ],
+    "whereToShop": [
+      "Orlando International Premium Outlets e Orlando Vineland Premium Outlets",
+      "Disney Springs, com lojas, restaurantes e entretenimento ao ar livre",
+      "The Mall at Millenia, com grifes internacionais"
+    ],
+    "restaurants": [
+      "Restaurantes temáticos dentro dos parques Disney e Universal",
+      "Culinária internacional na região de Restaurant Row, em Sand Lake Road",
+      "Opções informais e família no CityWalk e ao longo da International Drive"
+    ],
+    "tips": [
+      "Reserve os ingressos dos parques com antecedência — a disponibilidade de experiências como o Genie+ varia por dia.",
+      "Use aplicativos oficiais dos parques para acompanhar tempo de fila em tempo real.",
+      "Leve roupas leves, protetor solar e uma capa de chuva compacta, mesmo na baixa temporada de chuvas.",
+      "Alterne dias de parque com dias de descanso ou compras, principalmente em viagens com crianças pequenas."
+    ],
+    "suggestedItineraries": [
+      {
+        "title": "Primeira viagem em família",
+        "duration": "8 dias",
+        "description": "Foco nos quatro parques Disney com um dia extra de descanso e um dia dedicado às compras."
+      },
+      {
+        "title": "Disney & Universal combinados",
+        "duration": "10 dias",
+        "description": "Equilíbrio entre os parques Disney e os parques Universal, incluindo Epic Universe."
+      },
+      {
+        "title": "Escapada a dois",
+        "duration": "5 dias",
+        "description": "Roteiro mais enxuto, com os destaques dos parques e tempo livre para relaxar."
+      }
+    ],
+    "mapQuery": "Orlando, Flórida, Estados Unidos",
+    "faq": [
+      {
+        "question": "Quantos dias são recomendados para conhecer Orlando?",
+        "answer": "Para visitar com calma os principais parques da Disney e da Universal, recomendamos de 7 a 10 dias. É possível fazer roteiros mais curtos, mas o ritmo fica mais corrido."
+      },
+      {
+        "question": "Preciso comprar ingressos com muita antecedência?",
+        "answer": "Sim, principalmente em alta temporada. A disponibilidade de datas e de experiências como o Genie+ pode ser limitada — por isso ajudamos a planejar a compra no momento certo."
+      },
+      {
+        "question": "Orlando é um bom destino para quem nunca viajou para os EUA?",
+        "answer": "Sim. É um dos destinos mais estruturados para receber turistas brasileiros, com sinalização acessível e roteiro fácil de organizar."
+      },
+      {
+        "question": "Dá para combinar Orlando com outro destino na mesma viagem?",
+        "answer": "Sim, é comum combinar Orlando com Miami. Ajudamos a montar esse roteiro combinado considerando o tempo total disponível."
+      }
+    ]
+  },
+  {
+    "slug": "miami",
+    "flag": "🇺🇸",
+    "name": "Miami",
+    "country": "Estados Unidos",
+    "region": "Flórida",
+    "shortDescription": "Praias, compras e vida urbana vibrante na Flórida, perfeita para unir com Orlando.",
+    "imageKey": "destinoMiami",
+    "summary": "Miami combina praias urbanas, compras e uma cena gastronômica cosmopolita, com forte influência latino-americana. É um destino que funciona muito bem sozinho ou como extensão de uma viagem a Orlando.",
+    "bestTime": "De março a maio e de outubro a dezembro, com clima agradável e menos chuva. O verão (junho a setembro) é quente, úmido e com temporada de chuvas rápidas à tarde.",
+    "climate": "Clima tropical, quente durante praticamente o ano todo, com temporada de furacões entre junho e novembro.",
+    "recommendedDuration": "4 a 6 dias, ideal também como extensão de uma viagem a Orlando.",
+    "attractions": [
+      "South Beach e a arquitetura art déco de Ocean Drive",
+      "Bayside Marketplace e a orla de Downtown Miami",
+      "Wynwood Walls, bairro de arte urbana e murais",
+      "Little Havana, com forte influência cubana",
+      "Passeios de barco pela Baía de Biscayne"
+    ],
+    "whereToStay": [
+      "South Beach, para quem quer praia e vida noturna a poucos passos",
+      "Brickell, bairro financeiro com clima mais urbano e sofisticado",
+      "Áreas próximas a Downtown, com fácil acesso a passeios e compras"
+    ],
+    "whereToShop": [
+      "Sawgrass Mills, um dos maiores outlets dos Estados Unidos",
+      "Aventura Mall, com grifes internacionais",
+      "Bal Harbour Shops, para quem busca marcas de luxo"
+    ],
+    "restaurants": [
+      "Culinária latino-americana e cubana em Little Havana",
+      "Opções sofisticadas e vista para o mar em South Beach",
+      "Gastronomia variada e badalada no bairro de Wynwood"
+    ],
+    "tips": [
+      "Alugar um carro facilita bastante a locomoção entre bairros e para passeios fora do centro.",
+      "Fique atento à temporada de furacões (junho a novembro) ao planejar as datas da viagem.",
+      "Miami combina muito bem com uma extensão para Orlando, já que a distância entre as duas é curta.",
+      "Reserve tempo para caminhar por Ocean Drive ao entardecer, quando a luz e o movimento ficam mais agradáveis."
+    ],
+    "suggestedItineraries": [
+      {
+        "title": "Miami expressa",
+        "duration": "4 dias",
+        "description": "Praia, compras e os principais bairros da cidade em um roteiro enxuto."
+      },
+      {
+        "title": "Miami + Orlando",
+        "duration": "10 dias",
+        "description": "Combinação clássica entre parques em Orlando e praia urbana em Miami."
+      }
+    ],
+    "mapQuery": "Miami, Flórida, Estados Unidos",
+    "faq": [
+      {
+        "question": "Vale a pena alugar carro em Miami?",
+        "answer": "Sim, principalmente se o roteiro incluir bairros mais afastados ou passeios como os Everglades. Para quem vai ficar só em South Beach, é possível se locomover a pé ou de aplicativo."
+      },
+      {
+        "question": "Miami é um bom destino para família com crianças?",
+        "answer": "Sim, especialmente combinada com Orlando. A cidade também tem praias tranquilas e passeios que funcionam bem para todas as idades."
+      },
+      {
+        "question": "Qual a melhor época para evitar chuva em Miami?",
+        "answer": "Os meses entre outubro e abril costumam ter menos chuva. O verão concentra a maior parte das precipitações e também a temporada de furacões."
+      },
+      {
+        "question": "Dá para conhecer Miami em uma viagem curta?",
+        "answer": "Sim, 4 a 5 dias já permitem conhecer os principais pontos da cidade com um bom ritmo."
+      }
+    ]
+  },
+  {
+    "slug": "nova-york",
+    "flag": "🇺🇸",
+    "name": "Nova York",
+    "country": "Estados Unidos",
+    "region": "Nova York",
+    "shortDescription": "A energia única de Manhattan, cultura, compras e cartões-postais icônicos.",
+    "imageKey": "destinoNovaYork",
+    "summary": "Nova York é daqueles destinos que parecem familiares antes mesmo da primeira visita. Museus, teatros da Broadway, parques, compras e uma paisagem urbana reconhecida no mundo inteiro fazem da cidade um roteiro denso, ideal para quem gosta de caminhar e explorar.",
+    "bestTime": "Primavera (abril a junho) e outono (setembro a novembro), com temperaturas amenas e paisagens bonitas. O inverno traz neve e clima bem frio; o verão pode ser quente e úmido.",
+    "climate": "Quatro estações bem definidas — verões quentes, invernos rigorosos com possibilidade de neve, e primavera e outono mais amenos.",
+    "recommendedDuration": "6 a 8 dias, para explorar diferentes bairros sem pressa.",
+    "attractions": [
+      "Times Square, Central Park e a Quinta Avenida",
+      "Estátua da Liberdade e Ellis Island",
+      "Museus como o MET, MoMA e o American Museum of Natural History",
+      "Espetáculos da Broadway",
+      "Bairros como Brooklyn, SoHo e o Highline"
+    ],
+    "whereToStay": [
+      "Midtown Manhattan, central e próxima às principais atrações",
+      "Upper West Side ou Upper East Side, mais residenciais e tranquilos",
+      "Brooklyn, para quem busca uma experiência mais local com fácil acesso a Manhattan"
+    ],
+    "whereToShop": [
+      "Quinta Avenida, com lojas de grife e flagships internacionais",
+      "SoHo, com marcas contemporâneas e boutiques",
+      "Woodbury Common Premium Outlets, nos arredores da cidade"
+    ],
+    "restaurants": [
+      "Culinária internacional e diversidade gastronômica em praticamente todos os bairros",
+      "Delicatessens e cafés clássicos no estilo novaiorquino",
+      "Opções badaladas em bairros como Chelsea e West Village"
+    ],
+    "tips": [
+      "Reserve os ingressos de museus e musicais com antecedência, especialmente em alta temporada.",
+      "Use o metrô — é a forma mais prática de se locomover entre os bairros.",
+      "Leve roupas em camadas, já que a variação de temperatura ao longo do dia pode ser grande.",
+      "Reserve tempo livre sem compromisso no roteiro: a cidade rende boas descobertas a pé."
+    ],
+    "suggestedItineraries": [
+      {
+        "title": "Primeira vez em Nova York",
+        "duration": "7 dias",
+        "description": "Os clássicos da cidade — Manhattan, museus, parques e um musical da Broadway."
+      },
+      {
+        "title": "Nova York fora do óbvio",
+        "duration": "8 dias",
+        "description": "Inclui bairros como Brooklyn e o Highline, além dos pontos turísticos tradicionais."
+      }
+    ],
+    "mapQuery": "Nova York, Estados Unidos",
+    "faq": [
+      {
+        "question": "Preciso de visto para viajar para Nova York?",
+        "answer": "Depende da sua nacionalidade e situação de documentação. Para brasileiros, geralmente é necessário visto americano ou autorização válida — orientamos sobre esse processo durante o atendimento."
+      },
+      {
+        "question": "Qual a melhor época para ver Nova York com neve?",
+        "answer": "Dezembro a fevereiro é quando a neve é mais provável, mas o frio pode ser intenso. Para clima mais ameno com boas paisagens, prefira a primavera ou o outono."
+      },
+      {
+        "question": "Quantos dias são suficientes para conhecer Nova York?",
+        "answer": "De 6 a 8 dias já permitem conhecer os principais bairros e atrações com um bom ritmo, sem correria."
+      },
+      {
+        "question": "Vale a pena ver um musical da Broadway?",
+        "answer": "Sim, é uma das experiências mais marcantes da cidade. Recomendamos reservar os ingressos com antecedência, principalmente para os musicais mais procurados."
+      }
+    ]
+  },
+  {
+    "slug": "california",
+    "flag": "🇺🇸",
+    "name": "Califórnia",
+    "country": "Estados Unidos",
+    "region": "Califórnia",
+    "shortDescription": "Parques, praias e cidades icônicas como Los Angeles e San Francisco em um só roteiro.",
+    "imageKey": "destinoCalifornia",
+    "summary": "A Califórnia reúne uma combinação rara: parques temáticos, praias, natureza e cidades com identidade própria, de Los Angeles a San Francisco. É um destino que rende roteiros bem variados, ideais para quem quer combinar diferentes tipos de experiência em uma única viagem.",
+    "bestTime": "De março a maio e de setembro a novembro, com clima ameno e menos turistas. O verão (junho a agosto) é a alta temporada, com mais movimento nos parques e atrações.",
+    "climate": "Clima mediterrâneo na maior parte do estado — verões secos e ensolarados, invernos suaves e chuvosos, com bastante variação entre o litoral e o interior.",
+    "recommendedDuration": "10 a 14 dias, para incluir mais de uma cidade e não passar o roteiro inteiro em deslocamento.",
+    "attractions": [
+      "Disneyland Resort e Universal Studios Hollywood, em Los Angeles",
+      "Golden Gate Bridge e Fisherman's Wharf, em San Francisco",
+      "Hollywood Walk of Fame e Rodeo Drive",
+      "Praias de Santa Monica e Malibu",
+      "Parques naturais próximos, como Yosemite (para roteiros mais longos)"
+    ],
+    "whereToStay": [
+      "Região central de Los Angeles ou próxima a Anaheim, para quem prioriza os parques",
+      "Union Square ou o centro de San Francisco, para explorar a pé",
+      "Santa Monica, para quem quer praia e clima mais tranquilo"
+    ],
+    "whereToShop": [
+      "Rodeo Drive, em Beverly Hills, para marcas de luxo",
+      "Desert Hills Premium Outlets, próximo a Los Angeles",
+      "Union Square, em San Francisco, com lojas de departamento e grifes"
+    ],
+    "restaurants": [
+      "Culinária variada e informal ao longo da orla de Santa Monica",
+      "Frutos do mar frescos na região do Fisherman's Wharf, em San Francisco",
+      "Opções badaladas e vista panorâmica em Hollywood e West Hollywood"
+    ],
+    "tips": [
+      "Alugar um carro é praticamente essencial para roadtrips entre as cidades da Califórnia.",
+      "As distâncias entre Los Angeles e San Francisco são grandes — considere um voo doméstico curto se o tempo de viagem for limitado.",
+      "Reserve ingressos dos parques com antecedência, principalmente na alta temporada.",
+      "Leve roupas em camadas: o clima pode variar bastante entre o litoral e áreas mais internas no mesmo dia."
+    ],
+    "suggestedItineraries": [
+      {
+        "title": "Los Angeles & parques",
+        "duration": "7 dias",
+        "description": "Foco em Disneyland, Universal Studios e os bairros mais icônicos de LA."
+      },
+      {
+        "title": "Califórnia completa",
+        "duration": "14 dias",
+        "description": "Los Angeles, San Francisco e trechos da costa, combinando cidade, praia e natureza."
+      }
+    ],
+    "mapQuery": "Califórnia, Estados Unidos",
+    "faq": [
+      {
+        "question": "Vale alugar carro na Califórnia?",
+        "answer": "Sim, principalmente se o roteiro incluir mais de uma cidade. As distâncias são grandes e o transporte público é limitado fora dos centros urbanos."
+      },
+      {
+        "question": "Dá para conhecer Los Angeles e San Francisco na mesma viagem?",
+        "answer": "Sim, é um roteiro comum. Recomendamos pelo menos 10 a 14 dias para não passar a viagem inteira em deslocamento."
+      },
+      {
+        "question": "Quais parques temáticos ficam na Califórnia?",
+        "answer": "O principal é o Disneyland Resort, em Anaheim, além do Universal Studios Hollywood, em Los Angeles."
+      },
+      {
+        "question": "Qual a melhor época para evitar multidões na Califórnia?",
+        "answer": "Os períodos de março a maio e setembro a novembro costumam ter clima agradável e menos turistas do que o verão."
+      }
+    ]
+  },
+  {
+    "slug": "las-vegas",
+    "flag": "🇺🇸",
+    "name": "Las Vegas",
+    "country": "Estados Unidos",
+    "region": "Nevada",
+    "shortDescription": "Shows, entretenimento e uma vida noturna que não para, no coração do deserto americano.",
+    "imageKey": "destinoLasVegas",
+    "summary": "Las Vegas é sinônimo de entretenimento: shows, espetáculos, gastronomia variada e uma paisagem urbana que se reinventa constantemente na Strip. É um destino que funciona muito bem como parada de alguns dias dentro de um roteiro mais amplo pelos Estados Unidos.",
+    "bestTime": "Março a maio e setembro a novembro, quando as temperaturas do deserto são mais amenas. O verão (junho a agosto) pode ultrapassar os 40°C durante o dia.",
+    "climate": "Clima desértico, com verões muito quentes e secos e invernos amenos, com noites mais frias.",
+    "recommendedDuration": "3 a 5 dias, geralmente combinados com outros destinos dos Estados Unidos.",
+    "attractions": [
+      "A Las Vegas Strip e seus resorts temáticos",
+      "Shows e espetáculos residentes, de música a circo",
+      "Fountains of Bellagio e o passeio a pé pela Strip à noite",
+      "Passeios próximos, como o Grand Canyon e o Hoover Dam",
+      "Casinos e centros de entretenimento"
+    ],
+    "whereToStay": [
+      "Ao longo da Strip, para ficar perto dos shows, restaurantes e vida noturna",
+      "Downtown Las Vegas, com clima mais clássico e histórico",
+      "Áreas um pouco afastadas da Strip, para quem busca mais tranquilidade"
+    ],
+    "whereToShop": [
+      "Las Vegas North e South Premium Outlets",
+      "Grandes centros comerciais integrados aos resorts da Strip",
+      "The Forum Shops, com grifes internacionais"
+    ],
+    "restaurants": [
+      "Alta gastronomia assinada por chefs internacionais dentro dos resorts",
+      "Buffets e opções variadas espalhadas pela Strip",
+      "Restaurantes temáticos ligados aos espetáculos e casinos"
+    ],
+    "tips": [
+      "A cidade é bastante caminhável dentro da Strip, mas as distâncias entre um resort e outro podem ser maiores do que parecem.",
+      "Reserve shows e espetáculos com antecedência, principalmente em fins de semana.",
+      "Se o roteiro incluir o Grand Canyon, vale reservar um dia inteiro para o passeio.",
+      "O calor do deserto pode ser intenso mesmo à noite no verão — hidrate-se bem."
+    ],
+    "suggestedItineraries": [
+      {
+        "title": "Vegas rápida",
+        "duration": "3 dias",
+        "description": "Foco na Strip, um show e um passeio próximo, como o Hoover Dam."
+      },
+      {
+        "title": "Vegas + Grand Canyon",
+        "duration": "5 dias",
+        "description": "Combina os dias na cidade com um passeio de um dia inteiro ao Grand Canyon."
+      }
+    ],
+    "mapQuery": "Las Vegas, Nevada, Estados Unidos",
+    "faq": [
+      {
+        "question": "Quantos dias valem a pena em Las Vegas?",
+        "answer": "De 3 a 5 dias costuma ser suficiente, principalmente quando a cidade é combinada com outros destinos dos Estados Unidos."
+      },
+      {
+        "question": "Dá para conhecer o Grand Canyon a partir de Las Vegas?",
+        "answer": "Sim, é um dos passeios mais procurados por quem está na cidade. Recomendamos reservar um dia inteiro para o passeio."
+      },
+      {
+        "question": "Qual a melhor época para visitar Las Vegas por causa do calor?",
+        "answer": "Os meses de março a maio e setembro a novembro têm temperaturas mais amenas. O verão pode ser bastante quente durante o dia."
+      },
+      {
+        "question": "Las Vegas é um bom destino para quem não gosta de cassino?",
+        "answer": "Sim. A cidade também tem shows, gastronomia, compras e passeios próximos que não envolvem jogos."
+      }
+    ]
+  },
+  {
+    "slug": "havai",
+    "flag": "🇺🇸",
+    "name": "Havaí",
+    "country": "Estados Unidos",
+    "region": "Havaí",
+    "shortDescription": "Praias paradisíacas, natureza vulcânica e um clima tropical o ano todo.",
+    "imageKey": "destinoHavai",
+    "summary": "O arquipélago do Havaí combina praias de água cristalina, paisagens vulcânicas e uma cultura própria, marcada pela tradição polinésia. É um destino ideal para quem busca natureza, tranquilidade e experiências ao ar livre, seja em lua de mel ou em família.",
+    "bestTime": "O clima é agradável durante o ano todo. Abril a junho e setembro a novembro tendem a ter menos chuva e preços mais estáveis do que a alta temporada de verão e fim de ano.",
+    "climate": "Clima tropical, com temperaturas amenas o ano inteiro e uma estação um pouco mais chuvosa entre novembro e março.",
+    "recommendedDuration": "7 a 10 dias, especialmente se o roteiro incluir mais de uma ilha.",
+    "attractions": [
+      "Praias de Waikiki, em Oahu",
+      "Parque Nacional dos Vulcões, no Havaí (Big Island)",
+      "Estrada de Hana, em Maui",
+      "Trilhas e mirantes na costa de Na Pali, em Kauai",
+      "Passeios de snorkel e mergulho para observar a vida marinha"
+    ],
+    "whereToStay": [
+      "Waikiki, em Oahu, para quem busca praia urbana com boa estrutura",
+      "Região oeste de Maui, mais tranquila e voltada à natureza",
+      "Áreas próximas ao Parque Nacional dos Vulcões, para quem prioriza Big Island"
+    ],
+    "whereToShop": [
+      "Ala Moana Center, um dos maiores shoppings a céu aberto dos Estados Unidos, em Honolulu",
+      "Lojas locais de artesanato e produtos havaianos espalhadas pelas ilhas",
+      "Waikele Premium Outlets, próximo a Honolulu"
+    ],
+    "restaurants": [
+      "Culinária havaiana tradicional, com pratos como poke em sua origem",
+      "Restaurantes com vista para o mar em Waikiki e na costa de Maui",
+      "Food trucks e opções informais nas cidades menores das ilhas"
+    ],
+    "tips": [
+      "Se o roteiro incluir mais de uma ilha, planeje bem os deslocamentos aéreos entre elas.",
+      "Reserve os passeios de natureza mais concorridos, como trilhas e mergulho, com antecedência.",
+      "Leve protetor solar biodegradável — algumas praias e áreas de conservação exigem esse cuidado.",
+      "O Havaí é um destino que combina bem com desaceleração no roteiro: evite preenchê-lo com passeios demais por dia."
+    ],
+    "suggestedItineraries": [
+      {
+        "title": "Oahu essencial",
+        "duration": "6 dias",
+        "description": "Foco em Waikiki e nos principais pontos naturais e culturais da ilha de Oahu."
+      },
+      {
+        "title": "Duas ilhas",
+        "duration": "10 dias",
+        "description": "Combina Oahu com Maui ou Big Island, equilibrando praia, natureza e vulcões."
+      }
+    ],
+    "mapQuery": "Havaí, Estados Unidos",
+    "faq": [
+      {
+        "question": "É preciso pegar avião entre as ilhas do Havaí?",
+        "answer": "Sim, os deslocamentos entre as principais ilhas são feitos por voos domésticos curtos, geralmente com menos de uma hora de duração."
+      },
+      {
+        "question": "O Havaí é um bom destino para lua de mel?",
+        "answer": "Sim, é um dos destinos mais procurados para lua de mel, pela combinação de praias, natureza e resorts voltados para casais."
+      },
+      {
+        "question": "Qual ilha escolher em uma primeira viagem ao Havaí?",
+        "answer": "Oahu costuma ser a porta de entrada mais comum, por concentrar boa infraestrutura em Honolulu e Waikiki. A escolha final depende do perfil da viagem."
+      },
+      {
+        "question": "Quantos dias são recomendados para o Havaí?",
+        "answer": "Entre 7 e 10 dias, principalmente se o roteiro incluir mais de uma ilha."
+      }
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "disney",
+    "name": "Disney",
+    "icon": "castle",
+    "description": "Magic Kingdom, Epcot, Hollywood Studios e Animal Kingdom."
+  },
+  {
+    "slug": "universal",
+    "name": "Universal",
+    "icon": "coaster",
+    "description": "Islands of Adventure e Universal Studios Orlando."
+  },
+  {
+    "slug": "epic-universe",
+    "name": "Epic Universe",
+    "icon": "sparkles",
+    "description": "O novo parque da Universal Orlando."
+  },
+  {
+    "slug": "seaworld",
+    "name": "SeaWorld",
+    "icon": "wave",
+    "description": "Vida marinha e atrações para toda a família."
+  },
+  {
+    "slug": "busch-gardens",
+    "name": "Busch Gardens",
+    "icon": "leaf",
+    "description": "Aventura, natureza e montanhas-russas em Tampa."
+  }
+]

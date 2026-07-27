@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { validateQuoteForm } from "@/lib/validation";
-import { buildQuoteEmailSubject, buildQuoteEmailText } from "@/lib/email";
+import { buildQuoteEmailHtml, buildQuoteEmailSubject, buildQuoteEmailText } from "@/lib/email";
 import { emptyQuoteFormData, type QuoteFormData } from "@/types/quote";
 
 export const runtime = "nodejs";
@@ -113,6 +113,7 @@ async function sendQuoteEmail(data: QuoteFormData): Promise<void> {
     replyTo: data.email || undefined,
     subject: buildQuoteEmailSubject(data),
     text: buildQuoteEmailText(data),
+    html: buildQuoteEmailHtml(data),
   });
 }
 

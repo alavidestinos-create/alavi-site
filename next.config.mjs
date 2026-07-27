@@ -10,6 +10,12 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      { source: "/blog", destination: "/guia-do-viajante", permanent: true },
+      { source: "/blog/:slug", destination: "/guia-do-viajante/:slug", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

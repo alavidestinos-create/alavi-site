@@ -12,7 +12,7 @@ const navLinks = [
   { href: "/disney-orlando", label: "Disney & Orlando" },
   { href: "/servicos", label: "Serviços" },
   { href: "/sobre", label: "Sobre" },
-  { href: "/blog", label: "Blog" },
+  { href: "/guia-do-viajante", label: "Guia do Viajante" },
   { href: "/contato", label: "Contato" },
 ];
 

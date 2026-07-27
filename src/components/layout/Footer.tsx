@@ -9,7 +9,7 @@ const siteLinks = [
   { href: "/servicos", label: "Serviços" },
   { href: "/destinos", label: "Destinos" },
   { href: "/disney-orlando", label: "Disney & Orlando" },
-  { href: "/blog", label: "Blog" },
+  { href: "/guia-do-viajante", label: "Guia do Viajante" },
   { href: "/orcamento", label: "Solicitar orçamento" },
 ];
 

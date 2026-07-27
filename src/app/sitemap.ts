@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
 import { blogPosts } from "@/content/blog";
+import { destinations } from "@/content/destinations";
 
 const routes = [
   "",
@@ -8,7 +9,7 @@ const routes = [
   "/servicos",
   "/destinos",
   "/disney-orlando",
-  "/blog",
+  "/guia-do-viajante",
   "/pontos-e-milhas",
   "/orcamento",
   "/contato",
@@ -26,12 +27,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === "" ? 1 : 0.7,
   }));
 
-  const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
-    url: `${siteConfig.url}/blog/${post.slug}`,
+  const destinationRoutes: MetadataRoute.Sitemap = destinations.map((destination) => ({
+    url: `${siteConfig.url}/destinos/${destination.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  const guideRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${siteConfig.url}/guia-do-viajante/${post.slug}`,
     lastModified: new Date(post.publishedAt),
     changeFrequency: "monthly",
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...blogRoutes];
+  return [...staticRoutes, ...destinationRoutes, ...guideRoutes];
 }
