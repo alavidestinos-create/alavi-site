@@ -67,6 +67,17 @@ export function CookieConsent() {
           </button>
         </div>
       </div>
+      <p className="container-alavi mt-2 text-[11px] text-navy-400">
+        Crafted by{" "}
+        <a
+          href="https://secureprivacy.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-teal-400"
+        >
+          Secure Privacy
+        </a>
+      </p>
     </div>
   );
 }
