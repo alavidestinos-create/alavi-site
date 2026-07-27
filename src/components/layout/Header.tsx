@@ -2,58 +2,106 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 
 const navLinks = [
   { href: "/", label: "Início" },
   { href: "/destinos", label: "Destinos" },
-  { href: "/disney-orlando", label: "Disney & Orlando" },
   { href: "/servicos", label: "Serviços" },
-  { href: "/sobre", label: "Sobre" },
   { href: "/guia-do-viajante", label: "Guia do Viajante" },
+  { href: "/sobre", label: "Sobre" },
   { href: "/contato", label: "Contato" },
 ];
 
+function isActive(pathname: string, href: string): boolean {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 export function Header() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 8);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Bloqueia o scroll da página enquanto o menu fullscreen mobile está aberto.
+  useEffect(() => {
+    document.documentElement.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.documentElement.style.overflow = "";
+    };
+  }, [open]);
+
+  // Fecha o menu automaticamente se a rota mudar (ex.: navegação pelo botão voltar).
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-sand-200 bg-cream/95 backdrop-blur">
-      <div className="container-alavi flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-navy-50">
+    <header
+      className={cn(
+        "sticky top-0 z-50 border-b bg-cream/95 backdrop-blur transition-shadow duration-300",
+        scrolled ? "border-sand-200 shadow-soft" : "border-transparent"
+      )}
+    >
+      <div className="container-alavi grid h-16 grid-cols-[auto_1fr_auto] items-center gap-4 sm:h-[72px] xl:h-20">
+        <Link href="/" className="flex items-center gap-2.5" aria-label="ALAVI Destinos & Experiências — página inicial">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-navy-50 sm:h-10 sm:w-10">
             <Image
               src="/brand/logo-icon.png"
-              alt="ALAVI Destinos & Experiências"
+              alt=""
               width={40}
               height={40}
-              className="h-9 w-9 object-cover"
+              className="h-[34px] w-[34px] object-cover sm:h-9 sm:w-9"
               priority
             />
           </span>
-          <span className="font-display text-xl font-medium tracking-tight text-navy-900">
+          <span className="font-display text-lg font-medium tracking-tight text-navy-900 sm:text-xl">
             ALAVI
-            <span className="ml-1.5 hidden text-xs font-normal text-teal-700 sm:inline">
+            <span className="ml-1.5 hidden text-xs font-normal text-teal-700 lg:inline">
               Destinos &amp; Experiências
             </span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-7 xl:flex" aria-label="Navegação principal">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-[13px] font-semibold uppercase tracking-wide text-navy-700 transition-colors hover:text-teal-700"
-            >
-              {link.label}
-            </Link>
-          ))}
+        <nav className="hidden items-center justify-center gap-9 xl:flex" aria-label="Navegação principal">
+          {navLinks.map((link) => {
+            const active = isActive(pathname, link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={active ? "page" : undefined}
+                className={cn(
+                  "group relative py-2 text-[13px] font-semibold uppercase tracking-wide transition-colors",
+                  active ? "text-teal-700" : "text-navy-700 hover:text-teal-700"
+                )}
+              >
+                {link.label}
+                <span
+                  aria-hidden="true"
+                  className={cn(
+                    "absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-teal-600 transition-transform duration-200 ease-out group-hover:scale-x-100",
+                    active && "scale-x-100"
+                  )}
+                />
+              </Link>
+            );
+          })}
         </nav>
 
-        <div className="hidden xl:flex">
+        <div className="hidden justify-self-end xl:flex">
           <Button href="/orcamento" size="sm">
             Planejar minha viagem
           </Button>
@@ -61,40 +109,60 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-navy-800 xl:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center justify-self-end rounded-full text-navy-800 xl:hidden"
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
+          aria-controls="menu-mobile"
           onClick={() => setOpen((value) => !value)}
         >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-6 w-6">
             {open ? (
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 7h16M4 12h16M4 17h16" />
             )}
           </svg>
         </button>
       </div>
 
+      {/* Menu mobile fullscreen — sem links horizontais no topo; abre por cima de tudo. */}
       <div
+        id="menu-mobile"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Menu de navegação"
         className={cn(
-          "border-t border-sand-200 bg-cream xl:hidden",
-          open ? "block" : "hidden"
+          "fixed inset-0 top-16 z-40 bg-cream transition-all duration-200 ease-out sm:top-[72px] xl:hidden",
+          open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         )}
       >
-        <nav className="container-alavi flex flex-col gap-1 py-4" aria-label="Navegação mobile">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="rounded-md px-2 py-2.5 text-sm font-medium text-navy-700 hover:bg-navy-50"
-              onClick={() => setOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <div className="mt-3">
-            <Button href="/orcamento" className="w-full" onClick={() => setOpen(false)}>
+        <nav
+          className="flex h-full flex-col overflow-y-auto px-6 pb-8 pt-6"
+          aria-label="Navegação mobile"
+        >
+          <ul className="flex flex-col gap-5">
+            {navLinks.map((link) => {
+              const active = isActive(pathname, link.href);
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    aria-current={active ? "page" : undefined}
+                    className={cn(
+                      "block text-[22px] font-medium leading-tight transition-colors hover:text-teal-700",
+                      active ? "text-teal-700" : "text-navy-900"
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+
+          <div className="mt-8">
+            <Button href="/orcamento" onClick={() => setOpen(false)} className="h-14 w-full justify-center text-base">
               Planejar minha viagem
             </Button>
           </div>
