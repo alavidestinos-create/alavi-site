@@ -8,7 +8,8 @@ const siteLinks = [
   { href: "/sobre", label: "Sobre a ALAVI" },
   { href: "/servicos", label: "Serviços" },
   { href: "/destinos", label: "Destinos" },
-  { href: "/pontos-e-milhas", label: "Pontos e Milhas" },
+  { href: "/disney-orlando", label: "Disney & Orlando" },
+  { href: "/blog", label: "Blog" },
   { href: "/orcamento", label: "Solicitar orçamento" },
 ];
 

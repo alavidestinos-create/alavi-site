@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function ContatoPage() {
   return (
-    <section className="py-16 sm:py-20">
+    <section className="py-16 sm:py-24">
       <div className="container-alavi grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
         <div>
           <SectionTitle eyebrow="Contato" title="Fale com a ALAVI"
@@ -34,7 +34,7 @@ export default function ContatoPage() {
           </div>
           <ContactLinks className="mt-8 space-y-3 text-sm text-navy-700 [&_a]:text-navy-900" />
         </div>
-        <div className="rounded-2xl border border-navy-100 bg-white p-6 shadow-soft sm:p-8">
+        <div className="rounded-2xl border border-sand-200 bg-white p-6 shadow-soft sm:p-8">
           <QuoteForm />
         </div>
       </div>

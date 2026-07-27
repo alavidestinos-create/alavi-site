@@ -1,19 +1,24 @@
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { DestinationCard } from "@/components/ui/DestinationCard";
+import { Reveal } from "@/components/ui/Reveal";
 import { destinations } from "@/content/destinations";
 
 export function DestinationsHighlight() {
   return (
-    <section className="bg-navy-50/60 py-16 sm:py-20">
+    <section className="py-20 sm:py-28">
       <div className="container-alavi">
-        <SectionTitle
-          eyebrow="Destinos"
-          title="Destinos e experiências em destaque"
-          description="Um ponto de partida para pensar sua próxima viagem — o roteiro final é sempre montado sob medida."
-        />
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {destinations.map((destination) => (
-            <DestinationCard key={destination.slug} destination={destination} />
+        <Reveal>
+          <SectionTitle
+            eyebrow="Destinos"
+            title="Alguns lugares que merecem estar no seu próximo roteiro"
+            description="Um ponto de partida para inspirar sua viagem — o roteiro final é sempre construído sob medida para você."
+          />
+        </Reveal>
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+          {destinations.map((destination, index) => (
+            <Reveal key={destination.slug} delay={index * 80}>
+              <DestinationCard destination={destination} priority={index === 0} />
+            </Reveal>
           ))}
         </div>
       </div>

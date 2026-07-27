@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
-import { ServicesOverview } from "@/components/sections/ServicesOverview";
-import { WhyAlavi } from "@/components/sections/WhyAlavi";
-import { HowItWorks } from "@/components/sections/HowItWorks";
-import { PersonalizedTrips } from "@/components/sections/PersonalizedTrips";
 import { DestinationsHighlight } from "@/components/sections/DestinationsHighlight";
-import { PointsAndMiles } from "@/components/sections/PointsAndMiles";
+import { OrlandoSection } from "@/components/sections/OrlandoSection";
+import { ServicesOverview } from "@/components/sections/ServicesOverview";
+import { HowItWorks } from "@/components/sections/HowItWorks";
+import { WhyAlavi } from "@/components/sections/WhyAlavi";
+import { BlogPreview } from "@/components/sections/BlogPreview";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
@@ -25,12 +25,12 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <ServicesOverview />
       <DestinationsHighlight />
-      <WhyAlavi />
+      <OrlandoSection />
+      <ServicesOverview />
       <HowItWorks />
-      <PersonalizedTrips />
-      <PointsAndMiles />
+      <WhyAlavi />
+      <BlogPreview />
       <Testimonials />
       <Faq items={homeFaq} />
       <FinalCta />

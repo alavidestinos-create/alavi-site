@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function OrcamentoPage() {
   return (
-    <section className="py-16 sm:py-20">
+    <section className="py-16 sm:py-24">
       <div className="container-alavi max-w-3xl">
         <SectionTitle
           eyebrow="Orçamento"
@@ -18,7 +18,7 @@ export default function OrcamentoPage() {
           description="Quanto mais detalhes você compartilhar, mais preciso é o orçamento. Todos os campos marcados com * são obrigatórios."
             as="h1"
           />
-        <div className="mt-10 rounded-2xl border border-navy-100 bg-white p-6 shadow-soft sm:p-8">
+        <div className="mt-10 rounded-2xl border border-sand-200 bg-white p-6 shadow-soft sm:p-8">
           <QuoteForm />
         </div>
       </div>

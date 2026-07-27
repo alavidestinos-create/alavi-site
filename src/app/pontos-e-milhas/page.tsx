@@ -40,7 +40,7 @@ const topics = [
 export default function PontosEMilhasPage() {
   return (
     <>
-      <section className="py-16 sm:py-20">
+      <section className="py-16 sm:py-24">
         <div className="container-alavi max-w-3xl">
           <SectionTitle
             eyebrow="Pontos e Milhas"
@@ -57,7 +57,7 @@ export default function PontosEMilhasPage() {
           </p>
         </div>
       </section>
-      <section className="bg-navy-50/60 py-16 sm:py-20">
+      <section className="bg-navy-50/60 py-16 sm:py-24">
         <div className="container-alavi grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {topics.map((topic) => (
             <div key={topic.title} className="rounded-2xl bg-white p-6 shadow-soft">

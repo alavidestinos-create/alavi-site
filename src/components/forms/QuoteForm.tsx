@@ -65,7 +65,7 @@ export function QuoteForm() {
 
   if (state === "success") {
     return (
-      <div className="rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
+      <div className="rounded-2xl border border-teal-200 bg-teal-50 p-8 text-center">
         <h3 className="font-display text-lg font-semibold text-navy-900">
           Pedido enviado com sucesso!
         </h3>
@@ -88,7 +88,7 @@ export function QuoteForm() {
 
   if (state === "unavailable") {
     return (
-      <div className="rounded-2xl border border-navy-200 bg-navy-50 p-6 text-center">
+      <div className="rounded-2xl border border-sand-300 bg-sand-50 p-8 text-center">
         <h3 className="font-display text-lg font-semibold text-navy-900">
           Envio automático indisponível no momento
         </h3>
@@ -119,7 +119,7 @@ export function QuoteForm() {
       )}
 
       <fieldset className="grid gap-5 sm:grid-cols-2">
-        <legend className="mb-1 font-display text-base font-semibold text-navy-900 sm:col-span-2">
+        <legend className="mb-1 font-display text-lg font-medium text-navy-900 sm:col-span-2">
           Seus dados
         </legend>
         <FieldWrapper label="Nome completo" htmlFor="fullName" required error={errors.fullName}>
@@ -158,7 +158,7 @@ export function QuoteForm() {
       </fieldset>
 
       <fieldset className="grid gap-5 sm:grid-cols-2">
-        <legend className="mb-1 font-display text-base font-semibold text-navy-900 sm:col-span-2">
+        <legend className="mb-1 font-display text-lg font-medium text-navy-900 sm:col-span-2">
           Viagem
         </legend>
         <FieldWrapper label="Cidade de origem" htmlFor="originCity" required error={errors.originCity}>
@@ -211,7 +211,7 @@ export function QuoteForm() {
       </fieldset>
 
       <fieldset className="grid gap-5 sm:grid-cols-3">
-        <legend className="mb-1 font-display text-base font-semibold text-navy-900 sm:col-span-3">
+        <legend className="mb-1 font-display text-lg font-medium text-navy-900 sm:col-span-3">
           Viajantes
         </legend>
         <FieldWrapper label="Adultos" htmlFor="adults" required error={errors.adults}>
@@ -265,7 +265,7 @@ export function QuoteForm() {
       </fieldset>
 
       <fieldset className="grid gap-5 sm:grid-cols-2">
-        <legend className="mb-1 font-display text-base font-semibold text-navy-900 sm:col-span-2">
+        <legend className="mb-1 font-display text-lg font-medium text-navy-900 sm:col-span-2">
           Preferências
         </legend>
         <FieldWrapper label="Tipo de viagem" htmlFor="tripType">
@@ -301,7 +301,7 @@ export function QuoteForm() {
       </fieldset>
 
       <fieldset className="grid gap-5 sm:grid-cols-3">
-        <legend className="mb-1 font-display text-base font-semibold text-navy-900 sm:col-span-3">
+        <legend className="mb-1 font-display text-lg font-medium text-navy-900 sm:col-span-3">
           Hospedagem e serviços adicionais
         </legend>
         <label className="flex items-center gap-2 text-sm text-navy-700">
@@ -370,7 +370,7 @@ export function QuoteForm() {
       </fieldset>
 
       <fieldset className="grid gap-5 sm:grid-cols-2">
-        <legend className="mb-1 font-display text-base font-semibold text-navy-900 sm:col-span-2">
+        <legend className="mb-1 font-display text-lg font-medium text-navy-900 sm:col-span-2">
           Pontos e milhas
         </legend>
         <label className="flex items-center gap-2 text-sm text-navy-700 sm:col-span-2">
@@ -407,7 +407,7 @@ export function QuoteForm() {
       </fieldset>
 
       <fieldset className="grid gap-5">
-        <legend className="mb-1 font-display text-base font-semibold text-navy-900">
+        <legend className="mb-1 font-display text-lg font-medium text-navy-900">
           Orçamento e observações
         </legend>
         <FieldWrapper label="Orçamento estimado" htmlFor="estimatedBudget" hint="Opcional — ajuda a montar opções mais adequadas">
@@ -465,7 +465,7 @@ export function QuoteForm() {
       <button
         type="submit"
         disabled={state === "submitting"}
-        className="inline-flex w-full items-center justify-center rounded-full bg-teal-700 px-6 py-3.5 text-base font-semibold text-white transition-colors hover:bg-teal-800 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="inline-flex w-full items-center justify-center rounded-full bg-navy-900 px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-navy-800 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
         {state === "submitting" ? "Enviando..." : "Solicitar orçamento"}
       </button>

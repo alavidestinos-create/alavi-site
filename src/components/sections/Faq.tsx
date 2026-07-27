@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { SectionTitle } from "@/components/ui/SectionTitle";
+import { Reveal } from "@/components/ui/Reveal";
 import type { FaqItem } from "@/content/faq";
 import { cn } from "@/lib/utils";
 
@@ -13,10 +14,12 @@ export function Faq({ items }: FaqProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-16 sm:py-20">
-      <div className="container-alavi">
-        <SectionTitle eyebrow="Dúvidas frequentes" title="Perguntas frequentes" />
-        <div className="mt-8 divide-y divide-navy-100 rounded-2xl border border-navy-100">
+    <section className="py-20 sm:py-28">
+      <div className="container-alavi max-w-3xl">
+        <Reveal>
+          <SectionTitle eyebrow="Dúvidas frequentes" title="Perguntas frequentes" />
+        </Reveal>
+        <div className="mt-10 divide-y divide-sand-200 rounded-2xl border border-sand-200">
           {items.map((item, index) => {
             const isOpen = openIndex === index;
             return (

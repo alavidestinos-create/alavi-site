@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-display: "Inter", system-ui, sans-serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
 }
 
 html {
@@ -20,7 +20,11 @@ body {
 }
 
 body {
-  @apply bg-white text-navy-900 antialiased;
+  @apply bg-cream text-navy-900 antialiased;
+}
+
+::selection {
+  @apply bg-teal-200 text-navy-900;
 }
 
 /* Foco visível para navegação por teclado */
@@ -30,5 +34,30 @@ body {
 }
 
 .container-alavi {
-  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  @apply mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-10;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase tracking-widest2 text-teal-700;
+}
+
+/* Reveal-on-scroll: aplicado via componente Reveal (IntersectionObserver).
+   Sem JS ou com prefers-reduced-motion, o conteúdo permanece sempre visível. */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.reveal-in {
+  animation: reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-init {
+    opacity: 1;
+    transform: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Manrope, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 import { Header } from "@/components/layout/Header";
@@ -9,9 +9,15 @@ import { CookieConsent } from "@/components/cookie/CookieConsent";
 import { Analytics } from "@/components/analytics/Analytics";
 import { StructuredData } from "@/components/seo/StructuredData";
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-display",
   display: "swap",
 });
 
@@ -55,7 +61,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" className={inter.variable}>
+    <html lang="pt-BR" className={`${manrope.variable} ${playfair.variable}`}>
       <body>
         <a
           href="#conteudo-principal"

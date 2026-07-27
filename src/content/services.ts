@@ -8,15 +8,19 @@ export interface Service {
     | "hotel"
     | "package"
     | "route"
-    | "snow"
-    | "seat"
+    | "castle"
+    | "coaster"
     | "shield"
     | "transfer"
-    | "sim"
     | "experience"
-    | "miles";
+    | "concierge";
 }
 
+/**
+ * Lista enxuta de serviços (decisão de simplificação do redesign premium —
+ * ver DECISOES-TECNICAS.md). "Pontos e Milhas" deixou de ser um serviço em
+ * destaque no menu/grade principal.
+ */
 export const services: Service[] = [
   {
     slug: "passagens-aereas",
@@ -27,44 +31,44 @@ export const services: Service[] = [
     icon: "plane",
   },
   {
-    slug: "hoteis-hospedagens",
-    name: "Hotéis e Hospedagens",
-    shortDescription: "Seleção de hospedagens de acordo com o estilo e o orçamento da sua viagem.",
+    slug: "hospedagens",
+    name: "Hospedagens",
+    shortDescription: "Hotéis, resorts e pousadas alinhados ao estilo da sua viagem.",
     description:
-      "Indicamos hotéis, resorts e pousadas alinhados ao perfil da viagem — desde opções econômicas até hospedagens de alto padrão — sempre considerando localização e custo-benefício.",
+      "Indicamos hospedagens alinhadas ao perfil da viagem — de opções econômicas a hospedagens de alto padrão — sempre considerando localização e custo-benefício.",
     icon: "hotel",
   },
   {
-    slug: "pacotes-de-viagem",
-    name: "Pacotes de Viagem",
+    slug: "pacotes",
+    name: "Pacotes",
     shortDescription: "Passagem, hospedagem e serviços organizados em um único pacote.",
     description:
-      "Montamos pacotes combinando passagens, hospedagem, transfer e passeios, simplificando o planejamento e facilitando a organização financeira da viagem.",
+      "Montamos pacotes combinando passagens, hospedagem, transfer e passeios, simplificando o planejamento e a organização financeira da viagem.",
     icon: "package",
   },
   {
-    slug: "roteiros-personalizados",
-    name: "Roteiros Personalizados",
+    slug: "roteiros",
+    name: "Roteiros",
     shortDescription: "Viagens desenhadas conforme o tempo, o orçamento e o estilo do viajante.",
     description:
-      "Cada viagem é diferente. Construímos roteiros sob medida, considerando o tempo disponível, o orçamento, o número de viajantes e o tipo de experiência que você procura.",
+      "Cada viagem é diferente. Construímos roteiros sob medida, considerando tempo disponível, orçamento, número de viajantes e o tipo de experiência que você procura.",
     icon: "route",
   },
   {
-    slug: "viagens-de-neve",
-    name: "Viagens de Neve",
-    shortDescription: "Destinos de neve na América do Sul e no mundo, com planejamento completo.",
+    slug: "disney",
+    name: "Disney",
+    shortDescription: "Parques, ingressos e logística pensados nos mínimos detalhes.",
     description:
-      "Organizamos viagens para destinos de neve como Bariloche e outros pontos da América do Sul e do mundo, incluindo passagens, hospedagem e orientações sobre a temporada.",
-    icon: "snow",
+      "Planejamento completo para os parques Disney: escolha de ingressos, otimização de dias de parque, hospedagem e dicas para aproveitar cada momento com a família.",
+    icon: "castle",
   },
   {
-    slug: "classe-executiva",
-    name: "Classe Executiva",
-    shortDescription: "Emissão em classe executiva, com ou sem uso de pontos e milhas.",
+    slug: "universal",
+    name: "Universal",
+    shortDescription: "Roteiros para os parques da Universal Orlando sem perder tempo em filas.",
     description:
-      "Auxiliamos na busca por passagens em classe executiva, avaliando compra direta ou emissão com pontos e milhas, conforme a disponibilidade em cada caso.",
-    icon: "seat",
+      "Organizamos a visita aos parques da Universal Orlando com planejamento de ingressos e logística para aproveitar melhor cada dia de parque.",
+    icon: "coaster",
   },
   {
     slug: "seguro-viagem",
@@ -75,20 +79,12 @@ export const services: Service[] = [
     icon: "shield",
   },
   {
-    slug: "transfer",
-    name: "Transfer",
+    slug: "transfers",
+    name: "Transfers",
     shortDescription: "Deslocamentos entre aeroporto, hotel e passeios organizados previamente.",
     description:
       "Organizamos o transfer entre aeroporto e hospedagem — e entre pontos do roteiro, quando aplicável — para reduzir a logística durante a viagem.",
     icon: "transfer",
-  },
-  {
-    slug: "chip-internacional",
-    name: "Chip Internacional",
-    shortDescription: "Orientação sobre conectividade para você viajar conectado.",
-    description:
-      "Indicamos opções de chip ou e-SIM internacional para você manter conexão durante a viagem, conforme o destino escolhido.",
-    icon: "sim",
   },
   {
     slug: "experiencias",
@@ -99,12 +95,12 @@ export const services: Service[] = [
     icon: "experience",
   },
   {
-    slug: "pontos-e-milhas",
-    name: "Pontos e Milhas",
-    shortDescription: "Planejamento e uso estratégico de pontos e milhas na emissão de passagens.",
+    slug: "consultoria-personalizada",
+    name: "Consultoria Personalizada",
+    shortDescription: "Um especialista dedicado a pensar a sua viagem do início ao fim.",
     description:
-      "Analisamos seus pontos e milhas disponíveis, orientamos sobre transferências entre programas e buscamos oportunidades de emissão, sempre de forma transparente quanto à disponibilidade.",
-    icon: "miles",
+      "Atendimento próximo e consultivo, para quem quer uma viagem pensada nos detalhes — do primeiro contato ao seu retorno para casa.",
+    icon: "concierge",
   },
 ];
 

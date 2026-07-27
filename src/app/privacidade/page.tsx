@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function PrivacidadePage() {
   return (
-    <section className="py-16 sm:py-20">
+    <section className="py-16 sm:py-24">
       <div className="container-alavi max-w-3xl">
         <SectionTitle eyebrow="Legal" title="Política de Privacidade"
             as="h1"
