@@ -6,7 +6,6 @@ import { ServicesOverview } from "@/components/sections/ServicesOverview";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { WhyAlavi } from "@/components/sections/WhyAlavi";
 import { BlogPreview } from "@/components/sections/BlogPreview";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { homeFaq } from "@/content/faq";
@@ -31,7 +30,9 @@ export default function HomePage() {
       <HowItWorks />
       <WhyAlavi />
       <BlogPreview />
-      <Testimonials />
+      {/* Depoimentos removidos por enquanto (sem depoimentos reais de clientes ainda).
+          Componente e conteúdo mantidos em src/components/sections/Testimonials.tsx
+          e src/content/testimonials.ts para reativar quando houver depoimentos reais. */}
       <Faq items={homeFaq} />
       <FinalCta />
     </>

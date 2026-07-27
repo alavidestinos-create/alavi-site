@@ -54,9 +54,13 @@ no código (buscar por `PENDENTE_`) até serem preenchidos.
 
 - [ ] Domínio `alavidestinos.com.br` — acesso ao DNS para configuração na
       Vercel/Netlify
-- [ ] Definição do destino do formulário de orçamento
-      (`ORCAMENTO_WEBHOOK_URL`): webhook Make/Zapier, serviço de formulário,
-      ou aguardar integração futura com o CRM
+- [ ] Configurar o envio direto por e-mail do formulário de orçamento
+      (variáveis `SMTP_HOST`/`SMTP_USER`/`SMTP_PASSWORD`/`ORCAMENTO_EMAIL_TO`
+      em `.env.example` — recomendado usar uma "Senha de app" do Gmail da
+      conta `alavidestinos@gmail.com`). Sem isso configurado no Netlify, o
+      formulário continua caindo no fallback de WhatsApp.
+- [ ] Alternativa: `ORCAMENTO_WEBHOOK_URL` (Make/Zapier, serviço de
+      formulário, ou futura integração com o CRM)
 - [ ] IDs de Analytics, se e quando a agência decidir usar
       (`NEXT_PUBLIC_GA_ID`, `NEXT_PUBLIC_GTM_ID`, `NEXT_PUBLIC_META_PIXEL_ID`)
 - [ ] Conta na Vercel (ou Netlify) e no GitHub para publicação
