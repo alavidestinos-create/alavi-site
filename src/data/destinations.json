@@ -435,5 +435,469 @@
         "answer": "Entre 7 e 10 dias, principalmente se o roteiro incluir mais de uma ilha."
       }
     ]
+  },
+  {
+    "slug": "bariloche",
+    "flag": "🇦🇷",
+    "name": "Bariloche",
+    "country": "Argentina",
+    "region": "Patagônia",
+    "shortDescription": "Neve, montanhas e lagos na Patagônia andina — um dos destinos de inverno mais desejados pelos brasileiros.",
+    "imageKey": "destinoBariloche",
+    "summary": "San Carlos de Bariloche combina neve, montanhas e lagos de tirar o fôlego na Patagônia andina. É um dos destinos de inverno preferidos dos brasileiros, com estrutura para família, casais e grupos, e paisagens impressionantes mesmo fora da temporada de neve.",
+    "bestTime": "Para neve, de junho a setembro, com pico de estrutura para esqui em julho e agosto. Para lagos e montanhas sem neve, dezembro a março também é uma boa época, com dias mais longos e clima ameno.",
+    "climate": "Clima frio de montanha, com invernos rigorosos e neve frequente entre maio e setembro, e verões amenos entre dezembro e março.",
+    "recommendedDuration": "5 a 7 dias.",
+    "attractions": [
+      "Cerro Catedral, principal centro de esqui da região",
+      "Circuito Chico, com mirantes sobre lagos e montanhas",
+      "Lago Nahuel Huapi e passeios de barco",
+      "Cerro Campanario, um dos mirantes mais famosos da Patagônia",
+      "Centro Cívico e as tradicionais chocolaterias da cidade"
+    ],
+    "whereToStay": [
+      "Centro Cívico, para quem quer ficar perto do comércio e da vida da cidade",
+      "Ao longo do Circuito Chico (a região dos \"quilômetros\"), com vista para o lago",
+      "Próximo ao Cerro Catedral, para quem prioriza os dias de neve"
+    ],
+    "whereToShop": [
+      "Chocolaterias tradicionais no Centro Cívico",
+      "Lojas de artesanato regional e produtos andinos",
+      "Lojas de equipamentos e roupas de inverno"
+    ],
+    "restaurants": [
+      "Casas de fondue e chocolate quente, típicas da cidade",
+      "Culinária patagônica, com destaque para pratos à base de cordeiro",
+      "Cafés e confeitarias no Centro Cívico"
+    ],
+    "tips": [
+      "Leve roupas em camadas e itens térmicos, mesmo fora do pico do inverno.",
+      "Reserve o aluguel de equipamento de neve com antecedência na alta temporada.",
+      "As estradas da região podem ficar com gelo no inverno — vale se informar sobre as condições antes de sair.",
+      "Bariloche também é um ótimo destino sem neve, entre dezembro e março, para quem prefere trilhas e passeios de lago."
+    ],
+    "suggestedItineraries": [
+      {
+        "title": "Neve em família",
+        "duration": "6 dias",
+        "description": "Dias de neve no Cerro Catedral combinados com passeios pelo Circuito Chico."
+      },
+      {
+        "title": "Bariloche + Buenos Aires",
+        "duration": "9 dias",
+        "description": "Combina a neve e os lagos de Bariloche com a vida urbana de Buenos Aires."
+      }
+    ],
+    "mapQuery": "San Carlos de Bariloche, Argentina",
+    "faq": [
+      {
+        "question": "Qual a melhor época para ver neve em Bariloche?",
+        "answer": "Os meses de julho e agosto costumam ter a melhor estrutura para esqui e maior probabilidade de neve nas pistas do Cerro Catedral."
+      },
+      {
+        "question": "Preciso levar equipamento de neve próprio?",
+        "answer": "Não. É possível alugar roupas e equipamentos de neve na cidade e próximo ao Cerro Catedral — ajudamos a organizar isso dentro do roteiro."
+      },
+      {
+        "question": "Dá para combinar Bariloche com Buenos Aires na mesma viagem?",
+        "answer": "Sim, é uma combinação comum. Avaliamos com você a melhor forma de dividir os dias entre os dois destinos."
+      },
+      {
+        "question": "Vale a pena ir a Bariloche sem esquiar?",
+        "answer": "Sim. Fora da época de neve, a cidade também oferece trilhas, passeios de barco pelo Lago Nahuel Huapi e paisagens de montanha o ano todo."
+      }
+    ]
+  },
+  {
+    "slug": "buenos-aires",
+    "flag": "🇦🇷",
+    "name": "Buenos Aires",
+    "country": "Argentina",
+    "region": "Buenos Aires",
+    "shortDescription": "Cultura, gastronomia e vida urbana a poucas horas do Brasil.",
+    "imageKey": "destinoBuenosAires",
+    "summary": "Buenos Aires tem forte vida cultural, boa gastronomia e uma identidade europeia bem particular na América do Sul. Com fácil acesso a partir de diversas capitais brasileiras, é ideal tanto para viagens curtas quanto combinada com outros destinos da Argentina.",
+    "bestTime": "Março a maio (outono) e setembro a novembro (primavera), com clima mais ameno. Dezembro a fevereiro é verão, quente e mais movimentado.",
+    "climate": "Clima temperado, com quatro estações bem definidas — verões quentes e úmidos, invernos frios (sem neve na cidade) e estações intermediárias agradáveis.",
+    "recommendedDuration": "4 a 5 dias.",
+    "attractions": [
+      "Cemitério da Recoleta e o bairro ao redor",
+      "La Boca e o tradicional Caminito",
+      "Teatro Colón, um dos teatros de ópera mais importantes do mundo",
+      "Bairro de Palermo, com parques, bares e vida noturna",
+      "Shows de tango, tradição forte da cidade"
+    ],
+    "whereToStay": [
+      "Recoleta, bairro elegante e central",
+      "Palermo, com boa vida noturna e gastronomia",
+      "Microcentro, próximo às principais atrações históricas"
+    ],
+    "whereToShop": [
+      "Alto Palermo, um dos shoppings mais conhecidos da cidade",
+      "Calle Florida, tradicional rua de comércio no microcentro",
+      "Boutiques e lojas de design em Palermo Soho"
+    ],
+    "restaurants": [
+      "Parrillas tradicionais argentinas, espalhadas por toda a cidade",
+      "Cafés históricos (\"notables\"), parte da cultura portenha",
+      "Gastronomia contemporânea concentrada em Palermo"
+    ],
+    "tips": [
+      "Prefira táxis oficiais ou aplicativos de transporte para se locomover com mais segurança.",
+      "Reserve o show de tango com antecedência, principalmente em alta temporada.",
+      "O outono e a primavera costumam ser os períodos mais agradáveis para caminhar pela cidade.",
+      "Buenos Aires combina bem com outros destinos da Argentina, como Bariloche, na mesma viagem."
+    ],
+    "suggestedItineraries": [
+      {
+        "title": "Buenos Aires expressa",
+        "duration": "4 dias",
+        "description": "Os principais bairros e atrações da cidade em um roteiro enxuto."
+      },
+      {
+        "title": "Buenos Aires + Bariloche",
+        "duration": "9 dias",
+        "description": "Combina a vida urbana de Buenos Aires com a neve e os lagos de Bariloche."
+      }
+    ],
+    "mapQuery": "Buenos Aires, Argentina",
+    "faq": [
+      {
+        "question": "Brasileiros precisam de visto para a Argentina?",
+        "answer": "Em geral, brasileiros podem entrar na Argentina apenas com RG válido dentro das regras do Mercosul, sem necessidade de visto — mas orientamos sobre a documentação atualizada durante o atendimento."
+      },
+      {
+        "question": "Qual a melhor época para visitar Buenos Aires?",
+        "answer": "Outono (março a maio) e primavera (setembro a novembro), quando o clima é mais ameno e a cidade fica muito agradável para caminhar."
+      },
+      {
+        "question": "Vale a pena assistir a um show de tango?",
+        "answer": "Sim, é uma das experiências mais tradicionais da cidade. Recomendamos reservar com antecedência, especialmente em fins de semana."
+      },
+      {
+        "question": "Dá para combinar Buenos Aires com Bariloche?",
+        "answer": "Sim, é uma combinação bastante comum entre viajantes brasileiros. Ajudamos a montar esse roteiro combinado."
+      }
+    ]
+  },
+  {
+    "slug": "ushuaia",
+    "flag": "🇦🇷",
+    "name": "Ushuaia",
+    "country": "Argentina",
+    "region": "Terra do Fogo",
+    "shortDescription": "A cidade mais austral do mundo, portal para o Canal de Beagle e para a Antártida.",
+    "imageKey": "destinoUshuaia",
+    "summary": "Conhecida como \"o fim do mundo\", Ushuaia é a cidade mais austral do planeta, cercada por montanhas, canais e uma natureza selvagem única na Patagônia argentina. É também a porta de embarque para a maioria dos cruzeiros rumo à Antártida.",
+    "bestTime": "Os meses de novembro a março (verão no hemisfério sul) têm dias mais longos e são o período mais procurado, inclusive para quem embarca em cruzeiros antárticos.",
+    "climate": "Clima subpolar, frio durante o ano todo, com verões amenos e curtos e invernos longos e rigorosos.",
+    "recommendedDuration": "3 a 5 dias.",
+    "attractions": [
+      "Parque Nacional Tierra del Fuego",
+      "Passeio de barco pelo Canal de Beagle, com vista do Farol Les Éclaireurs",
+      "Trem do Fim do Mundo (Tren del Fin del Mundo)",
+      "Observação de pinguins e leões-marinhos em passeios de barco"
+    ],
+    "whereToStay": [
+      "Região central da cidade, próxima ao porto e ao comércio"
+    ],
+    "whereToShop": [
+      "Lojas de artesanato e produtos com o tema \"fim do mundo\" no centro da cidade"
+    ],
+    "restaurants": [
+      "Restaurantes com destaque para centolla (caranguejo patagônico) e frutos do mar"
+    ],
+    "tips": [
+      "O clima muda rápido — leve roupas em camadas e um bom corta-vento mesmo no verão.",
+      "Se o objetivo for embarcar para a Antártida, vale reservar alguns dias extras de folga em Ushuaia antes do embarque."
+    ],
+    "suggestedItineraries": [
+      {
+        "title": "Ushuaia expressa",
+        "duration": "4 dias",
+        "description": "Passeio pelo Parque Nacional Tierra del Fuego e navegação pelo Canal de Beagle."
+      }
+    ],
+    "mapQuery": "Ushuaia, Argentina",
+    "faq": [
+      {
+        "question": "Ushuaia é um bom ponto de partida para a Antártida?",
+        "answer": "Sim, a maioria dos cruzeiros para a Antártida embarca a partir de Ushuaia. Vale reservar dias extras na cidade antes do embarque."
+      },
+      {
+        "question": "Qual a melhor época para visitar Ushuaia?",
+        "answer": "O verão no hemisfério sul, de novembro a março, com dias mais longos e clima mais ameno."
+      }
+    ]
+  },
+  {
+    "slug": "peru",
+    "flag": "🇵🇪",
+    "name": "Peru",
+    "country": "Peru",
+    "region": "Cusco & Vale Sagrado",
+    "shortDescription": "Machu Picchu, cultura inca e paisagens andinas de tirar o fôlego.",
+    "imageKey": "destinoPeru",
+    "summary": "O Peru reúne história, cultura inca e paisagens andinas impressionantes, com Machu Picchu como o grande destaque. Cusco e o Vale Sagrado completam um roteiro rico em cultura, gastronomia própria e cenários de montanha únicos na América do Sul.",
+    "bestTime": "De maio a setembro (temporada seca), quando as trilhas e o acesso a Machu Picchu ficam mais estáveis. De novembro a abril é temporada de chuvas na região andina.",
+    "climate": "Clima andino, seco e com dias ensolarados e noites frias entre maio e setembro; mais chuvoso entre novembro e abril, com temperaturas amenas durante o dia.",
+    "recommendedDuration": "6 a 8 dias.",
+    "attractions": [
+      "Machu Picchu, a cidadela inca mais famosa do mundo",
+      "Centro histórico de Cusco, antiga capital do Império Inca",
+      "Vale Sagrado, com vilarejos como Ollantaytambo e Pisac",
+      "Montanha de Vinicunca (Montanha das 7 Cores)",
+      "Lima, porta de entrada e polo gastronômico do país"
+    ],
+    "whereToStay": [
+      "Centro histórico de Cusco, para quem prioriza cultura e vida noturna",
+      "Vilarejos do Vale Sagrado, como Urubamba ou Ollantaytambo, para um ritmo mais tranquilo",
+      "Aguas Calientes, para quem quer ficar próximo a Machu Picchu"
+    ],
+    "whereToShop": [
+      "Mercado San Pedro, em Cusco",
+      "Lojas de tecidos e artesanato de lã de alpaca pela cidade"
+    ],
+    "restaurants": [
+      "Culinária andina tradicional em Cusco e no Vale Sagrado",
+      "Cena gastronômica contemporânea peruana em Lima"
+    ],
+    "tips": [
+      "Cusco fica a cerca de 3.400 metros de altitude — reserve um dia para aclimatação antes de trilhas mais intensas.",
+      "O acesso a Machu Picchu é limitado por dia — reserve os ingressos com bastante antecedência.",
+      "Leve roupas em camadas: as manhãs e noites são frias mesmo na temporada seca.",
+      "Considere incluir Lima no início ou fim do roteiro para conhecer a gastronomia da capital."
+    ],
+    "suggestedItineraries": [
+      {
+        "title": "Cusco & Machu Picchu",
+        "duration": "6 dias",
+        "description": "Foco no centro histórico de Cusco, no Vale Sagrado e na visita a Machu Picchu."
+      },
+      {
+        "title": "Peru completo",
+        "duration": "9 dias",
+        "description": "Combina Lima, Cusco, Vale Sagrado e Machu Picchu em um só roteiro."
+      }
+    ],
+    "mapQuery": "Cusco, Peru",
+    "faq": [
+      {
+        "question": "Preciso me preocupar com a altitude em Cusco?",
+        "answer": "Sim, Cusco fica bem acima de 3.000 metros. Recomendamos um dia de aclimatação e um ritmo mais tranquilo nos primeiros dias do roteiro."
+      },
+      {
+        "question": "Preciso reservar o ingresso para Machu Picchu com antecedência?",
+        "answer": "Sim. O número de visitantes por dia é limitado, então reservar com antecedência é essencial, principalmente na alta temporada."
+      },
+      {
+        "question": "Qual a melhor época para visitar o Peru?",
+        "answer": "De maio a setembro, na temporada seca, quando o acesso às trilhas e a Machu Picchu costuma ser mais estável."
+      },
+      {
+        "question": "Vale a pena incluir Lima no roteiro?",
+        "answer": "Sim, principalmente para quem quer conhecer a forte cena gastronômica da capital antes ou depois de Cusco."
+      }
+    ]
+  },
+  {
+    "slug": "canada",
+    "flag": "🇨🇦",
+    "name": "Canadá",
+    "country": "Canadá",
+    "region": "Ontário & Rockies",
+    "shortDescription": "Natureza exuberante, cidades cosmopolitas e paisagens para todas as estações.",
+    "imageKey": "destinoCanada",
+    "summary": "O Canadá combina cidades cosmopolitas, como Toronto, com paisagens naturais imponentes, das Cataratas do Niágara às Montanhas Rochosas. É um destino versátil, que rende tanto roteiros urbanos quanto viagens focadas em natureza, em qualquer época do ano.",
+    "bestTime": "De maio a setembro para clima ameno e passeios ao ar livre. De dezembro a fevereiro para quem busca neve e esportes de inverno.",
+    "climate": "Quatro estações bem definidas, com invernos frios e nevados (variando por região) e verões amenos a quentes.",
+    "recommendedDuration": "8 a 10 dias.",
+    "attractions": [
+      "Cataratas do Niágara",
+      "CN Tower e o centro de Toronto",
+      "Bairro histórico de Quebec (Cidade Velha)",
+      "Parque Nacional de Banff e as Montanhas Rochosas",
+      "Whistler, para quem busca neve e esportes de inverno"
+    ],
+    "whereToStay": [
+      "Downtown Toronto, central e bem conectado",
+      "Região próxima às Cataratas do Niágara, para quem prioriza esse passeio",
+      "Vilarejo de Banff, base para explorar as Montanhas Rochosas"
+    ],
+    "whereToShop": [
+      "Eaton Centre, em Toronto",
+      "Outlets nos arredores de Toronto e da região do Niágara"
+    ],
+    "restaurants": [
+      "Cena gastronômica multicultural em Toronto",
+      "Doces e produtos à base de xarope de bordo, típicos de Quebec"
+    ],
+    "tips": [
+      "Verifique a exigência de eTA (autorização eletrônica de viagem) para brasileiros antes de embarcar.",
+      "As distâncias entre as regiões do Canadá são grandes — considere voos domésticos entre o leste e o oeste do país.",
+      "Leve roupas para frio mesmo fora do inverno, especialmente nas Montanhas Rochosas.",
+      "Setembro e outubro costumam trazer paisagens de outono bastante procuradas, especialmente perto de Quebec."
+    ],
+    "suggestedItineraries": [
+      {
+        "title": "Toronto & Niágara",
+        "duration": "5 dias",
+        "description": "Foco na cidade de Toronto e num dia de passeio às Cataratas do Niágara."
+      },
+      {
+        "title": "Leste + Oeste do Canadá",
+        "duration": "12 dias",
+        "description": "Combina Toronto e Quebec com as Montanhas Rochosas, em Banff."
+      }
+    ],
+    "mapQuery": "Toronto, Canadá",
+    "faq": [
+      {
+        "question": "Brasileiros precisam de visto para o Canadá?",
+        "answer": "Depende do tipo de viagem — geralmente é necessária uma eTA (autorização eletrônica) para embarques por voo. Orientamos sobre a documentação atualizada durante o atendimento."
+      },
+      {
+        "question": "Qual a melhor época para ver as folhas de outono no Canadá?",
+        "answer": "Entre setembro e outubro, especialmente na região de Quebec e ao redor dos Grandes Lagos."
+      },
+      {
+        "question": "Dá para combinar o Canadá com Nova York?",
+        "answer": "Sim, é uma combinação possível, especialmente incluindo Toronto. Avaliamos a logística com você conforme o tempo disponível."
+      },
+      {
+        "question": "O Canadá tem neve o ano todo?",
+        "answer": "Não. A neve é mais comum entre dezembro e março, variando por região. O verão costuma ser ameno e agradável para passeios ao ar livre."
+      }
+    ]
+  },
+  {
+    "slug": "europa",
+    "flag": "🇪🇺",
+    "name": "Europa",
+    "country": "Europa",
+    "region": "Multidestino",
+    "shortDescription": "História, gastronomia e cenários de cinema em roteiros que combinam mais de um país.",
+    "imageKey": "destinoEuropa",
+    "summary": "A Europa rende roteiros que combinam cidades históricas, boa gastronomia e paisagens icônicas — sob medida tanto para quem visita o continente pela primeira vez quanto para quem já é apaixonado por ele. Cada roteiro é montado combinando os países e cidades que fazem mais sentido para o seu tempo de viagem.",
+    "bestTime": "Abril a junho e setembro a outubro, com clima agradável e menos turistas. Julho e agosto são a alta temporada, mais quentes e movimentados.",
+    "climate": "Varia bastante por região — verões quentes e secos no sul (Mediterrâneo), e verões mais amenos e invernos frios no centro e norte do continente.",
+    "recommendedDuration": "12 a 18 dias, para roteiros combinando mais de um país.",
+    "attractions": [
+      "Cidades históricas como Paris, Roma, Barcelona e Lisboa",
+      "Museus e patrimônios históricos reconhecidos mundialmente",
+      "Vilarejos e paisagens de cinema em diferentes regiões do continente",
+      "Gastronomia local, diferente a cada país do roteiro"
+    ],
+    "whereToStay": [
+      "Regiões centrais e históricas de cada cidade incluída no roteiro"
+    ],
+    "whereToShop": [
+      "Principais ruas e distritos de compras de cada cidade do roteiro"
+    ],
+    "restaurants": [
+      "Culinária local típica de cada país visitado"
+    ],
+    "tips": [
+      "Verifique a exigência de visto Schengen para brasileiros antes de montar o roteiro.",
+      "Trens de alta velocidade costumam ser práticos para distâncias médias entre cidades europeias.",
+      "Evite incluir cidades demais em pouco tempo — roteiros mais enxutos rendem uma experiência mais agradável.",
+      "A primavera e o início do outono costumam equilibrar bom clima com menos movimento turístico."
+    ],
+    "suggestedItineraries": [
+      {
+        "title": "Clássica europeia",
+        "duration": "14 dias",
+        "description": "Combina Paris, Roma e Barcelona em um roteiro pela Europa Ocidental."
+      },
+      {
+        "title": "Ibérica",
+        "duration": "10 dias",
+        "description": "Combina Lisboa, Madri e Barcelona, com foco em Portugal e Espanha."
+      }
+    ],
+    "mapQuery": "Europa",
+    "faq": [
+      {
+        "question": "Preciso de visto Schengen para a Europa?",
+        "answer": "Depende da duração e do motivo da viagem. Orientamos sobre a documentação necessária conforme os países do seu roteiro."
+      },
+      {
+        "question": "Quantos países dá para visitar em uma viagem à Europa?",
+        "answer": "Depende do tempo disponível. Recomendamos não incluir cidades demais em pouco tempo — um roteiro mais enxuto costuma render uma experiência melhor."
+      },
+      {
+        "question": "Qual a melhor época para visitar a Europa?",
+        "answer": "Abril a junho e setembro a outubro, quando o clima já está agradável e o movimento turístico é menor do que no verão."
+      },
+      {
+        "question": "Vale mais a pena ir de trem ou de avião entre as cidades?",
+        "answer": "Para distâncias médias, o trem costuma ser prático e confortável. Para trajetos mais longos, um voo de baixo custo pode valer a pena — avaliamos a melhor combinação para o seu roteiro."
+      }
+    ]
+  },
+  {
+    "slug": "caribe",
+    "flag": "🌴",
+    "name": "Caribe",
+    "country": "Caribe",
+    "region": "Multidestino",
+    "shortDescription": "Águas turquesa e resorts pensados para casais, famílias e luas de mel.",
+    "imageKey": "destinoCaribe",
+    "summary": "O Caribe reúne praias de areia branca, águas turquesa e uma estrutura de resorts pensada para descanso — o cenário perfeito para lua de mel, aniversário ou simplesmente parar o tempo por alguns dias, com diferentes ilhas e estilos para escolher.",
+    "bestTime": "De dezembro a abril, na temporada seca. De junho a novembro é a temporada de furacões na região, o que pode significar mais instabilidade no clima.",
+    "climate": "Clima tropical, quente durante o ano todo, com estação mais seca entre dezembro e abril e mais chuvosa entre junho e novembro.",
+    "recommendedDuration": "5 a 8 dias.",
+    "attractions": [
+      "Praias de areia branca e águas turquesa",
+      "Recifes de corais para mergulho e snorkel",
+      "Vilarejos e centros históricos coloniais, dependendo da ilha",
+      "Passeios de barco entre ilhas próximas"
+    ],
+    "whereToStay": [
+      "Regiões à beira-mar, voltadas para descanso e estrutura de resort"
+    ],
+    "whereToShop": [
+      "Mercados e lojas locais de artesanato, variando por ilha"
+    ],
+    "restaurants": [
+      "Culinária caribenha, com destaque para frutos do mar frescos"
+    ],
+    "tips": [
+      "Fique atento à temporada de furacões (junho a novembro) ao escolher as datas da viagem.",
+      "A escolha da ilha muda bastante o estilo da viagem — avaliamos junto com você qual combina mais com o seu roteiro.",
+      "Reserve o quarto com antecedência para garantir categorias com vista, especialmente em lua de mel.",
+      "Leve protetor solar e proteção para atividades de sol e mar durante o dia todo."
+    ],
+    "suggestedItineraries": [
+      {
+        "title": "Lua de mel no Caribe",
+        "duration": "6 dias",
+        "description": "Roteiro de descanso, com foco em praia e momentos a dois."
+      },
+      {
+        "title": "Caribe em família",
+        "duration": "7 dias",
+        "description": "Estrutura de resort e praia pensada para viajar com crianças."
+      }
+    ],
+    "mapQuery": "Caribe",
+    "faq": [
+      {
+        "question": "Qual ilha do Caribe escolher?",
+        "answer": "Depende do perfil da viagem — cada ilha tem um estilo diferente. Ajudamos a escolher com base no que você busca: descanso, vida noturna, mergulho ou lua de mel."
+      },
+      {
+        "question": "Como evitar a temporada de furacões no Caribe?",
+        "answer": "Viajar entre dezembro e abril reduz bastante o risco de instabilidade climática relacionada a furacões."
+      },
+      {
+        "question": "O Caribe é um bom destino para lua de mel?",
+        "answer": "Sim, é um dos destinos mais procurados para lua de mel, pela combinação de praia, estrutura de resort e cenários românticos."
+      },
+      {
+        "question": "Preciso de visto para o Caribe?",
+        "answer": "Depende da ilha e do país. Orientamos sobre a documentação necessária conforme o destino específico do seu roteiro."
+      }
+    ]
   }
 ]

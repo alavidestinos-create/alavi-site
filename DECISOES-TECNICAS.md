@@ -114,6 +114,25 @@ Viajante, com arquitetura orientada a dados:
   biblioteca nova.
 - **Mapa por iframe público do Google Maps** (`?output=embed`, sem chave de
   API) em vez de uma lib de mapas — leve e sem custo/dependência.
+- **Catálogo expandido para 13 destinos** (Orlando, Miami, Nova York, Califórnia,
+  Las Vegas, Havaí, Bariloche, Buenos Aires, Ushuaia, Peru, Canadá, Europa,
+  Caribe) e **Guia do Viajante para 20 artigos**, a pedido do cliente.
+  Ushuaia ficou com um perfil intencionalmente mais enxuto (menos itens em
+  atrações/roteiros/FAQ) a pedido do cliente, que vai complementar o
+  conteúdo depois. "Europa" e "Caribe" foram tratados como destinos
+  multi-país (como já eram antes do redesenho, e não como cidades únicas).
+- **Correção de bug real (27/07/2026): conteúdo sumindo no mobile.** O
+  componente `Reveal` (fade-in ao rolar a página) deixava o elemento em
+  `opacity: 0` até o `IntersectionObserver` disparar. Em conexões lentas ou
+  com rolagem rápida antes do JS terminar de carregar, o observer podia
+  nunca disparar, deixando seções inteiras da Home invisíveis (mas ainda
+  ocupando espaço) — exatamente o sintoma relatado pelo cliente em
+  print de celular. Corrigido com uma checagem imediata de "já está visível
+  ao montar" e um `setTimeout` de segurança de 1.8s que força a exibição
+  mesmo se o observer falhar, sem depender de nada além do próprio
+  componente.
+- **Ícone do Instagram no rodapé**, linkando direto para o perfil, a pedido
+  do cliente (antes só havia um link de texto).
 - **Rota do Blog renomeada para `/guia-do-viajante`**, com redirects 301
   (`/blog` → `/guia-do-viajante`, `/blog/:slug` → `/guia-do-viajante/:slug`)
   configurados em `next.config.mjs` para não quebrar links já indexados. Os

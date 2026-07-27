@@ -34,12 +34,25 @@ export function Footer() {
           <p className="mt-3 font-display text-xl font-extrabold text-white">ALAVI</p>
           <p className="mt-1 text-sm text-teal-400">Destinos &amp; Experiências</p>
           <p className="mt-4 max-w-xs text-sm text-navy-300">{siteConfig.brand.shortDescription}</p>
-          <div className="mt-5">
+          <div className="mt-5 flex flex-wrap items-center gap-3">
             <WhatsAppButton
               message={siteConfig.whatsappMessages.footer}
               label="Falar no WhatsApp"
               source="footer"
             />
+            <a
+              href={siteConfig.social.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Instagram da ALAVI: @${siteConfig.contact.instagramHandle}`}
+              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/15 text-white transition-colors hover:border-teal-400 hover:text-teal-400"
+            >
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} className="h-5 w-5">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
           </div>
         </div>
 

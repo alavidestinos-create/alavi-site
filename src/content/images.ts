@@ -29,6 +29,9 @@ export const images = {
   destinoCalifornia: unsplash("1623121013540-478557f6d9e8"),
   destinoLasVegas: unsplash("1455539002418-a4cd5aa3ec04"),
   destinoHavai: unsplash("1665513950300-127867f8c21b"),
+  destinoUshuaia: unsplash("1615656637621-5aa19f1ef847"),
+  destinoPeru: unsplash("1568805746970-0bbae56ab18b"),
+  destinoCanada: unsplash("1744937013351-99126126c2b5"),
 
   orlandoParque: unsplash("1621445944472-f252571005b6"),
   orlandoNoturno: unsplash("1679855928083-9f03b91a6daa"),

@@ -22,6 +22,18 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
     const node = ref.current;
     if (!node) return;
 
+    // Se o elemento já está visível (ou quase) no momento em que o
+    // componente monta — comum em telas pequenas, links com âncora ou
+    // conexões lentas, quando o JS termina de carregar depois de o usuário
+    // já ter rolado a página — mostra o conteúdo imediatamente, sem
+    // depender do IntersectionObserver disparar a tempo.
+    const rect = node.getBoundingClientRect();
+    const alreadyInView = rect.top < window.innerHeight && rect.bottom > 0;
+    if (alreadyInView) {
+      setVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -31,11 +43,20 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.1, rootMargin: "0px 0px -10% 0px" }
     );
 
     observer.observe(node);
-    return () => observer.disconnect();
+
+    // Rede de segurança: garante que o conteúdo nunca fique escondido
+    // permanentemente, mesmo se o observer não disparar por algum motivo
+    // (rolagem muito rápida, aba em segundo plano, navegador incomum).
+    const fallback = window.setTimeout(() => setVisible(true), 1800);
+
+    return () => {
+      observer.disconnect();
+      window.clearTimeout(fallback);
+    };
   }, []);
 
   return (
