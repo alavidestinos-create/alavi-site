@@ -65,6 +65,15 @@ export function QuoteForm() {
       whatsAppTab = null;
     }
 
+    // Redireciona a aba pro WhatsApp imediatamente, sem esperar o e-mail.
+    // O WhatsApp é o canal principal e não pode ficar refém da velocidade
+    // do envio de e-mail (handshake SMTP com o Gmail + partida a frio da
+    // função na Netlify podem levar alguns segundos). O e-mail continua
+    // sendo enviado normalmente, só que em paralelo, em segundo plano.
+    if (whatsAppTab) {
+      whatsAppTab.location.href = buildWhatsAppUrl(buildQuoteWhatsAppMessage(data));
+    }
+
     setState("submitting");
 
     // Evita que o formulário fique "travado" em "Enviando..." para sempre
@@ -82,11 +91,7 @@ export function QuoteForm() {
 
       if (response.status === 501) {
         // Nenhum destino configurado ainda: fluxo esperado enquanto o
-        // e-mail/webhook não estão definidos. Mesmo assim, abre o WhatsApp
-        // com a mensagem pronta para o cliente não perder o pedido.
-        if (whatsAppTab) {
-          whatsAppTab.location.href = buildWhatsAppUrl(buildQuoteWhatsAppMessage(data));
-        }
+        // e-mail/webhook não estão definidos. O WhatsApp já foi aberto acima.
         setState("unavailable");
         trackEvent("quote_form_submit", { result: "unavailable" });
         return;
@@ -96,18 +101,11 @@ export function QuoteForm() {
         throw new Error("submit_failed");
       }
 
-      if (whatsAppTab) {
-        whatsAppTab.location.href = buildWhatsAppUrl(buildQuoteWhatsAppMessage(data));
-      }
       setState("success");
       trackEvent("quote_form_submit", { result: "success" });
     } catch {
-      // Mesmo em caso de erro (rede, timeout, servidor fora do ar), o pedido
-      // não pode se perder: reaproveita a aba já aberta para levar o cliente
-      // direto ao WhatsApp com os dados que preencheu.
-      if (whatsAppTab) {
-        whatsAppTab.location.href = buildWhatsAppUrl(buildQuoteWhatsAppMessage(data));
-      }
+      // O WhatsApp já foi aberto acima, então o pedido não se perde mesmo
+      // que o envio de e-mail falhe (rede, timeout, servidor fora do ar).
       setState("error");
       trackEvent("quote_form_submit", { result: "error" });
     } finally {

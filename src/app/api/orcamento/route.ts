@@ -1,6 +1,13 @@
 import { NextResponse } from "next/server";
 import { validateQuoteForm } from "@/lib/validation";
-import { buildQuoteEmailHtml, buildQuoteEmailSubject, buildQuoteEmailText } from "@/lib/email";
+import {
+  buildClientConfirmationEmailHtml,
+  buildClientConfirmationEmailSubject,
+  buildClientConfirmationEmailText,
+  buildQuoteEmailHtml,
+  buildQuoteEmailSubject,
+  buildQuoteEmailText,
+} from "@/lib/email";
 import { emptyQuoteFormData, type QuoteFormData } from "@/types/quote";
 
 export const runtime = "nodejs";
@@ -107,6 +114,8 @@ async function sendQuoteEmail(data: QuoteFormData): Promise<void> {
 
   const to = process.env.ORCAMENTO_EMAIL_TO || process.env.SMTP_USER;
 
+  // 1) E-mail do lead para a ALAVI — obrigatório: se falhar, o chamador
+  //    ainda pode cair no webhook (ver POST acima), então o erro sobe.
   await transporter.sendMail({
     from: `"Site ALAVI" <${process.env.SMTP_USER}>`,
     to,
@@ -115,6 +124,25 @@ async function sendQuoteEmail(data: QuoteFormData): Promise<void> {
     text: buildQuoteEmailText(data),
     html: buildQuoteEmailHtml(data),
   });
+
+  // 2) E-mail de confirmação para o próprio cliente — best-effort: se o
+  //    cliente digitou um e-mail inválido de um jeito que passou pela
+  //    validação, ou o envio falhar por qualquer motivo, isso não pode
+  //    derrubar o pedido em si (o lead acima já foi entregue com sucesso).
+  if (data.email) {
+    try {
+      await transporter.sendMail({
+        from: `"ALAVI Destinos & Experiências" <${process.env.SMTP_USER}>`,
+        to: data.email,
+        replyTo: process.env.ORCAMENTO_EMAIL_TO || process.env.SMTP_USER,
+        subject: buildClientConfirmationEmailSubject(),
+        text: buildClientConfirmationEmailText(data),
+        html: buildClientConfirmationEmailHtml(data),
+      });
+    } catch (error) {
+      console.error("Falha ao enviar e-mail de confirmação ao cliente:", error);
+    }
+  }
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {

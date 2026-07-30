@@ -13,6 +13,34 @@ export function buildWhatsAppUrl(message: string): string {
 }
 
 /**
+ * Normaliza um numero de WhatsApp digitado pelo cliente (ex: "(11) 99999-9999",
+ * sem DDI) para o formato exigido pelo wa.me. Assume Brasil (+55) quando o
+ * numero informado nao ja inclui um DDI (ou seja, tem 10 ou 11 digitos —
+ * DDD + numero).
+ */
+export function normalizeBrazilianPhoneDigits(rawPhone: string): string {
+  const digits = rawPhone.replace(/\D/g, "");
+  if (digits.length <= 11 && digits.length > 0) {
+    return `55${digits}`;
+  }
+  return digits;
+}
+
+/**
+ * Monta o link de WhatsApp para a ALAVI falar diretamente com o cliente que
+ * preencheu o formulario de orcamento — usado no e-mail de lead, para que
+ * quem recebe o pedido consiga clicar e ja abrir a conversa com o cliente.
+ */
+export function buildClientWhatsAppUrl(data: Pick<QuoteFormData, "whatsapp" | "fullName" | "destination">): string {
+  const number = normalizeBrazilianPhoneDigits(data.whatsapp);
+  const firstName = data.fullName.trim().split(/\s+/)[0] || "";
+  const greeting = firstName ? `Olá ${firstName}!` : "Olá!";
+  const destinationPart = data.destination ? ` para ${data.destination}` : "";
+  const message = `${greeting} Aqui é da ALAVI Destinos, recebemos seu pedido de orçamento${destinationPart} e já vamos te ajudar a planejar essa viagem.`;
+  return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+}
+
+/**
  * Gera uma mensagem de WhatsApp organizada a partir dos dados do
  * formulario de orcamento, incluindo apenas os campos essenciais para o
  * primeiro contato (evita expor detalhes sensiveis desnecessarios, como
