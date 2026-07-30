@@ -69,6 +69,8 @@ export const siteConfig = {
       `Olá! Vim pelo site da ALAVI e tenho interesse no serviço de ${servico}. Podem me ajudar?`,
     destino: (destino: string) =>
       `Olá! Vim pelo site da ALAVI e tenho interesse em uma viagem para ${destino}. Podem me ajudar a montar um roteiro?`,
+    experiencia: (tema: string) =>
+      `Olá! Vim pelo site da ALAVI e tenho interesse em uma viagem com o tema "${tema}". Podem me ajudar a montar um roteiro?`,
     pontosMilhas: "Olá! Vim pelo site da ALAVI e gostaria de entender melhor como usar meus pontos ou milhas em uma viagem.",
     parques: "Olá! Vim pelo site da ALAVI e gostaria de cotar ingressos para os parques da minha viagem.",
     footer: "Olá! Vim pelo site da ALAVI e gostaria de falar com um especialista em viagens.",

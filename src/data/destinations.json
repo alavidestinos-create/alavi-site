@@ -836,6 +836,366 @@
     ]
   },
   {
+    "slug": "franca",
+    "flag": "🇫🇷",
+    "name": "França",
+    "country": "França",
+    "region": "Paris & Vale do Loire",
+    "shortDescription": "Paris, castelos, vinícolas e a atmosfera romântica que faz da França um clássico europeu.",
+    "imageKey": "destinoFranca",
+    "summary": "A França combina a energia cultural de Paris com vilarejos charmosos e paisagens de tirar o fôlego, sendo um dos destinos mais desejados por quem viaja à Europa pela primeira vez ou já é apaixonado pelo continente.",
+    "bestTime": "Abril a junho e setembro a outubro, com clima ameno e menos turistas. Julho e agosto são a alta temporada, mais quentes e cheios.",
+    "climate": "Clima temperado, com verões amenos a quentes e invernos frios, ocasionalmente com neve em Paris.",
+    "recommendedDuration": "7 a 10 dias, incluindo Paris e ao menos uma região próxima.",
+    "attractions": [
+      "Torre Eiffel e o Trocadéro",
+      "Museu do Louvre e Museu d'Orsay",
+      "Champs-Élysées e Arco do Triunfo",
+      "Palácio de Versalhes",
+      "Vale do Loire e seus castelos históricos"
+    ],
+    "whereToStay": [
+      "Regiões centrais de Paris, como Le Marais ou Saint-Germain-des-Prés",
+      "Próximo aos Champs-Élysées, para quem prioriza compras e vida noturna",
+      "Vilarejos do Vale do Loire, para quem inclui um roteiro de castelos"
+    ],
+    "whereToShop": [
+      "Champs-Élysées e as grandes lojas de departamento parisienses",
+      "Le Marais, com boutiques e lojas independentes",
+      "Outlets nos arredores de Paris"
+    ],
+    "restaurants": [
+      "Bistrôs tradicionais franceses espalhados por toda a cidade",
+      "Culinária contemporânea em Le Marais e Saint-Germain",
+      "Cafés históricos parisienses"
+    ],
+    "tips": [
+      "Reserve o Louvre e Versalhes com antecedência para evitar filas longas.",
+      "O metrô é a forma mais prática de circular por Paris.",
+      "Considere um dia de bate-volta para o Vale do Loire ou a região de Champagne.",
+      "Leve roupas em camadas — o clima pode mudar ao longo do dia."
+    ],
+    "suggestedItineraries": [
+      {
+        "title": "Paris essencial",
+        "duration": "5 dias",
+        "description": "Os principais pontos turísticos e museus de Paris em um roteiro enxuto."
+      },
+      {
+        "title": "Paris + Vale do Loire",
+        "duration": "9 dias",
+        "description": "Combina a capital com um roteiro de castelos históricos pelo interior do país."
+      }
+    ],
+    "mapQuery": "Paris, França",
+    "faq": [
+      {
+        "question": "Preciso de visto Schengen para a França?",
+        "answer": "Depende da duração e do motivo da viagem. Orientamos sobre a documentação necessária durante o atendimento."
+      },
+      {
+        "question": "Quantos dias são recomendados para Paris?",
+        "answer": "De 4 a 5 dias já permitem conhecer os principais pontos turísticos da cidade com um bom ritmo."
+      },
+      {
+        "question": "Vale a pena sair de Paris durante a viagem?",
+        "answer": "Sim, o Vale do Loire e a região de Champagne ficam a poucas horas e rendem bate-voltas ou uma extensão do roteiro."
+      },
+      {
+        "question": "Qual a melhor época para visitar a França?",
+        "answer": "Abril a junho e setembro a outubro, quando o clima está agradável e o movimento turístico é menor do que no verão."
+      }
+    ]
+  },
+  {
+    "slug": "italia",
+    "flag": "🇮🇹",
+    "name": "Itália",
+    "country": "Itália",
+    "region": "Roma, Toscana & Amalfi",
+    "shortDescription": "História milenar, gastronomia icônica e paisagens que parecem pintura, de Roma à Costa Amalfitana.",
+    "imageKey": "destinoItalia",
+    "summary": "A Itália reúne história antiga, arte renascentista e uma das gastronomias mais celebradas do mundo, com roteiros que vão de Roma e Florença até os vilarejos coloridos da Costa Amalfitana.",
+    "bestTime": "Abril a junho e setembro a outubro, com clima agradável. Julho e agosto são quentes e concorridos, especialmente no litoral.",
+    "climate": "Clima mediterrâneo, com verões quentes e secos e invernos amenos, com mais chuva.",
+    "recommendedDuration": "10 a 14 dias, para combinar Roma, Toscana e a costa.",
+    "attractions": [
+      "Coliseu e Fórum Romano",
+      "Vaticano e a Capela Sistina",
+      "Torre de Pisa e o centro histórico de Florença",
+      "Costa Amalfitana, com Positano e Amalfi",
+      "Canais e a arquitetura única de Veneza"
+    ],
+    "whereToStay": [
+      "Centro histórico de Roma, próximo às principais atrações",
+      "Florença, como base para explorar a Toscana",
+      "Vilarejos da Costa Amalfitana, para quem prioriza o litoral"
+    ],
+    "whereToShop": [
+      "Via del Corso e Via Condotti, em Roma",
+      "Ponte Vecchio, em Florença, com joalherias tradicionais",
+      "Ateliês e lojas de artesanato pela região da Toscana"
+    ],
+    "restaurants": [
+      "Trattorias tradicionais em Roma e Florença",
+      "Culinária costeira e frutos do mar na Costa Amalfitana",
+      "Vinícolas e degustações na região da Toscana"
+    ],
+    "tips": [
+      "Reserve o Vaticano e a Galleria degli Uffizi com antecedência.",
+      "Trens de alta velocidade conectam bem as principais cidades italianas.",
+      "A Costa Amalfitana tem estradas estreitas — vale contratar transfer em vez de dirigir.",
+      "Evite julho e agosto se quiser fugir das multidões e do calor mais intenso."
+    ],
+    "suggestedItineraries": [
+      {
+        "title": "Roma & Florença",
+        "duration": "7 dias",
+        "description": "Os clássicos da Itália central, entre história antiga e renascença."
+      },
+      {
+        "title": "Itália clássica",
+        "duration": "12 dias",
+        "description": "Combina Roma, a Toscana e a Costa Amalfitana em um só roteiro."
+      }
+    ],
+    "mapQuery": "Roma, Itália",
+    "faq": [
+      {
+        "question": "Preciso de visto Schengen para a Itália?",
+        "answer": "Depende da duração e do motivo da viagem. Orientamos sobre a documentação necessária durante o atendimento."
+      },
+      {
+        "question": "Dá para combinar a Itália com outros países da Europa?",
+        "answer": "Sim, é uma combinação comum, especialmente com França e Espanha. Avaliamos a melhor logística para o seu tempo disponível."
+      },
+      {
+        "question": "Qual a melhor época para visitar a Itália?",
+        "answer": "Abril a junho e setembro a outubro, com clima agradável e menos turistas do que no verão."
+      },
+      {
+        "question": "A Costa Amalfitana vale a pena incluir no roteiro?",
+        "answer": "Sim, é um dos trechos mais bonitos da Itália, mas vale reservar dias específicos para ela, já que as estradas da região pedem um ritmo mais tranquilo."
+      }
+    ]
+  },
+  {
+    "slug": "espanha",
+    "flag": "🇪🇸",
+    "name": "Espanha",
+    "country": "Espanha",
+    "region": "Barcelona & Madri",
+    "shortDescription": "Arquitetura de Gaudí, tapas, praias e uma vida noturna que começa tarde e não para.",
+    "imageKey": "destinoEspanha",
+    "summary": "A Espanha combina cidades vibrantes como Barcelona e Madri com praias mediterrâneas e uma cultura gastronômica própria, sendo um destino que agrada tanto quem busca cultura quanto quem quer descanso.",
+    "bestTime": "Abril a junho e setembro a outubro, com clima ameno. O verão é quente, especialmente no interior, mas ótimo para praias.",
+    "climate": "Clima mediterrâneo na costa e mais continental no interior — verões quentes e secos, invernos amenos no litoral.",
+    "recommendedDuration": "8 a 12 dias, para combinar Barcelona, Madri e eventualmente o sul do país.",
+    "attractions": [
+      "Sagrada Família e o Park Güell, em Barcelona",
+      "Museu do Prado e o Palácio Real, em Madri",
+      "Alhambra, em Granada",
+      "Praias da Costa Brava e da Costa del Sol",
+      "Bairros históricos como o Gótico, em Barcelona, e La Latina, em Madri"
+    ],
+    "whereToStay": [
+      "Eixample ou Bairro Gótico, em Barcelona",
+      "Centro ou Salamanca, em Madri",
+      "Regiões litorâneas, para quem prioriza praia"
+    ],
+    "whereToShop": [
+      "Passeig de Gràcia, em Barcelona",
+      "Gran Vía, em Madri",
+      "Mercados tradicionais, como La Boqueria"
+    ],
+    "restaurants": [
+      "Bares de tapas espalhados por toda a Espanha",
+      "Culinária catalã em Barcelona",
+      "Gastronomia contemporânea em Madri"
+    ],
+    "tips": [
+      "Reserve a Sagrada Família e a Alhambra com antecedência — os ingressos esgotam rápido.",
+      "Trens de alta velocidade conectam Barcelona e Madri em poucas horas.",
+      "Os espanhóis costumam jantar tarde — muitos restaurantes abrem só após as 20h.",
+      "Considere estender o roteiro até a Andaluzia se tiver mais tempo disponível."
+    ],
+    "suggestedItineraries": [
+      {
+        "title": "Barcelona & Madri",
+        "duration": "8 dias",
+        "description": "As duas principais cidades da Espanha em um roteiro equilibrado."
+      },
+      {
+        "title": "Espanha completa",
+        "duration": "12 dias",
+        "description": "Combina Barcelona, Madri e a Andaluzia, incluindo Granada e a Alhambra."
+      }
+    ],
+    "mapQuery": "Barcelona, Espanha",
+    "faq": [
+      {
+        "question": "Preciso de visto Schengen para a Espanha?",
+        "answer": "Depende da duração e do motivo da viagem. Orientamos sobre a documentação necessária durante o atendimento."
+      },
+      {
+        "question": "Barcelona ou Madri: por onde começar?",
+        "answer": "Não há uma resposta única — depende do seu perfil de viagem. Ajudamos a montar o roteiro considerando o que você mais valoriza."
+      },
+      {
+        "question": "Qual a melhor época para visitar a Espanha?",
+        "answer": "Abril a junho e setembro a outubro, com clima agradável e menos turistas do que no verão."
+      },
+      {
+        "question": "Vale a pena incluir a Andaluzia no roteiro?",
+        "answer": "Sim, especialmente para quem quer conhecer Granada e a Alhambra. Recomendamos pelo menos 12 dias para incluir essa região com calma."
+      }
+    ]
+  },
+  {
+    "slug": "japao",
+    "flag": "🇯🇵",
+    "name": "Japão",
+    "country": "Japão",
+    "region": "Tóquio & Kyoto",
+    "shortDescription": "Tradição e modernidade lado a lado, entre templos milenares e a energia de Tóquio.",
+    "imageKey": "destinoJapao",
+    "summary": "O Japão combina tecnologia de ponta com tradições milenares, oferecendo um dos roteiros mais únicos da Ásia — de templos centenários em Kyoto à energia inconfundível de Tóquio.",
+    "bestTime": "Março a maio, época da florada das cerejeiras, e setembro a novembro, no outono, com temperaturas agradáveis. O verão é quente e úmido.",
+    "climate": "Quatro estações bem definidas, com verões quentes e úmidos e invernos frios, com neve em algumas regiões.",
+    "recommendedDuration": "12 a 16 dias, para conhecer com calma diferentes regiões.",
+    "attractions": [
+      "Templos e o cruzamento de Shibuya, em Tóquio",
+      "Distrito histórico de Gion e os templos de Kyoto",
+      "Monte Fuji",
+      "Parque dos Cervos, em Nara",
+      "Osaka e sua cena gastronômica"
+    ],
+    "whereToStay": [
+      "Shinjuku ou Shibuya, em Tóquio, por localização e vida noturna",
+      "Centro histórico de Kyoto, próximo aos templos",
+      "Osaka, como base para bate-voltas pela região"
+    ],
+    "whereToShop": [
+      "Ginza e Shibuya, em Tóquio",
+      "Lojas tradicionais e mercados em Kyoto",
+      "Dotonbori, em Osaka"
+    ],
+    "restaurants": [
+      "Culinária japonesa tradicional em Kyoto",
+      "Cena gastronômica moderna e izakayas em Tóquio",
+      "Rua da comida de rua em Osaka"
+    ],
+    "tips": [
+      "O trem-bala (Shinkansen) é a forma mais prática de circular entre as cidades.",
+      "Considere o JR Pass antes de embarcar, se o roteiro incluir várias cidades.",
+      "Muitos restaurantes menores não aceitam cartão — leve dinheiro em espécie.",
+      "Respeite os costumes locais, como tirar os sapatos em templos e alguns restaurantes."
+    ],
+    "suggestedItineraries": [
+      {
+        "title": "Tóquio & Kyoto",
+        "duration": "10 dias",
+        "description": "Os destaques da capital moderna e da antiga capital imperial."
+      },
+      {
+        "title": "Japão completo",
+        "duration": "15 dias",
+        "description": "Combina Tóquio, Kyoto, Osaka e Nara em um roteiro mais completo."
+      }
+    ],
+    "mapQuery": "Tóquio, Japão",
+    "faq": [
+      {
+        "question": "Brasileiros precisam de visto para o Japão?",
+        "answer": "Depende das regras vigentes no momento da viagem. Orientamos sobre a documentação atualizada durante o atendimento."
+      },
+      {
+        "question": "Qual a melhor época para ver as cerejeiras floridas?",
+        "answer": "Geralmente entre março e abril, mas a data exata varia um pouco a cada ano conforme o clima."
+      },
+      {
+        "question": "Vale a pena comprar o JR Pass?",
+        "answer": "Depende do roteiro. Para quem vai visitar várias cidades usando o trem-bala, costuma valer a pena — avaliamos isso caso a caso."
+      },
+      {
+        "question": "Quantos dias são recomendados para o Japão?",
+        "answer": "De 12 a 16 dias permitem conhecer bem Tóquio, Kyoto e outras regiões sem correria."
+      }
+    ]
+  },
+  {
+    "slug": "dubai",
+    "flag": "🇦🇪",
+    "name": "Dubai",
+    "country": "Emirados Árabes Unidos",
+    "region": "Dubai",
+    "shortDescription": "Luxo, arquitetura futurista e experiências no deserto, em uma cidade que não para de se reinventar.",
+    "imageKey": "destinoDubai",
+    "summary": "Dubai é sinônimo de luxo e modernidade, com arranha-céus impressionantes, shoppings gigantes e experiências únicas no deserto — um destino que funciona tanto como viagem própria quanto como escala rumo à Ásia ou à Oceania.",
+    "bestTime": "Novembro a março, com temperaturas mais amenas. Os meses de verão (junho a agosto) podem ultrapassar os 40°C.",
+    "climate": "Clima desértico, extremamente quente e seco no verão, com invernos amenos e agradáveis.",
+    "recommendedDuration": "5 a 7 dias.",
+    "attractions": [
+      "Burj Khalifa, o edifício mais alto do mundo",
+      "Dubai Mall e a Dubai Fountain",
+      "Passeio de safári pelo deserto",
+      "Palm Jumeirah e o Burj Al Arab",
+      "Souk tradicional e o bairro histórico de Al Fahidi"
+    ],
+    "whereToStay": [
+      "Downtown Dubai, próximo ao Burj Khalifa e ao Dubai Mall",
+      "Dubai Marina, com vida noturna e orla",
+      "Palm Jumeirah, para quem prioriza resorts de praia"
+    ],
+    "whereToShop": [
+      "Dubai Mall, um dos maiores shoppings do mundo",
+      "Mall of the Emirates",
+      "Souks tradicionais de ouro e especiarias"
+    ],
+    "restaurants": [
+      "Alta gastronomia internacional nos grandes hotéis",
+      "Culinária árabe tradicional nos souks",
+      "Restaurantes com vista para o Burj Khalifa"
+    ],
+    "tips": [
+      "O calor é intenso mesmo à noite no verão — prefira viajar entre novembro e março.",
+      "O passeio de safári no deserto costuma ser um dos destaques da viagem.",
+      "Dubai tem código de vestimenta mais conservador em locais públicos e religiosos.",
+      "Considere combinar Dubai com um destino na Ásia, já que funciona bem como escala."
+    ],
+    "suggestedItineraries": [
+      {
+        "title": "Dubai expressa",
+        "duration": "4 dias",
+        "description": "Os principais pontos da cidade e um passeio de safári no deserto."
+      },
+      {
+        "title": "Dubai + Ásia",
+        "duration": "6 dias",
+        "description": "Dubai como escala estendida a caminho de outro destino asiático."
+      }
+    ],
+    "mapQuery": "Dubai, Emirados Árabes Unidos",
+    "faq": [
+      {
+        "question": "Brasileiros precisam de visto para Dubai?",
+        "answer": "Depende das regras vigentes no momento da viagem. Orientamos sobre a documentação atualizada durante o atendimento."
+      },
+      {
+        "question": "Qual a melhor época para visitar Dubai por causa do calor?",
+        "answer": "Os meses de novembro a março têm temperaturas bem mais amenas. O verão pode ultrapassar os 40°C durante o dia."
+      },
+      {
+        "question": "Vale a pena fazer o passeio de safári no deserto?",
+        "answer": "Sim, é uma das experiências mais procuradas por quem visita Dubai, geralmente incluindo jantar e atividades ao entardecer."
+      },
+      {
+        "question": "Existe um código de vestimenta em Dubai?",
+        "answer": "Em locais públicos e religiosos, recomenda-se um vestuário mais discreto. Em hotéis, resorts e praias privadas, as regras são mais flexíveis."
+      }
+    ]
+  },
+  {
     "slug": "caribe",
     "flag": "🌴",
     "name": "Caribe",

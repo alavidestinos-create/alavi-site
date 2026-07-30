@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { DestinationsHighlight } from "@/components/sections/DestinationsHighlight";
+import { Experiences } from "@/components/sections/Experiences";
 import { OrlandoSection } from "@/components/sections/OrlandoSection";
 import { ServicesOverview } from "@/components/sections/ServicesOverview";
 import { HowItWorks } from "@/components/sections/HowItWorks";
@@ -25,6 +26,7 @@ export default function HomePage() {
     <>
       <Hero />
       <DestinationsHighlight />
+      <Experiences />
       <OrlandoSection />
       <ServicesOverview />
       <HowItWorks />

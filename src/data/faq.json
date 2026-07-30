@@ -30,5 +30,33 @@
   {
     "question": "Posso comprar apenas os ingressos?",
     "answer": "Sim. Também ajudamos quem já organizou o restante da viagem e precisa apenas de orientação e cotação para os ingressos dos parques."
+  },
+  {
+    "question": "Como funciona o uso de pontos e milhas?",
+    "answer": "Avaliamos os pontos e milhas que você já tem (cartão de crédito, programas de fidelidade de companhias aéreas) e buscamos a melhor forma de usá-los no seu roteiro, incluindo transferências entre programas quando fazem sentido. Você entende as opções antes de decidir."
+  },
+  {
+    "question": "Vocês atendem grupos e viagens corporativas?",
+    "answer": "Sim. Organizamos viagens em grupo (família, amigos, turmas) e também atendimento corporativo, com um ponto de contato único para cuidar de passagens, hospedagem e detalhes de todos os viajantes."
+  },
+  {
+    "question": "Dá para parcelar a viagem?",
+    "answer": "As condições de pagamento variam por fornecedor e forma de pagamento escolhida. Explicamos as opções disponíveis para o seu roteiro durante o atendimento, para você decidir com clareza."
+  },
+  {
+    "question": "Qual a diferença entre comprar direto e por uma agência?",
+    "answer": "Ao comprar com a ALAVI, você tem um consultor acompanhando toda a viagem — da escolha das melhores opções até o suporte se algo precisar mudar — em vez de resolver sozinho cada etapa em sites e canais diferentes."
+  },
+  {
+    "question": "E se eu precisar cancelar ou remarcar?",
+    "answer": "As regras de cancelamento e remarcação dependem da companhia aérea, hotel ou fornecedor de cada reserva. Orientamos sobre as condições no momento da compra e ajudamos a resolver caso você precise fazer alguma alteração depois."
+  },
+  {
+    "question": "Bebês e crianças pequenas pagam passagem?",
+    "answer": "As regras variam por companhia aérea e faixa etária. Explicamos as condições aplicáveis ao seu roteiro ao montar o orçamento, incluindo bebês de colo e crianças."
+  },
+  {
+    "question": "Depois que a viagem é comprada, vocês continuam ajudando?",
+    "answer": "Sim. Nosso atendimento continua até você voltar da viagem — para dúvidas, imprevistos ou ajustes de última hora, você fala diretamente com quem organizou o seu roteiro."
   }
 ]

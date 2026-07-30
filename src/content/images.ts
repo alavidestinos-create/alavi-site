@@ -32,6 +32,11 @@ export const images = {
   destinoUshuaia: unsplash("1615656637621-5aa19f1ef847"),
   destinoPeru: unsplash("1568805746970-0bbae56ab18b"),
   destinoCanada: unsplash("1744937013351-99126126c2b5"),
+  destinoFranca: unsplash("1431274172761-fca41d930114"),
+  destinoItalia: unsplash("1514896856000-91cb6de818e0"),
+  destinoEspanha: unsplash("1745091723338-cbe6561908ea"),
+  destinoJapao: unsplash("1741097574041-d70d3fe6a3ab"),
+  destinoDubai: unsplash("1746731341047-76b2652ea843"),
 
   orlandoParque: unsplash("1621445944472-f252571005b6"),
   orlandoNoturno: unsplash("1679855928083-9f03b91a6daa"),
@@ -42,6 +47,8 @@ export const images = {
   luaDeMel: unsplash("1759758844140-a4389568d86a"),
   familiaViajando: unsplash("1695425812104-8a9963d58887"),
   resortLuxo: unsplash("1758448756167-88dc934c58e4"),
+  experienciaClasseExecutiva: unsplash("1706921271123-c3bef3d8a8c1"),
+  experienciaAventura: unsplash("1747985323857-5c1c16b2ac47"),
 
   sobre: unsplash("1758448756167-88dc934c58e4"),
 
