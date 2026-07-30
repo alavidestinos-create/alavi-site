@@ -53,7 +53,11 @@ export default function ArticlePage({ params }: ArticlePageProps) {
     image: post.coverImage,
     datePublished: post.publishedAt,
     author: { "@type": "Organization", name: siteConfig.brand.fullName },
-    publisher: { "@type": "Organization", name: siteConfig.brand.fullName },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.brand.fullName,
+      logo: { "@type": "ImageObject", url: `${siteConfig.url}/brand/logo-nova.png` },
+    },
     mainEntityOfPage: `${siteConfig.url}/guia-do-viajante/${post.slug}`,
   };
 

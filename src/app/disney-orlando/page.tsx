@@ -85,7 +85,7 @@ export default function DisneyOrlandoPage() {
                   />
                 </div>
                 <div className="p-6">
-                  <h2 className="font-display text-lg font-medium text-navy-900">{topic.title}</h2>
+                  <h2 className="font-display text-lg font-semibold text-navy-900">{topic.title}</h2>
                   <p className="mt-2 text-sm leading-relaxed text-navy-700">{topic.description}</p>
                 </div>
               </div>

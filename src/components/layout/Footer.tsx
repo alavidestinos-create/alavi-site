@@ -26,7 +26,7 @@ export function Footer() {
         <div>
           <Image src="/brand/logo-nova.png" alt="ALAVI Destinos & Experiências" width={145} height={104} className="h-11 w-auto" />
           <p className="mt-3 font-display text-xl font-extrabold text-white">ALAVI</p>
-          <p className="mt-1 text-sm text-teal-400">Destinos &amp; Experiências</p>
+          <p className="mt-1 text-sm text-teal-300">Destinos &amp; Experiências</p>
           <p className="mt-4 max-w-xs text-sm text-navy-300">{siteConfig.brand.shortDescription}</p>
           <div className="mt-5 flex flex-wrap items-center gap-3">
             <WhatsAppButton
@@ -39,7 +39,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Instagram da ALAVI: @${siteConfig.contact.instagramHandle}`}
-              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/15 text-white transition-colors hover:border-teal-400 hover:text-teal-400"
+              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/15 text-white transition-colors hover:border-teal-400 hover:text-teal-300"
             >
               <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} className="h-5 w-5">
                 <rect x="3" y="3" width="18" height="18" rx="5" />
@@ -55,7 +55,7 @@ export function Footer() {
           <ul className="mt-4 space-y-2 text-sm">
             {siteLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="text-navy-300 hover:text-teal-400">
+                <Link href={link.href} className="text-navy-300 hover:text-teal-300">
                   {link.label}
                 </Link>
               </li>
@@ -73,7 +73,7 @@ export function Footer() {
           <ul className="mt-4 space-y-2 text-sm">
             {legalLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="text-navy-300 hover:text-teal-400">
+                <Link href={link.href} className="text-navy-300 hover:text-teal-300">
                   {link.label}
                 </Link>
               </li>
@@ -83,7 +83,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-alavi flex flex-col gap-2 py-6 text-xs text-navy-400 sm:flex-row sm:items-center sm:justify-between">
+        <div className="container-alavi flex flex-col gap-2 py-6 text-xs text-navy-300 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} {siteConfig.brand.fullName}. Todos os direitos reservados.
           </p>

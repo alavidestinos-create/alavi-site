@@ -479,13 +479,18 @@ export function QuoteForm() {
         )}
       </fieldset>
 
-      <button
-        type="submit"
-        disabled={state === "submitting"}
-        className="inline-flex w-full items-center justify-center rounded-full bg-navy-900 px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-navy-800 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
-      >
-        {state === "submitting" ? "Enviando..." : "Solicitar orçamento"}
-      </button>
+      <div>
+        <button
+          type="submit"
+          disabled={state === "submitting"}
+          className="inline-flex w-full items-center justify-center rounded-full bg-navy-900 px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-navy-800 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        >
+          {state === "submitting" ? "Enviando..." : "Solicitar orçamento"}
+        </button>
+        <p className="mt-3 text-xs text-navy-500">
+          Sem compromisso — um consultor entra em contato para dar continuidade ao seu pedido.
+        </p>
+      </div>
     </form>
   );
 }

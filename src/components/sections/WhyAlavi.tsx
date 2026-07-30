@@ -32,7 +32,7 @@ export function WhyAlavi() {
           {reasons.map((reason, index) => (
             <Reveal key={reason.title} delay={index * 100} className="text-center sm:text-left">
               <span className="font-display text-4xl font-medium text-teal-700/40">0{index + 1}</span>
-              <h3 className="mt-3 font-display text-lg font-medium text-navy-900">{reason.title}</h3>
+              <h3 className="mt-3 font-display text-lg font-semibold text-navy-900">{reason.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-navy-700">{reason.description}</p>
             </Reveal>
           ))}

@@ -35,7 +35,7 @@ export function HowItWorks() {
           {steps.map((step, index) => (
             <Reveal key={step.number} delay={index * 100}>
               <span className="font-display text-3xl font-medium text-teal-700">{step.number}</span>
-              <h3 className="mt-3 font-display text-base font-medium text-navy-900">{step.title}</h3>
+              <h3 className="mt-3 font-display text-lg font-semibold text-navy-900">{step.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-navy-700">{step.description}</p>
             </Reveal>
           ))}

@@ -45,7 +45,7 @@ export function CookieConsent() {
           Usamos cookies essenciais para o funcionamento do site e, mediante seu
           consentimento, cookies de análise para entender como o site é usado.
           Saiba mais na{" "}
-          <Link href="/cookies" className="underline hover:text-teal-400">
+          <Link href="/cookies" className="underline hover:text-teal-300">
             Política de Cookies
           </Link>
           .
@@ -67,13 +67,13 @@ export function CookieConsent() {
           </button>
         </div>
       </div>
-      <p className="container-alavi mt-2 text-[11px] text-navy-400">
+      <p className="container-alavi mt-2 text-[11px] text-navy-300">
         Crafted by{" "}
         <a
           href="https://secureprivacy.ai"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline hover:text-teal-400"
+          className="underline hover:text-teal-300"
         >
           Secure Privacy
         </a>

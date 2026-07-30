@@ -12,6 +12,8 @@ export function StructuredData() {
     description: siteConfig.seo.defaultDescription,
     email: siteConfig.contact.email,
     telephone: siteConfig.contact.isWhatsappConfigured ? `+${siteConfig.contact.whatsappNumber}` : undefined,
+    image: `${siteConfig.url}/brand/logo-nova.png`,
+    logo: `${siteConfig.url}/brand/logo-nova.png`,
     address: {
       "@type": "PostalAddress",
       streetAddress: addressDetails.streetAddress,
