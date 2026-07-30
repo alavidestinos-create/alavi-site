@@ -15,6 +15,7 @@ export function QuoteForm() {
   const [data, setData] = useState<QuoteFormData>(emptyQuoteFormData);
   const [errors, setErrors] = useState<QuoteFormErrors>({});
   const [state, setState] = useState<SubmitState>("idle");
+  const [showErrorSummary, setShowErrorSummary] = useState(false);
   const hasStarted = useRef(false);
 
   function update<K extends keyof QuoteFormData>(key: K, value: QuoteFormData[K]) {
@@ -31,23 +32,52 @@ export function QuoteForm() {
     const validationErrors = validateQuoteForm(data);
     setErrors(validationErrors);
 
-    if (Object.keys(validationErrors).length > 0) {
+    const invalidKeys = Object.keys(validationErrors);
+    if (invalidKeys.length > 0) {
+      // Nunca falhar em silêncio: mostra um aviso destacado no topo e leva o
+      // usuário direto até o primeiro campo com problema, mesmo que ele
+      // esteja fora da área visível no momento do envio.
+      setShowErrorSummary(true);
+      const firstInvalidId = invalidKeys[0];
+      const firstInvalidField = firstInvalidId ? document.getElementById(firstInvalidId) : null;
+      firstInvalidField?.scrollIntoView({ behavior: "smooth", block: "center" });
+      if (firstInvalidField instanceof HTMLElement) {
+        firstInvalidField.focus({ preventScroll: true });
+      }
+      trackEvent("quote_form_validation_error", { fields: invalidKeys.join(",") });
       return;
     }
+
+    setShowErrorSummary(false);
 
     // Abre uma aba em branco de forma síncrona (ainda dentro do clique do
     // usuário) e só preenche o destino depois que o envio terminar. Isso
     // evita que o navegador bloqueie a abertura como pop-up, já que a
     // chamada assíncrona ao servidor aconteceria depois do gesto de clique.
-    const whatsAppTab = window.open("", "_blank");
+    // Protegido em try/catch: alguns navegadores/extensões podem lançar uma
+    // exceção (em vez de simplesmente retornar null) ao bloquear o pop-up —
+    // sem essa proteção, o restante da função nunca chegava a rodar e o
+    // envio parecia não fazer nada.
+    let whatsAppTab: Window | null = null;
+    try {
+      whatsAppTab = window.open("", "_blank");
+    } catch {
+      whatsAppTab = null;
+    }
 
     setState("submitting");
+
+    // Evita que o formulário fique "travado" em "Enviando..." para sempre
+    // caso a função da Netlify demore demais ou nunca responda.
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 20000);
 
     try {
       const response = await fetch("/api/orcamento", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
+        signal: controller.signal,
       });
 
       if (response.status === 501) {
@@ -72,9 +102,16 @@ export function QuoteForm() {
       setState("success");
       trackEvent("quote_form_submit", { result: "success" });
     } catch {
-      whatsAppTab?.close();
+      // Mesmo em caso de erro (rede, timeout, servidor fora do ar), o pedido
+      // não pode se perder: reaproveita a aba já aberta para levar o cliente
+      // direto ao WhatsApp com os dados que preencheu.
+      if (whatsAppTab) {
+        whatsAppTab.location.href = buildWhatsAppUrl(buildQuoteWhatsAppMessage(data));
+      }
       setState("error");
       trackEvent("quote_form_submit", { result: "error" });
+    } finally {
+      clearTimeout(timeout);
     }
   }
 
@@ -128,8 +165,22 @@ export function QuoteForm() {
     <form onSubmit={handleSubmit} noValidate className="space-y-8">
       {state === "error" && (
         <div role="alert" className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700">
-          Não foi possível enviar seu pedido agora. Tente novamente em instantes
-          ou fale diretamente pelo WhatsApp usando o botão no rodapé da página.
+          <p>Não foi possível enviar seu pedido agora. Tente novamente em instantes.</p>
+          <a
+            href={buildWhatsAppUrl(buildQuoteWhatsAppMessage(data))}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex items-center justify-center rounded-full bg-teal-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-teal-800"
+          >
+            Continuar no WhatsApp
+          </a>
+        </div>
+      )}
+
+      {showErrorSummary && Object.keys(errors).length > 0 && (
+        <div role="alert" className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+          Verifique os campos destacados em vermelho antes de enviar — faltam
+          algumas informações obrigatórias.
         </div>
       )}
 
@@ -459,6 +510,7 @@ export function QuoteForm() {
         </label>
         <label className="flex items-start gap-2 text-sm text-navy-700">
           <input
+            id="acceptsPrivacyPolicy"
             type="checkbox"
             checked={data.acceptsPrivacyPolicy}
             onChange={(e) => update("acceptsPrivacyPolicy", e.target.checked)}

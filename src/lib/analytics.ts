@@ -10,6 +10,7 @@ type EventName =
   | "whatsapp_click"
   | "quote_form_start"
   | "quote_form_submit"
+  | "quote_form_validation_error"
   | "service_click"
   | "destination_click"
   | "instagram_click";
