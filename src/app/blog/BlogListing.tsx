@@ -4,10 +4,11 @@ import { useMemo, useState } from "react";
 import { BlogCard } from "@/components/ui/BlogCard";
 import { cn } from "@/lib/utils";
 import type { BlogPost } from "@/content/blog";
+import type { Category } from "@/content/categories";
 
 interface BlogListingProps {
   posts: BlogPost[];
-  categories: string[];
+  categories: Category[];
 }
 
 export function BlogListing({ posts, categories }: BlogListingProps) {
@@ -42,17 +43,17 @@ export function BlogListing({ posts, categories }: BlogListingProps) {
           </button>
           {categories.map((item) => (
             <button
-              key={item}
+              key={item.slug}
               type="button"
-              onClick={() => setCategory(item)}
+              onClick={() => setCategory(item.slug)}
               className={cn(
                 "rounded-full border px-4 py-1.5 text-xs font-semibold uppercase tracking-wide transition-colors",
-                category === item
+                category === item.slug
                   ? "border-navy-900 bg-navy-900 text-white"
                   : "border-sand-300 text-navy-700 hover:border-navy-400"
               )}
             >
-              {item}
+              {item.icon} {item.label}
             </button>
           ))}
         </div>

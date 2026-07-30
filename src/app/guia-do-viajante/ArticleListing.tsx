@@ -6,10 +6,11 @@ import { useMemo, useState } from "react";
 import { ArticleCard } from "@/components/ui/ArticleCard";
 import { cn } from "@/lib/utils";
 import type { BlogPost } from "@/content/blog";
+import { getCategoryLabel, type Category } from "@/content/categories";
 
 interface ArticleListingProps {
   posts: BlogPost[];
-  categories: string[];
+  categories: Category[];
 }
 
 export function ArticleListing({ posts, categories }: ArticleListingProps) {
@@ -52,7 +53,7 @@ export function ArticleListing({ posts, categories }: ArticleListingProps) {
             />
           </div>
           <div className="flex flex-col justify-center p-8 sm:p-10">
-            <p className="eyebrow">Em destaque · {featured.category}</p>
+            <p className="eyebrow">Em destaque · {getCategoryLabel(featured.category)}</p>
             <h2 className="mt-3 font-display text-3xl font-semibold leading-tight text-navy-900 sm:text-4xl">
               {featured.title}
             </h2>
@@ -81,17 +82,17 @@ export function ArticleListing({ posts, categories }: ArticleListingProps) {
           </button>
           {categories.map((item) => (
             <button
-              key={item}
+              key={item.slug}
               type="button"
-              onClick={() => setCategory(item)}
+              onClick={() => setCategory(item.slug)}
               className={cn(
                 "rounded-full border px-4 py-1.5 text-xs font-semibold uppercase tracking-wide transition-colors",
-                category === item
+                category === item.slug
                   ? "border-navy-900 bg-navy-900 text-white"
                   : "border-sand-300 text-navy-700 hover:border-navy-400"
               )}
             >
-              {item}
+              {item.icon} {item.label}
             </button>
           ))}
         </div>

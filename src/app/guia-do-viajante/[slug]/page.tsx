@@ -3,7 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CallToAction } from "@/components/ui/CallToAction";
-import { blogPosts, getBlogPostBySlug } from "@/content/blog";
+import { ArticleCard } from "@/components/ui/ArticleCard";
+import { Faq } from "@/components/sections/Faq";
+import { blogPosts, getBlogPostBySlug, getRelatedPosts } from "@/content/blog";
+import { getCategoryLabel } from "@/content/categories";
 import { siteConfig } from "@/config/site";
 
 interface ArticlePageProps {
@@ -71,6 +74,20 @@ export default function ArticlePage({ params }: ArticlePageProps) {
     ],
   };
 
+  const faqJsonLd = post.faq?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: post.faq.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: { "@type": "Answer", text: item.answer },
+        })),
+      }
+    : null;
+
+  const relatedPosts = getRelatedPosts(post);
+
   return (
     <>
       <script
@@ -83,12 +100,19 @@ export default function ArticlePage({ params }: ArticlePageProps) {
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <article className="py-16 sm:py-24">
         <div className="container-alavi max-w-3xl">
           <Link href="/guia-do-viajante" className="text-sm font-semibold text-teal-700 hover:underline">
             ← Voltar para o Guia do Viajante
           </Link>
-          <p className="eyebrow mt-6">{post.category}</p>
+          <p className="eyebrow mt-6">{getCategoryLabel(post.category)}</p>
           <h1 className="mt-2 font-display text-3xl font-semibold leading-tight text-navy-900 sm:text-4xl">
             {post.title}
           </h1>
@@ -113,6 +137,27 @@ export default function ArticlePage({ params }: ArticlePageProps) {
           </div>
         </div>
       </article>
+
+      {post.faq && post.faq.length > 0 && (
+        <Faq items={post.faq} eyebrow="Perguntas frequentes" title="Perguntas sobre este assunto" />
+      )}
+
+      {relatedPosts.length > 0 && (
+        <section className="bg-sand-50 py-16 sm:py-24">
+          <div className="container-alavi">
+            <p className="eyebrow">Continue lendo</p>
+            <h2 className="mt-2 font-display text-2xl font-semibold text-navy-900 sm:text-3xl">
+              Artigos relacionados
+            </h2>
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {relatedPosts.map((relatedPost) => (
+                <ArticleCard key={relatedPost.slug} post={relatedPost} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <CallToAction
         title="Bora transformar essa leitura em viagem?"
         description="Conte para a gente o que você tem em mente e receba um orçamento sem compromisso."

@@ -3,7 +3,7 @@
     "slug": "como-economizar-em-orlando",
     "title": "Como economizar em Orlando",
     "excerpt": "Passagens, ingressos e alimentação: onde vale a pena economizar e onde vale investir em uma viagem para os parques.",
-    "category": "Orçamento",
+    "category": "economia-em-viagens",
     "imageKey": "orlandoParque",
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-07-02",
@@ -18,7 +18,7 @@
     "slug": "melhor-epoca-visitar-miami",
     "title": "Melhor época para visitar Miami",
     "excerpt": "Clima, temporada de furacões e alta estação: o que considerar antes de escolher as datas da sua viagem para a Flórida.",
-    "category": "Clima",
+    "category": "dicas-de-viagem",
     "imageKey": "destinoMiami",
     "readingTime": "5 min de leitura",
     "publishedAt": "2026-06-20",
@@ -33,7 +33,7 @@
     "slug": "quanto-custa-viajar-para-nova-york",
     "title": "Quanto custa viajar para Nova York",
     "excerpt": "Os principais fatores que influenciam o orçamento de uma viagem a Nova York e como planejar cada etapa com clareza.",
-    "category": "Orçamento",
+    "category": "economia-em-viagens",
     "imageKey": "destinoNovaYork",
     "readingTime": "7 min de leitura",
     "publishedAt": "2026-06-05",
@@ -48,7 +48,7 @@
     "slug": "vale-alugar-carro-na-california",
     "title": "Vale alugar carro na Califórnia?",
     "excerpt": "Quando faz sentido dirigir pela Califórnia e quando outras formas de deslocamento podem ser mais práticas.",
-    "category": "Roteiro",
+    "category": "dicas-de-viagem",
     "imageKey": "destinoCalifornia",
     "readingTime": "5 min de leitura",
     "publishedAt": "2026-05-22",
@@ -63,7 +63,7 @@
     "slug": "como-escolher-ingressos-dos-parques",
     "title": "Como escolher os ingressos dos parques",
     "excerpt": "Entenda as diferenças entre os tipos de ingresso para parques como Disney e Universal antes de fechar a compra.",
-    "category": "Parques",
+    "category": "disney-e-orlando",
     "imageKey": "orlandoNoturno",
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-05-10",
@@ -78,7 +78,7 @@
     "slug": "classe-executiva-vale-a-pena",
     "title": "Classe Executiva vale a pena?",
     "excerpt": "Conforto, produtividade e uso de pontos e milhas: quando faz sentido investir em uma passagem de classe executiva.",
-    "category": "Voos",
+    "category": "classe-executiva",
     "imageKey": "sobre",
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-04-28",
@@ -93,7 +93,7 @@
     "slug": "como-montar-roteiro-personalizado",
     "title": "Como montar um roteiro personalizado",
     "excerpt": "O passo a passo de como pensamos um roteiro sob medida, do primeiro contato até a viagem estar pronta.",
-    "category": "Roteiro",
+    "category": "dicas-de-viagem",
     "imageKey": "familiaViajando",
     "readingTime": "5 min de leitura",
     "publishedAt": "2026-04-14",
@@ -108,7 +108,7 @@
     "slug": "seguro-viagem-tudo-que-voce-precisa-saber",
     "title": "Seguro Viagem: tudo o que você precisa saber",
     "excerpt": "Por que contratar, o que costuma estar coberto e como escolher a cobertura adequada para o seu destino.",
-    "category": "Seguro",
+    "category": "seguro-viagem",
     "imageKey": "resortLuxo",
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-03-30",
@@ -123,7 +123,7 @@
     "slug": "bariloche-quando-ir-para-pegar-neve-de-verdade",
     "title": "Bariloche: quando ir para pegar neve de verdade",
     "excerpt": "Nem todo mês de inverno garante neve nas pistas. Entenda a janela certa para curtir Bariloche com neve de verdade.",
-    "category": "Neve",
+    "category": "neve",
     "imageKey": "destinoBariloche",
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-07-08",
@@ -139,7 +139,7 @@
     "slug": "esquiar-pela-primeira-vez-dicas-bariloche",
     "title": "Esquiar pela primeira vez: dicas para iniciantes em Bariloche",
     "excerpt": "Equipamento, aulas e expectativas realistas para quem vai pisar na neve pela primeira vez.",
-    "category": "Neve",
+    "category": "neve",
     "imageKey": "destinoBariloche",
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-07-06",
@@ -155,7 +155,7 @@
     "slug": "o-que-fazer-em-orlando-alem-dos-parques",
     "title": "O que fazer em Orlando além dos parques",
     "excerpt": "Compras, natureza e passeios que valem a pena incluir num roteiro que não seja só de parque em parque.",
-    "category": "Roteiro",
+    "category": "dicas-de-viagem",
     "imageKey": "orlandoFamilia",
     "readingTime": "5 min de leitura",
     "publishedAt": "2026-07-04",
@@ -171,7 +171,7 @@
     "slug": "miami-ou-orlando-qual-escolher-primeiro",
     "title": "Miami ou Orlando: qual escolher primeiro?",
     "excerpt": "Se o tempo de viagem é curto e só dá para um dos dois, veja o que considerar na escolha.",
-    "category": "Roteiro",
+    "category": "dicas-de-viagem",
     "imageKey": "destinoMiami",
     "readingTime": "5 min de leitura",
     "publishedAt": "2026-07-02",
@@ -187,7 +187,7 @@
     "slug": "primeira-viagem-a-europa-por-onde-comecar",
     "title": "Primeira viagem à Europa: por onde começar",
     "excerpt": "Como decidir os primeiros países e cidades de um roteiro europeu sem se perder nas opções.",
-    "category": "Europa",
+    "category": "destinos",
     "imageKey": "destinoEuropa",
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-06-28",
@@ -203,7 +203,7 @@
     "slug": "quantos-paises-visitar-em-uma-viagem-a-europa",
     "title": "Quantos países visitar em uma viagem à Europa",
     "excerpt": "Por que menos costuma ser mais quando o assunto é roteiro multi-país na Europa.",
-    "category": "Europa",
+    "category": "destinos",
     "imageKey": "destinoEuropa",
     "readingTime": "5 min de leitura",
     "publishedAt": "2026-06-25",
@@ -219,7 +219,7 @@
     "slug": "canada-inverno-ou-verao-qual-escolher",
     "title": "Canadá no inverno ou no verão: qual escolher?",
     "excerpt": "Duas viagens bem diferentes dentro do mesmo país — veja o que muda entre as estações.",
-    "category": "Canadá",
+    "category": "destinos",
     "imageKey": "destinoCanada",
     "readingTime": "5 min de leitura",
     "publishedAt": "2026-06-20",
@@ -235,7 +235,7 @@
     "slug": "cataratas-do-niagara-o-que-saber-antes-de-ir",
     "title": "Cataratas do Niágara: o que saber antes de ir",
     "excerpt": "Lado americano, lado canadense e como organizar esse passeio dentro do roteiro pelo Canadá.",
-    "category": "Canadá",
+    "category": "destinos",
     "imageKey": "destinoCanada",
     "readingTime": "5 min de leitura",
     "publishedAt": "2026-06-18",
@@ -251,7 +251,7 @@
     "slug": "machu-picchu-como-se-preparar-para-a-altitude",
     "title": "Machu Picchu: como se preparar para a altitude",
     "excerpt": "Cusco fica a mais de 3 mil metros — veja como se adaptar antes das trilhas e da visita a Machu Picchu.",
-    "category": "Peru",
+    "category": "destinos",
     "imageKey": "destinoPeru",
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-06-14",
@@ -267,7 +267,7 @@
     "slug": "cusco-e-vale-sagrado-o-que-nao-pode-faltar",
     "title": "Cusco e Vale Sagrado: o que não pode faltar no roteiro",
     "excerpt": "Além de Machu Picchu, esses são os pontos que costumam valer mais a pena na região.",
-    "category": "Peru",
+    "category": "destinos",
     "imageKey": "destinoPeru",
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-06-10",
@@ -283,7 +283,7 @@
     "slug": "nova-york-fora-do-obvio-bairros-para-descobrir",
     "title": "Nova York fora do óbvio: bairros para descobrir",
     "excerpt": "Além de Manhattan, esses bairros rendem uma Nova York bem diferente da rota mais turística.",
-    "category": "Nova York",
+    "category": "destinos",
     "imageKey": "destinoNovaYork",
     "readingTime": "6 min de leitura",
     "publishedAt": "2026-06-06",
@@ -299,7 +299,7 @@
     "slug": "ushuaia-o-que-saber-antes-de-ir-ao-fim-do-mundo",
     "title": "Ushuaia: o que saber antes de ir ao fim do mundo",
     "excerpt": "Clima instável, embarque para a Antártida e outros pontos práticos antes de viajar para a cidade mais austral do planeta.",
-    "category": "Ushuaia",
+    "category": "destinos",
     "imageKey": "destinoUshuaia",
     "readingTime": "5 min de leitura",
     "publishedAt": "2026-06-02",
@@ -309,6 +309,442 @@
       "Para quem sonha com a Antártida, Ushuaia é o principal ponto de embarque de cruzeiros para o continente — vale reservar alguns dias extras na cidade antes da data do embarque, já que atrasos de voo até a Patagônia não são incomuns.",
       "Mesmo sem seguir para a Antártida, a cidade por si só já rende um bom roteiro: o Parque Nacional Tierra del Fuego, o passeio de barco pelo Canal de Beagle (com chance de ver pinguins e leões-marinhos) e o Trem do Fim do Mundo são os destaques mais procurados.",
       "Como é um destino ainda em fase de expansão de conteúdo aqui no site, seguimos ampliando as informações sobre Ushuaia — mas já ajudamos a montar o roteiro completo para quem quiser incluir esse destino na viagem."
+    ]
+  },
+  {
+    "slug": "quanto-custa-viajar-para-europa",
+    "title": "Quanto custa viajar para a Europa",
+    "excerpt": "Os principais fatores que pesam no orçamento de uma viagem à Europa e como planejar com mais clareza.",
+    "category": "economia-em-viagens",
+    "imageKey": "destinoEuropa",
+    "readingTime": "6 min de leitura",
+    "publishedAt": "2026-07-10",
+    "content": [
+      "O custo de uma viagem à Europa varia bastante conforme o país, a época do ano, o estilo de hospedagem e o ritmo do roteiro — não existe um valor único que sirva para qualquer viajante, mas alguns fatores pesam mais do que outros na conta final.",
+      "As passagens aéreas costumam ser mais caras no verão europeu (junho a agosto) e no fim de ano, quando a demanda de viajantes de várias partes do mundo se concentra ao mesmo tempo. Fora desses períodos, especialmente na primavera e no outono europeus, é comum encontrar condições mais favoráveis.",
+      "Dentro do continente, o custo também muda bastante entre países: capitais como Paris, Londres e Zurique tendem a ser mais caras do que cidades do sul ou do leste europeu. Combinar destinos de perfis diferentes no mesmo roteiro é uma forma comum de equilibrar o orçamento.",
+      "A logística entre cidades também entra na conta — trens de alta velocidade são confortáveis, mas nem sempre são a opção mais barata, enquanto voos de baixo custo dentro da Europa podem compensar em trajetos mais longos.",
+      "Como cada roteiro tem um perfil diferente, o caminho mais assertivo para entender o investimento real é montar um orçamento personalizado com base nas suas datas, destinos e estilo de viagem — é esse o trabalho da nossa consultoria."
+    ],
+    "faq": [
+      {
+        "question": "Qual é a melhor época para economizar numa viagem à Europa?",
+        "answer": "De forma geral, os períodos fora do verão europeu e das festas de fim de ano tendem a ter passagens e hospedagem mais em conta, além de menos movimento nos pontos turísticos."
+      },
+      {
+        "question": "É mais barato viajar com roteiro fechado ou montar tudo por conta própria?",
+        "answer": "Depende do perfil da viagem. Um roteiro bem planejado evita gastos com decisões de última hora e ajuda a priorizar onde vale a pena investir — é justamente esse o papel de uma consultoria personalizada."
+      },
+      {
+        "question": "Preciso decidir todos os destinos antes de pedir um orçamento?",
+        "answer": "Não. Muitos viajantes chegam até nós com uma ideia geral, e ajudamos a definir os destinos considerando tempo disponível, orçamento e o que mais interessa para a viagem."
+      }
+    ]
+  },
+  {
+    "slug": "melhor-epoca-para-conhecer-a-italia",
+    "title": "Melhor época para conhecer a Itália",
+    "excerpt": "Clima, movimento turístico e o que muda entre as estações para ajudar a escolher as datas do seu roteiro pela Itália.",
+    "category": "destinos",
+    "imageKey": "destinoItalia",
+    "readingTime": "6 min de leitura",
+    "publishedAt": "2026-07-12",
+    "content": [
+      "A Itália tem um clima que varia bastante entre o norte e o sul do país, e entender essa diferença ajuda a escolher a melhor época conforme o roteiro que você tem em mente.",
+      "A primavera (abril a junho) e o início do outono (setembro e outubro) costumam ser os períodos mais equilibrados: clima ameno, dias longos e um movimento turístico mais tranquilo do que no auge do verão.",
+      "O verão europeu (julho e agosto) é a alta temporada por excelência — dias quentes, praias movimentadas no sul do país e cidades como Roma, Florença e Veneza especialmente cheias, principalmente em agosto, quando muitos italianos também tiram férias.",
+      "O inverno tem um charme próprio, especialmente no norte: cidades como Milão e Veneza com menos turistas, além da possibilidade de esquiar nos Alpes italianos. Já o sul mantém um clima mais ameno mesmo nessa época.",
+      "Ao montar o roteiro com você, cruzamos o clima da época escolhida com o que mais importa na viagem — sejam cidades históricas, a costa amalfitana ou a região vinícola da Toscana."
+    ],
+    "faq": [
+      {
+        "question": "Qual o melhor mês para ir à Itália sem enfrentar multidões?",
+        "answer": "Maio, junho, setembro e outubro costumam equilibrar bom clima com um movimento turístico mais tranquilo do que em julho e agosto."
+      },
+      {
+        "question": "Vale a pena ir à Itália no inverno?",
+        "answer": "Sim, principalmente para quem quer conhecer cidades com menos turistas ou combinar a viagem com esqui nos Alpes. O sul do país mantém um clima ameno mesmo nessa época."
+      }
+    ]
+  },
+  {
+    "slug": "como-economizar-em-uma-viagem-para-portugal",
+    "title": "Como economizar em uma viagem para Portugal",
+    "excerpt": "Portugal costuma ser um dos destinos mais acessíveis da Europa — veja onde vale a pena ajustar o orçamento.",
+    "category": "economia-em-viagens",
+    "imageKey": "destinoEuropa",
+    "readingTime": "5 min de leitura",
+    "publishedAt": "2026-07-13",
+    "content": [
+      "Portugal costuma ser um dos destinos europeus mais acessíveis, tanto em hospedagem quanto em alimentação, o que o torna uma boa porta de entrada para quem está planejando a primeira viagem ao continente.",
+      "Lisboa e Porto concentram a maior parte da procura e, por isso, tendem a ter preços um pouco mais altos do que cidades menores do interior ou do Alentejo — vale considerar incluir uma dessas regiões no roteiro para equilibrar o orçamento.",
+      "A gastronomia local também ajuda a economizar: restaurantes com o \"prato do dia\" costumam oferecer refeições completas por um valor bem mais em conta do que em opções mais turísticas.",
+      "Trens e ônibus interurbanos conectam bem as principais cidades portuguesas, e costumam ser uma alternativa mais econômica do que alugar carro, a não ser que o roteiro inclua regiões mais afastadas, como o Douro ou o Algarve fora das cidades principais.",
+      "Viajar fora da alta temporada (verão europeu) também ajuda bastante, tanto no preço das passagens quanto na disponibilidade de hospedagem nos destinos mais procurados."
+    ],
+    "faq": [
+      {
+        "question": "Lisboa ou Porto: qual é mais barato?",
+        "answer": "Os valores costumam ser parecidos entre as duas cidades, mas o Porto tende a ter uma leve vantagem em hospedagem e alimentação fora dos pontos mais turísticos."
+      },
+      {
+        "question": "Vale a pena alugar carro em Portugal?",
+        "answer": "Depende do roteiro. Para conhecer só as grandes cidades, transporte público costuma bastar. Para regiões como o Douro ou o interior do Alentejo, o carro facilita bastante."
+      }
+    ]
+  },
+  {
+    "slug": "quanto-custa-ir-para-a-disney",
+    "title": "Quanto custa ir para a Disney",
+    "excerpt": "Os principais itens que compõem o orçamento de uma viagem aos parques da Disney em Orlando.",
+    "category": "disney-e-orlando",
+    "imageKey": "orlandoParque",
+    "readingTime": "6 min de leitura",
+    "publishedAt": "2026-07-15",
+    "content": [
+      "O investimento numa viagem para a Disney varia bastante conforme o número de dias de parque, o tipo de ingresso escolhido, a hospedagem e o estilo de alimentação — por isso não existe um valor fixo que sirva para todo perfil de viajante.",
+      "Os ingressos são o ponto de partida: o preço por dia costuma diminuir quanto mais dias de parque forem incluídos no mesmo ticket, e experiências extras como o Genie+ têm um custo à parte que vale avaliar conforme o tamanho do grupo.",
+      "A hospedagem pesa bastante na conta. Ficar dentro de um resort da Disney custa mais do que hotéis fora do complexo, mas traz vantagens como transporte gratuito e acesso antecipado a algumas atrações — vale pesar o que compensa mais para o seu roteiro.",
+      "Alimentação também é um item importante: os planos de refeição (dining plans) podem ou não valer a pena dependendo do apetite e do estilo de consumo do grupo, e muitas famílias preferem pagar por refeição conforme o dia.",
+      "Como cada família tem um perfil diferente de consumo e prioridades, montamos o orçamento junto com você considerando dias de parque, hospedagem e alimentação, para que a viagem faça sentido dentro do que foi planejado."
+    ],
+    "faq": [
+      {
+        "question": "Vale a pena o plano de refeição da Disney?",
+        "answer": "Depende do apetite e do ritmo do grupo. Para quem come bastante e prefere não se preocupar com pagamentos durante o dia, pode compensar. Avaliamos isso junto com você conforme o perfil da família."
+      },
+      {
+        "question": "Com quanto tempo de antecedência devo comprar os ingressos?",
+        "answer": "Recomendamos reservar com bastante antecedência, especialmente em períodos de alta temporada, já que a disponibilidade de datas específicas nos parques pode ficar limitada."
+      }
+    ]
+  },
+  {
+    "slug": "quantos-dias-ficar-em-orlando",
+    "title": "Quantos dias ficar em Orlando",
+    "excerpt": "Como equilibrar dias de parque, descanso e passeios fora dos parques para definir a duração ideal da viagem.",
+    "category": "disney-e-orlando",
+    "imageKey": "orlandoResort",
+    "readingTime": "5 min de leitura",
+    "publishedAt": "2026-07-16",
+    "content": [
+      "A dúvida sobre quantos dias reservar para Orlando é uma das mais comuns entre quem planeja a viagem, e a resposta depende de quantos complexos de parques você pretende visitar.",
+      "Para conhecer com calma os principais parques da Disney e da Universal, o ideal costuma ser entre 7 e 10 dias — tempo suficiente para não precisar correr entre atrações e ainda incluir ao menos um dia de descanso.",
+      "Roteiros mais curtos, de 4 a 5 dias, são possíveis para quem quer focar em um único complexo de parques, mas tendem a ter um ritmo mais corrido, com menos espaço para imprevistos como filas maiores ou dias de chuva.",
+      "Vale também considerar um ou dois dias fora dos parques — para compras, parques aquáticos ou uma extensão para Miami — o que ajuda a variar o ritmo da viagem e evita o cansaço acumulado de muitos dias seguidos de parque.",
+      "Ajudamos a montar esse equilíbrio junto com você, considerando o perfil do grupo, os parques prioritários e quanto tempo de descanso faz sentido incluir no roteiro."
+    ],
+    "faq": [
+      {
+        "question": "Dá para conhecer Disney e Universal em uma semana?",
+        "answer": "Sim, é possível, mas o ritmo fica mais corrido. Para conhecer os dois complexos com mais calma, o ideal é entre 8 e 10 dias."
+      }
+    ]
+  },
+  {
+    "slug": "universal-ou-disney-qual-escolher",
+    "title": "Universal ou Disney: qual escolher primeiro?",
+    "excerpt": "Perfis diferentes de parque para perfis diferentes de viajante — veja o que considerar na hora de decidir.",
+    "category": "disney-e-orlando",
+    "imageKey": "orlandoNoturno",
+    "readingTime": "5 min de leitura",
+    "publishedAt": "2026-07-17",
+    "content": [
+      "Quando o tempo de viagem não permite conhecer os dois complexos com calma, escolher entre Universal e Disney é uma dúvida comum — e a resposta depende bastante do perfil de quem viaja.",
+      "A Disney costuma ser a escolha mais natural para famílias com crianças pequenas, pela atmosfera voltada à fantasia, aos personagens clássicos e a atrações pensadas para todas as idades.",
+      "A Universal tende a agradar mais quem busca atrações mais intensas, temáticas de filmes e séries, e experiências como o mundo de Harry Potter — funciona muito bem para famílias com crianças maiores, adolescentes e adultos.",
+      "Se o tempo permitir, a combinação dos dois complexos costuma valer muito a pena, já que eles ficam próximos e se complementam bem dentro do mesmo roteiro.",
+      "Ajudamos a pensar essa escolha (ou essa combinação) considerando a idade do grupo, o tempo disponível e o que mais interessa para a viagem."
+    ],
+    "faq": [
+      {
+        "question": "A Universal é indicada para crianças pequenas?",
+        "answer": "Tem opções para todas as idades, mas boa parte das atrações mais famosas é voltada a públicos maiores. Para crianças bem pequenas, a Disney costuma ser mais adequada."
+      }
+    ]
+  },
+  {
+    "slug": "vale-a-pena-esquiar-no-cerro-catedral",
+    "title": "Vale a pena esquiar no Cerro Catedral?",
+    "excerpt": "O maior centro de esqui da América do Sul, visto de perto: para quem ele é mais indicado e o que esperar da experiência.",
+    "category": "neve",
+    "imageKey": "destinoBariloche",
+    "readingTime": "5 min de leitura",
+    "publishedAt": "2026-07-18",
+    "content": [
+      "O Cerro Catedral, em Bariloche, é o maior centro de esqui da América do Sul, com uma variedade grande de pistas — o que faz dele uma boa escolha tanto para quem está começando quanto para esquiadores mais experientes.",
+      "Para iniciantes, a estrutura de aulas e as áreas mais tranquilas de pista ajudam bastante na curva de aprendizado. Já quem já tem experiência encontra pistas mais desafiadoras e uma extensão de terreno maior do que a maioria imagina antes de conhecer.",
+      "A vista também é um dos grandes atrativos: em dias claros, o Cerro Catedral oferece um panorama amplo do Lago Nahuel Huapi e da região andina, que vale a experiência mesmo para quem não vai esquiar o dia todo.",
+      "Vale reservar com antecedência o aluguel de equipamentos e, se for a primeira vez na neve, considerar aulas com instrutor logo no início da estadia — isso costuma tornar o restante da viagem bem mais aproveitável.",
+      "Ao montar seu roteiro de neve, ajudamos a equilibrar os dias de pista com o restante da experiência em Bariloche, para que a viagem não gire só em torno do esqui."
+    ],
+    "faq": [
+      {
+        "question": "O Cerro Catedral é bom para quem nunca esquiou?",
+        "answer": "Sim. Tem áreas específicas para iniciantes e uma boa estrutura de aulas, o que facilita bastante os primeiros dias na neve."
+      },
+      {
+        "question": "Preciso levar equipamento de casa?",
+        "answer": "Não é necessário. O aluguel de roupas e equipamentos pode ser feito na cidade ou próximo ao próprio Cerro Catedral."
+      }
+    ]
+  },
+  {
+    "slug": "como-viajar-de-classe-executiva-pagando-menos",
+    "title": "Como viajar de Classe Executiva pagando menos",
+    "excerpt": "Estratégias para tornar a classe executiva mais acessível sem abrir mão do conforto em voos longos.",
+    "category": "milhas-e-pontos",
+    "imageKey": "experienciaClasseExecutiva",
+    "readingTime": "6 min de leitura",
+    "publishedAt": "2026-07-19",
+    "content": [
+      "Viajar de classe executiva costuma parecer fora de alcance para quem nunca explorou as alternativas disponíveis, mas existem caminhos que tornam essa experiência mais acessível do que a maioria imagina.",
+      "O uso de pontos e milhas, acumulados em cartões de crédito ou programas de fidelidade de companhias aéreas, é o caminho mais comum. A quantidade de milhas necessárias e a disponibilidade de assentos variam bastante por rota e época do ano.",
+      "Outra estratégia é combinar milhas com uma taxa em dinheiro, o que pode reduzir a quantidade de pontos necessários em rotas onde a emissão só com milhas está mais concorrida.",
+      "Ter flexibilidade de datas e de aeroportos de conexão também amplia bastante as chances de encontrar boas oportunidades, já que a disponibilidade de assentos em classe executiva costuma ser mais limitada do que na econômica.",
+      "Avaliamos com você a disponibilidade para a sua data e destino, as melhores oportunidades de emissão e se vale mais a pena usar milhas, dinheiro ou uma combinação dos dois."
+    ],
+    "faq": [
+      {
+        "question": "Preciso ter muitas milhas acumuladas para viajar de executiva?",
+        "answer": "Depende da rota e da época. Algumas conexões exigem menos milhas do que voos diretos mais concorridos. Avaliamos as melhores opções disponíveis para o seu caso."
+      },
+      {
+        "question": "Dá para usar milhas de mais de uma pessoa na mesma reserva?",
+        "answer": "Em muitos programas sim, com regras específicas de transferência entre contas. Explicamos essas condições durante o atendimento."
+      }
+    ]
+  },
+  {
+    "slug": "o-que-e-tabela-fixa-de-milhas",
+    "title": "O que é uma tabela fixa de milhas?",
+    "excerpt": "Entenda a diferença entre tabelas fixas e preços dinâmicos na hora de emitir passagens com pontos e milhas.",
+    "category": "milhas-e-pontos",
+    "imageKey": "sobre",
+    "readingTime": "5 min de leitura",
+    "publishedAt": "2026-07-20",
+    "content": [
+      "Uma tabela fixa de milhas é uma referência de quantas milhas são necessárias para emitir uma passagem entre determinadas regiões, sem essa quantidade variar conforme a demanda do voo específico — diferente do que acontece em programas com precificação dinâmica.",
+      "Na prática, isso significa que, num programa com tabela fixa, o número de milhas para ir, por exemplo, do Brasil para a Europa em classe executiva tende a ser o mesmo independentemente de o voo estar mais cheio ou mais vazio — o que muda é a disponibilidade de assentos, não o preço em milhas.",
+      "Já em programas com precificação dinâmica, a quantidade de milhas pode variar bastante conforme a data, a demanda e até a proximidade da viagem, de forma parecida com o que acontece com o preço das passagens em dinheiro.",
+      "Entender qual modelo cada programa de milhas utiliza ajuda a decidir onde vale mais a pena acumular pontos, dependendo do seu objetivo de viagem — e essas regras podem mudar com o tempo, por isso vale confirmar as condições atuais antes de decidir onde concentrar o acúmulo.",
+      "Ajudamos você a entender essas diferenças e a escolher o caminho mais vantajoso para o seu perfil de viagem no momento da emissão."
+    ],
+    "faq": [
+      {
+        "question": "Tabela fixa é sempre mais vantajosa?",
+        "answer": "Nem sempre. Depende da rota, da época e da disponibilidade de assentos no momento. Avaliamos as opções disponíveis para o seu caso antes de decidir."
+      }
+    ]
+  },
+  {
+    "slug": "latam-pass-smiles-ou-azul-qual-programa-escolher",
+    "title": "LATAM Pass, Smiles ou Azul: qual programa de milhas escolher",
+    "excerpt": "As diferenças gerais entre os principais programas de fidelidade de companhias aéreas brasileiras.",
+    "category": "milhas-e-pontos",
+    "imageKey": "sobre",
+    "readingTime": "6 min de leitura",
+    "publishedAt": "2026-07-21",
+    "content": [
+      "LATAM Pass, Smiles e Azul Fidelidade são os principais programas de fidelidade de companhias aéreas no Brasil, e cada um tem parcerias, cartões de crédito e rotas próprias — a escolha do melhor programa depende do seu perfil de consumo e de viagem.",
+      "Um dos fatores mais importantes é onde você já acumula pontos no dia a dia: cartões de crédito com conversão para um programa específico, ou compras em parceiros comerciais, costumam pesar mais na decisão do que a companhia aérea em si.",
+      "As rotas voadas por cada companhia também importam — se o seu roteiro depende de conexões específicas dentro do Brasil ou para determinado continente, vale considerar qual malha aérea atende melhor esse trajeto.",
+      "Como as regras de acúmulo, parcerias e quantidade de milhas necessárias mudam com frequência, o melhor programa hoje pode não ser o mais vantajoso daqui a um ano — por isso vale reavaliar de tempos em tempos onde faz mais sentido concentrar o acúmulo.",
+      "Ajudamos você a entender essas diferenças na prática, considerando onde você já acumula pontos e para onde pretende viajar, para decidir com mais clareza."
+    ],
+    "faq": [
+      {
+        "question": "Posso ter milhas em mais de um programa ao mesmo tempo?",
+        "answer": "Sim, e muitos viajantes fazem isso justamente para ter mais flexibilidade de rotas e oportunidades de emissão."
+      },
+      {
+        "question": "Vale a pena transferir pontos de cartão de crédito para milhas?",
+        "answer": "Depende das condições da transferência e do seu objetivo de viagem. Avaliamos isso com você antes de decidir para onde direcionar o acúmulo."
+      }
+    ]
+  },
+  {
+    "slug": "como-emitir-passagens-internacionais-com-milhas",
+    "title": "Como emitir passagens internacionais com milhas",
+    "excerpt": "O passo a passo básico para transformar pontos acumulados em uma passagem internacional emitida.",
+    "category": "milhas-e-pontos",
+    "imageKey": "experienciaClasseExecutiva",
+    "readingTime": "6 min de leitura",
+    "publishedAt": "2026-07-22",
+    "content": [
+      "Emitir uma passagem internacional com milhas envolve mais do que simplesmente ter pontos suficientes acumulados — a disponibilidade de assentos por milhas costuma ser mais limitada do que a disponibilidade de assentos pagos, especialmente em datas de alta procura.",
+      "O primeiro passo é verificar quantas milhas você tem disponíveis e em qual programa, já que transferências entre programas (de cartão de crédito para companhia aérea, por exemplo) costumam levar alguns dias para serem processadas.",
+      "Depois, é preciso checar a disponibilidade de assentos por milhas para a rota e a data desejadas — o que exige acompanhar de perto as opções, já que essa disponibilidade pode mudar rapidamente, principalmente em classe executiva.",
+      "Ter flexibilidade de datas e de aeroportos de conexão aumenta bastante as chances de encontrar boas oportunidades de emissão, especialmente em rotas mais concorridas.",
+      "Acompanhamos essa disponibilidade com você, orientamos sobre transferências entre programas quando fazem sentido, e cuidamos da emissão para que o processo seja simples do seu lado."
+    ],
+    "faq": [
+      {
+        "question": "Quanto tempo antes preciso emitir a passagem com milhas?",
+        "answer": "Quanto antes, melhor — a disponibilidade de assentos por milhas tende a ser mais ampla com mais antecedência, principalmente em classe executiva."
+      }
+    ]
+  },
+  {
+    "slug": "hoteis-de-luxo-em-dubai-o-que-considerar",
+    "title": "Hotéis de luxo em Dubai: o que considerar na escolha",
+    "excerpt": "Dubai tem uma das cenas hoteleiras mais exclusivas do mundo — veja o que diferencia cada tipo de experiência.",
+    "category": "destinos",
+    "imageKey": "destinoDubai",
+    "readingTime": "6 min de leitura",
+    "publishedAt": "2026-07-23",
+    "content": [
+      "Dubai é conhecida por reunir uma das cenas hoteleiras mais exclusivas do mundo, com opções que vão de resorts à beira-mar a hotéis icônicos no centro da cidade — a escolha certa depende bastante do estilo de viagem que você tem em mente.",
+      "Hospedagens à beira-mar, na região da Jumeirah Beach, costumam agradar quem busca praia, spa e um ritmo mais tranquilo, com fácil acesso a algumas das paisagens mais conhecidas da cidade.",
+      "Já hotéis no centro, próximos ao Dubai Mall e ao Burj Khalifa, funcionam melhor para quem quer estar perto das compras, da vida noturna e dos principais pontos turísticos, sem depender tanto de deslocamento.",
+      "Para quem busca algo ainda mais exclusivo, existem resorts com vista para o deserto, que combinam luxo com uma experiência mais imersiva na paisagem árabe, geralmente incluindo passeios e atividades próprias.",
+      "Ajudamos a escolher a hospedagem que melhor combina com o restante do seu roteiro em Dubai, considerando o que mais importa para você: praia, compras, gastronomia ou uma experiência mais reservada."
+    ],
+    "faq": [
+      {
+        "question": "Qual região de Dubai é melhor para uma primeira viagem?",
+        "answer": "A região da Jumeirah Beach e o centro da cidade (perto do Dubai Mall e do Burj Khalifa) costumam ser os pontos de partida mais indicados, por reunirem boa infraestrutura e fácil acesso às principais atrações."
+      }
+    ]
+  },
+  {
+    "slug": "como-funciona-a-primeira-classe",
+    "title": "Como funciona a Primeira Classe",
+    "excerpt": "A diferença entre Primeira Classe e Classe Executiva, e quando essa experiência realmente faz sentido.",
+    "category": "classe-executiva",
+    "imageKey": "experienciaClasseExecutiva",
+    "readingTime": "5 min de leitura",
+    "publishedAt": "2026-07-24",
+    "content": [
+      "A Primeira Classe é o nível mais alto de conforto oferecido em voos comerciais, acima da classe executiva, mas está disponível em um número bem mais restrito de rotas e companhias aéreas do que a maioria imagina.",
+      "As diferenças em relação à classe executiva variam por companhia, mas costumam incluir mais privacidade (cabines fechadas em alguns casos), um serviço de bordo ainda mais elaborado e, em algumas aeronaves, suítes individuais.",
+      "Por ser uma experiência mais exclusiva, a quantidade de assentos de Primeira Classe por voo costuma ser pequena, o que torna a disponibilidade — seja paga ou por milhas — mais concorrida do que a classe executiva.",
+      "Para quem tem pontos acumulados, a Primeira Classe costuma exigir uma quantidade maior de milhas do que a executiva, mas em algumas rotas específicas a diferença de milhas entre as duas classes pode compensar, dependendo da disponibilidade.",
+      "Avaliamos com você se a Primeira Classe está disponível para a sua rota e data, e se faz sentido considerando o custo em milhas ou em dinheiro comparado à classe executiva."
+    ],
+    "faq": [
+      {
+        "question": "Toda companhia aérea tem Primeira Classe?",
+        "answer": "Não. É oferecida por um número limitado de companhias e, mesmo entre elas, apenas em rotas e aeronaves específicas."
+      }
+    ]
+  },
+  {
+    "slug": "lua-de-mel-como-montar-o-roteiro-perfeito",
+    "title": "Lua de mel: como montar o roteiro perfeito",
+    "excerpt": "O que considerar para equilibrar romantismo, descanso e um toque de aventura na primeira viagem como casal.",
+    "category": "destinos",
+    "imageKey": "luaDeMel",
+    "readingTime": "6 min de leitura",
+    "publishedAt": "2026-07-25",
+    "content": [
+      "A lua de mel costuma ser uma das viagens mais esperadas por um casal, e por isso vale dedicar um tempo real ao planejamento — geralmente logo depois do casamento, quando a rotina de organização do evento já ficou para trás.",
+      "O primeiro passo é alinhar o que o casal busca: destinos mais tranquilos e voltados ao descanso, roteiros com um pouco mais de aventura, ou uma combinação das duas coisas em etapas diferentes da viagem.",
+      "Equilibrar o orçamento também é importante — nem sempre o destino mais badalado é o que traz a melhor experiência para o casal. Às vezes, investir em uma hospedagem diferenciada compensa mais do que tentar visitar muitos lugares em pouco tempo.",
+      "Pequenos detalhes fazem diferença numa lua de mel: hospedagens com vista, jantares especiais ou um passeio privativo ajudam a tornar a viagem mais memorável sem necessariamente exigir um roteiro complexo.",
+      "Ajudamos o casal a montar esse roteiro sob medida, equilibrando romance, descanso e as experiências que fazem sentido para vocês dois."
+    ],
+    "faq": [
+      {
+        "question": "Quanto tempo depois do casamento é ideal viajar?",
+        "answer": "Não existe uma regra fixa — alguns casais preferem viajar logo em seguida, outros optam por esperar algumas semanas para organizar melhor a viagem. O importante é que o momento faça sentido para vocês."
+      }
+    ]
+  },
+  {
+    "slug": "documentacao-para-viajar-aos-estados-unidos",
+    "title": "Documentação para viajar aos Estados Unidos",
+    "excerpt": "Os documentos que costumam ser exigidos de brasileiros para entrar nos Estados Unidos, de forma geral.",
+    "category": "vistos-e-documentacao",
+    "imageKey": "destinoNovaYork",
+    "readingTime": "5 min de leitura",
+    "publishedAt": "2026-07-26",
+    "content": [
+      "A documentação exigida para viajar aos Estados Unidos pode mudar ao longo do tempo, por isso o primeiro passo é sempre confirmar as regras vigentes próximo à data da viagem, em vez de se basear apenas em uma viagem anterior.",
+      "De forma geral, a maioria dos brasileiros precisa de um visto ou de uma autorização de viagem válida para entrar no país, além do passaporte dentro da validade exigida — orientamos sobre qual documentação se aplica ao seu caso durante o atendimento.",
+      "O processo de obtenção de visto costuma levar tempo, incluindo agendamento de entrevista em alguns casos, por isso vale iniciar essa etapa com boa antecedência em relação à data pretendida da viagem.",
+      "Vale também verificar a validade do passaporte antes de comprar as passagens: muitos destinos internacionais, incluindo os Estados Unidos, costumam exigir alguns meses de validade além da data de retorno.",
+      "Ajudamos a entender qual documentação se aplica ao seu perfil e a organizar os prazos, para que essa parte da viagem não vire uma correria de última hora."
+    ],
+    "faq": [
+      {
+        "question": "Toda viagem aos Estados Unidos exige visto?",
+        "answer": "Depende do tipo de viagem e da situação de documentação de cada viajante. Orientamos sobre qual autorização se aplica ao seu caso durante o atendimento."
+      },
+      {
+        "question": "Com quanta antecedência devo iniciar o processo de documentação?",
+        "answer": "Recomendamos começar com bastante antecedência, já que processos como agendamento de entrevista de visto podem levar tempo, dependendo da época do ano."
+      }
+    ]
+  },
+  {
+    "slug": "passaporte-quando-tirar-e-renovar",
+    "title": "Passaporte: quando tirar e quando renovar",
+    "excerpt": "Prazos, validade mínima exigida por destinos internacionais e por que vale se antecipar a esse processo.",
+    "category": "vistos-e-documentacao",
+    "imageKey": "destinoEuropa",
+    "readingTime": "5 min de leitura",
+    "publishedAt": "2026-07-27",
+    "content": [
+      "O passaporte é o primeiro documento a verificar quando uma viagem internacional começa a ser planejada, e deixar essa etapa para depois costuma gerar correria desnecessária perto da data da viagem.",
+      "Muitos países exigem que o passaporte tenha uma validade mínima além da data de retorno da viagem — um período comum exigido por diversos destinos é de seis meses, mas essa regra varia por país, e vale confirmar antes de comprar as passagens.",
+      "Para quem já tem passaporte, vale verificar a validade assim que uma viagem internacional começa a ser cogitada, já que o processo de renovação pode levar algumas semanas, dependendo da época e da demanda no órgão emissor.",
+      "Para quem nunca tirou passaporte, o ideal é iniciar o processo com bastante antecedência, especialmente em períodos de alta demanda, como véspera de férias escolares.",
+      "Ajudamos a alinhar os prazos de documentação com a data pretendida da viagem, para que esse processo não vire um gargalo no planejamento."
+    ],
+    "faq": [
+      {
+        "question": "Quanto tempo antes da viagem devo verificar o passaporte?",
+        "answer": "O quanto antes possível, assim que a viagem começar a ser planejada — principalmente se o passaporte já tiver alguns anos de uso ou estiver perto do vencimento."
+      }
+    ]
+  },
+  {
+    "slug": "caribe-qual-ilha-escolher-para-a-sua-viagem",
+    "title": "Caribe: qual ilha escolher para a sua viagem",
+    "excerpt": "Perfis diferentes de destino dentro do Caribe, para ajudar a decidir qual combina mais com o seu roteiro.",
+    "category": "praias",
+    "imageKey": "destinoCaribe",
+    "readingTime": "6 min de leitura",
+    "publishedAt": "2026-07-28",
+    "content": [
+      "O Caribe reúne destinos bem diferentes entre si, apesar de serem frequentemente tratados como uma categoria única — entender esse perfil ajuda a escolher o lugar certo para o seu tipo de viagem.",
+      "Destinos como a Riviera Maya e Punta Cana são conhecidos pela grande oferta de resorts all-inclusive, o que funciona bem para quem busca praticidade, sem precisar se preocupar com deslocamento ou reservas de restaurante durante a estadia.",
+      "Ilhas como Aruba e as Bahamas costumam agradar quem busca um pouco mais de estrutura urbana combinada com praia, além de opções de passeios como mergulho e esportes aquáticos.",
+      "Para quem viaja em lua de mel ou busca mais privacidade, algumas regiões do Caribe oferecem hospedagens menores e mais exclusivas, com um perfil bem diferente dos grandes resorts all-inclusive.",
+      "Ajudamos a escolher o destino certo dentro do Caribe considerando o perfil da viagem — família, casal ou grupo de amigos — e o que mais importa para vocês: praticidade, badalação ou tranquilidade."
+    ],
+    "faq": [
+      {
+        "question": "Todo destino no Caribe é all-inclusive?",
+        "answer": "Não, mas é um modelo bastante comum em destinos como Riviera Maya e Punta Cana. Outras regiões do Caribe têm mais opções de hospedagem fora desse formato."
+      }
+    ]
+  },
+  {
+    "slug": "como-funciona-a-viagem-corporativa-com-a-alavi",
+    "title": "Como funciona a viagem corporativa com a ALAVI",
+    "excerpt": "Um ponto de contato único para organizar passagens, hospedagem e política de viagem da sua empresa.",
+    "category": "viagem-corporativa",
+    "imageKey": "experienciaClasseExecutiva",
+    "readingTime": "5 min de leitura",
+    "publishedAt": "2026-07-29",
+    "content": [
+      "Viagens corporativas têm necessidades diferentes das viagens de lazer: prazos mais apertados, necessidade de flexibilidade em alterações e, muitas vezes, uma política de viagem interna da empresa que precisa ser respeitada em cada reserva.",
+      "Trabalhamos como um ponto de contato único para a empresa, cuidando de passagens, hospedagem e, quando necessário, transfers — para que o time de viagens não precise lidar com múltiplos fornecedores para cada solicitação.",
+      "Entendemos a política de viagem de cada empresa (classe de voo permitida, categoria de hotel, limites de gasto) e buscamos as melhores opções dentro dessas regras, já checando a conformidade antes de apresentar as alternativas.",
+      "Também ajudamos em situações que exigem agilidade, como remarcações de última hora ou imprevistos durante a viagem — algo que costuma pesar bastante na experiência de quem viaja a trabalho com frequência.",
+      "Se a sua empresa está buscando um atendimento mais próximo para as viagens corporativas, entre em contato para entendermos o volume e o perfil de viagens da equipe."
+    ],
+    "faq": [
+      {
+        "question": "Vocês emitem notas fiscais para viagens corporativas?",
+        "answer": "Sim, ajustamos a documentação conforme a necessidade da empresa. Conversamos sobre esse processo diretamente durante o atendimento."
+      },
+      {
+        "question": "É possível combinar dias de trabalho com dias de lazer na mesma viagem?",
+        "answer": "Sim, esse formato (conhecido como bleisure) é bastante comum. Ajudamos a organizar os dois momentos dentro da mesma viagem, respeitando a política da empresa."
+      }
     ]
   }
 ]

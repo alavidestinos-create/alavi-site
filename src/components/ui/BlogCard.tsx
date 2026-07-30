@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { BlogPost } from "@/content/blog";
+import { getCategoryLabel } from "@/content/categories";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -19,7 +20,7 @@ export function BlogCard({ post }: BlogCardProps) {
         />
       </div>
       <div className="flex flex-1 flex-col p-6">
-        <p className="eyebrow">{post.category}</p>
+        <p className="eyebrow">{getCategoryLabel(post.category)}</p>
         <h3 className="mt-2 font-display text-lg font-medium leading-snug text-navy-900">{post.title}</h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-navy-700">{post.excerpt}</p>
         <p className="mt-4 text-xs text-navy-500">{post.readingTime}</p>
