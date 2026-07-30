@@ -32,7 +32,7 @@ export function Faq({ items, eyebrow = "Dúvidas frequentes", title = "Tire suas
                   aria-expanded={isOpen}
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                 >
-                  <span className="font-display text-sm font-semibold text-navy-900 sm:text-base">
+                  <span className="text-sm font-semibold text-navy-900 sm:text-base">
                     {item.question}
                   </span>
                   <span

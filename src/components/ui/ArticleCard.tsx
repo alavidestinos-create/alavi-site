@@ -24,7 +24,7 @@ export function ArticleCard({ post }: ArticleCardProps) {
       </div>
       <div className="flex flex-1 flex-col p-6">
         <p className="eyebrow">{post.category}</p>
-        <h3 className="mt-2 font-display text-lg font-medium leading-snug text-navy-900">{post.title}</h3>
+        <h3 className="mt-2 font-display text-xl font-semibold leading-snug text-navy-900">{post.title}</h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-navy-700">{post.excerpt}</p>
         <div className="mt-4 flex items-center justify-between">
           <p className="text-xs text-navy-500">{post.readingTime}</p>

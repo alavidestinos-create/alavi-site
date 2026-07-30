@@ -24,19 +24,19 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/55 to-navy-950/10" />
 
-      <div className="container-alavi relative z-10 pb-16 pt-40 sm:pb-24 sm:pt-56">
+      <div className="container-alavi relative z-10 pb-[max(4rem,env(safe-area-inset-bottom))] pt-32 sm:pb-24 sm:pt-56">
         <p className="eyebrow text-white/70">Agência de viagens · Passo Fundo, RS</p>
-        <h1 className="mt-4 max-w-3xl font-display text-4xl font-medium leading-[1.1] text-white sm:text-5xl lg:text-6xl">
+        <h1 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
           Sua próxima história começa aqui.
         </h1>
         <p className="mt-6 max-w-md text-base leading-relaxed text-white/85 sm:text-lg">
           Planejamos viagens que unem conforto, experiências e momentos inesquecíveis.
         </p>
         <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-          <Button href="/orcamento" variant="secondary" size="lg">
+          <Button href="/orcamento" variant="secondary" size="lg" className="w-full justify-center sm:w-auto">
             Planejar minha viagem
           </Button>
-          <Button href="/destinos" variant="outline-light" size="lg">
+          <Button href="/destinos" variant="outline-light" size="lg" className="w-full justify-center sm:w-auto">
             Conhecer destinos
           </Button>
         </div>

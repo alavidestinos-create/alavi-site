@@ -85,21 +85,27 @@ export default function ArticlePage({ params }: ArticlePageProps) {
             ← Voltar para o Guia do Viajante
           </Link>
           <p className="eyebrow mt-6">{post.category}</p>
-          <h1 className="mt-2 font-display text-3xl font-medium leading-tight text-navy-900 sm:text-4xl">
+          <h1 className="mt-2 font-display text-3xl font-semibold leading-tight text-navy-900 sm:text-4xl">
             {post.title}
           </h1>
           <p className="mt-3 text-sm text-navy-500">{post.readingTime}</p>
 
-          <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-2xl">
+          <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-2xl shadow-premium">
             <Image src={post.coverImage} alt={post.title} fill sizes="(min-width: 1024px) 60vw, 100vw" className="object-cover" priority />
           </div>
 
           <div className="prose-alavi mt-10 space-y-5">
-            {post.content.map((paragraph, index) => (
-              <p key={index} className="text-base leading-relaxed text-navy-800">
-                {paragraph}
-              </p>
-            ))}
+            {post.content.map((paragraph, index) =>
+              index === 0 ? (
+                <p key={index} className="font-display text-xl italic leading-relaxed text-navy-700 sm:text-2xl">
+                  {paragraph}
+                </p>
+              ) : (
+                <p key={index} className="text-base leading-relaxed text-navy-800">
+                  {paragraph}
+                </p>
+              )
+            )}
           </div>
         </div>
       </article>

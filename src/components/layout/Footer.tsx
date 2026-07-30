@@ -24,13 +24,7 @@ export function Footer() {
     <footer className="bg-navy-950 text-navy-100">
       <div className="container-alavi grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Image
-            src="/brand/logo-icon.png"
-            alt="ALAVI Destinos & Experiências"
-            width={56}
-            height={56}
-            className="h-14 w-14 rounded-2xl object-cover"
-          />
+          <Image src="/brand/logo-nova.png" alt="ALAVI Destinos & Experiências" width={145} height={104} className="h-11 w-auto" />
           <p className="mt-3 font-display text-xl font-extrabold text-white">ALAVI</p>
           <p className="mt-1 text-sm text-teal-400">Destinos &amp; Experiências</p>
           <p className="mt-4 max-w-xs text-sm text-navy-300">{siteConfig.brand.shortDescription}</p>

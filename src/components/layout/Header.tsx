@@ -63,16 +63,14 @@ export function Header() {
       <div className="bg-cream/95 backdrop-blur">
         <div className="container-alavi grid h-16 grid-cols-[auto_1fr_auto] items-center gap-4 sm:h-[72px] xl:h-20">
           <Link href="/" className="flex items-center gap-2.5" aria-label="ALAVI Destinos & Experiências — página inicial">
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-navy-50 sm:h-10 sm:w-10">
-              <Image
-                src="/brand/logo-icon.png"
-                alt=""
-                width={40}
-                height={40}
-                className="h-[34px] w-[34px] object-cover sm:h-9 sm:w-9"
-                priority
-              />
-            </span>
+            <Image
+              src="/brand/logo-nova.png"
+              alt=""
+              width={145}
+              height={104}
+              className="h-8 w-auto shrink-0 sm:h-9"
+              priority
+            />
             <span className="font-display text-lg font-medium tracking-tight text-navy-900 sm:text-xl">
               ALAVI
               <span className="ml-1.5 hidden text-xs font-normal text-teal-700 lg:inline">
@@ -146,7 +144,7 @@ export function Header() {
         )}
       >
         <nav
-          className="flex h-full flex-col overflow-y-auto px-6 pb-8 pt-6"
+          className="flex h-full flex-col overflow-y-auto px-6 pb-[max(2rem,env(safe-area-inset-bottom))] pt-6"
           aria-label="Navegação mobile"
         >
           <ul className="flex flex-col gap-5">

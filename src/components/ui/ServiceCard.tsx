@@ -39,7 +39,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
           <path d={iconPaths[service.icon]} />
         </svg>
       </span>
-      <h3 className="font-display text-lg font-medium text-navy-900">{service.name}</h3>
+      <h3 className="font-display text-xl font-semibold text-navy-900">{service.name}</h3>
       <p className="mt-2 flex-1 text-sm leading-relaxed text-navy-700">{service.shortDescription}</p>
       <span className="mt-5 inline-flex items-center text-sm font-semibold text-teal-700 group-hover:underline">
         Solicitar orçamento →

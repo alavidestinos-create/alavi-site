@@ -11,7 +11,7 @@ export function DestinationCard({ destination, priority }: DestinationCardProps)
   return (
     <Link
       href={`/destinos/${destination.slug}`}
-      className="group relative block aspect-[3/4] overflow-hidden rounded-2xl shadow-premium"
+      className="group relative block aspect-[3/4] overflow-hidden rounded-2xl shadow-premium transition-all duration-300 hover:-translate-y-1"
     >
       <Image
         src={destination.image}
@@ -27,7 +27,7 @@ export function DestinationCard({ destination, priority }: DestinationCardProps)
         <p className="eyebrow text-white/70">
           {destination.flag} {destination.country}
         </p>
-        <h3 className="mt-1 font-display text-2xl font-medium text-white">{destination.name}</h3>
+        <h3 className="mt-1 font-display text-2xl font-semibold text-white">{destination.name}</h3>
         <p className="mt-2 text-sm text-white/80">{destination.shortDescription}</p>
         <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white transition-transform duration-300 group-hover:translate-x-1">
           Conhecer destino →

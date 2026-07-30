@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope, Playfair_Display } from "next/font/google";
+import { Manrope, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 import { Header } from "@/components/layout/Header";
@@ -15,8 +15,9 @@ const manrope = Manrope({
   display: "swap",
 });
 
-const playfair = Playfair_Display({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-display",
   display: "swap",
 });
@@ -25,6 +26,7 @@ export const viewport: Viewport = {
   themeColor: "#032050",
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
 };
 
 export const metadata: Metadata = {
@@ -61,7 +63,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${manrope.variable} ${playfair.variable}`}>
+    <html lang="pt-BR" className={`${manrope.variable} ${cormorant.variable}`}>
       <body>
         <a
           href="#conteudo-principal"
