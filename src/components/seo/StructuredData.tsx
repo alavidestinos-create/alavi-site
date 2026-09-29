@@ -8,6 +8,8 @@ export function StructuredData() {
     "@type": "TravelAgency",
     name: siteConfig.brand.fullName,
     alternateName: siteConfig.brand.name,
+    legalName: siteConfig.legal.razaoSocial,
+    taxID: siteConfig.legal.cnpj,
     url: siteConfig.url,
     description: siteConfig.seo.defaultDescription,
     email: siteConfig.contact.email,

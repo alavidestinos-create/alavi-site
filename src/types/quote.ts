@@ -41,6 +41,7 @@ export interface QuoteFormData {
   // Servicos adicionais
   needsInsurance: boolean;
   needsTransfer: boolean;
+  needsCheckedBaggage: boolean;
 
   // Pontos e milhas
   wantsToUsePoints: boolean;
@@ -76,6 +77,7 @@ export const emptyQuoteFormData: QuoteFormData = {
   roomsCount: 1,
   needsInsurance: false,
   needsTransfer: false,
+  needsCheckedBaggage: false,
   wantsToUsePoints: false,
   loyaltyPrograms: "",
   approximatePoints: "",

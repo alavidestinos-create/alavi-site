@@ -83,11 +83,14 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-alavi flex flex-col gap-2 py-6 text-xs text-navy-300 sm:flex-row sm:items-center sm:justify-between">
+        <div className="container-alavi flex flex-col gap-1 py-6 text-xs text-navy-300 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} {siteConfig.brand.fullName}. Todos os direitos reservados.
           </p>
-          <p>{siteConfig.legal.razaoSocial !== "PENDENTE_INFORMAR_RAZAO_SOCIAL" ? `${siteConfig.legal.razaoSocial} — CNPJ ${siteConfig.legal.cnpj}` : "Razão social e CNPJ: a informar"}</p>
+          <p>
+            {siteConfig.legal.razaoSocial !== "PENDENTE_INFORMAR_RAZAO_SOCIAL" ? `${siteConfig.legal.razaoSocial} — CNPJ ${siteConfig.legal.cnpj}` : "Razão social e CNPJ: a informar"}
+            {" · "}Cadastur nº {siteConfig.cadastur.number}
+          </p>
         </div>
       </div>
     </footer>

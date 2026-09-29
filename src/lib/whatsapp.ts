@@ -70,6 +70,7 @@ export function buildQuoteWhatsAppMessage(data: Partial<QuoteFormData>): string 
   if (data.needsAccommodation) lines.push("Precisa de hospedagem: Sim");
   if (data.needsInsurance) lines.push("Precisa de seguro viagem: Sim");
   if (data.needsTransfer) lines.push("Precisa de transfer: Sim");
+  if (data.needsCheckedBaggage) lines.push("Precisa de bagagem despachada: Sim");
   if (data.wantsToUsePoints) lines.push("Tem interesse em usar pontos/milhas: Sim");
   if (data.estimatedBudget) lines.push(`Orçamento estimado: ${data.estimatedBudget}`);
   if (data.notes) lines.push(`Observações: ${data.notes}`);

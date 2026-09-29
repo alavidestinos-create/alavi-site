@@ -395,6 +395,15 @@ export function QuoteForm() {
           />
           Preciso de transfer
         </label>
+        <label className="flex items-center gap-2 text-sm text-navy-700">
+          <input
+            type="checkbox"
+            checked={data.needsCheckedBaggage}
+            onChange={(e) => update("needsCheckedBaggage", e.target.checked)}
+            className="h-4 w-4 rounded border-navy-300 accent-teal-700 focus:ring-teal-500"
+          />
+          Preciso de bagagem despachada
+        </label>
 
         {data.needsAccommodation && (
           <>

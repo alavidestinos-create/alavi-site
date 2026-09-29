@@ -4,8 +4,8 @@
  * Dado comercial vem de variaveis de ambiente, com um valor padrao (os
  * dados reais fornecidos pela agencia) usado como fallback. Isso mantem o
  * dado configuravel via ambiente sem depender de uma variavel ser definida
- * para o site funcionar corretamente. Itens ainda nao fornecidos (CNPJ,
- * razao social) continuam com placeholder EXPLICITO — ver PENDENCIAS.md.
+ * para o site funcionar corretamente. CNPJ, razao social e registro
+ * Cadastur ja fornecidos pela agencia (ver bloco `legal`/`cadastur` abaixo).
  *
  * Ver .env.example para a lista completa de variaveis.
  */
@@ -106,11 +106,19 @@ export const siteConfig = {
     metaPixelId: process.env.NEXT_PUBLIC_META_PIXEL_ID || "",
   },
 
-  // Dados legais (CNPJ, razao social) - PENDENTE fornecimento pela agencia.
+  // Dados legais (CNPJ, razao social, Cadastur).
   legal: {
-    razaoSocial: "PENDENTE_INFORMAR_RAZAO_SOCIAL",
-    cnpj: "PENDENTE_INFORMAR_CNPJ",
-    lastUpdated: "2026-07-23",
+    razaoSocial: "ALAVI Destinos e Experiências LTDA",
+    cnpj: "54.045.390/0001-45",
+    lastUpdated: "2026-09-28",
+  },
+
+  // Registro Cadastur (Ministério do Turismo) - Agência de Turismo.
+  cadastur: {
+    number: "54.045.390/0001-45",
+    activity: "Agência de Turismo",
+    validFrom: "2026-09-24",
+    validUntil: "2028-09-24",
   },
 } as const;
 

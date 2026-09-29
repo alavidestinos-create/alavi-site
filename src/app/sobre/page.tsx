@@ -50,6 +50,29 @@ export default function SobrePage() {
               feito, da primeira conversa até o seu retorno para casa.
             </p>
           </Reveal>
+
+          <Reveal className="mt-10 rounded-2xl border border-sand-200 bg-sand-50 p-6 sm:p-8">
+            <p className="eyebrow">Credenciais</p>
+            <h2 className="mt-2 font-display text-xl font-semibold text-navy-900">
+              Agência de Turismo registrada no Cadastur
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-navy-700">
+              A {siteConfig.legal.razaoSocial} (CNPJ {siteConfig.legal.cnpj}) é
+              cadastrada no Cadastur, o cadastro oficial de prestadores de
+              serviços turísticos do Ministério do Turismo, como Agência de
+              Turismo — registro nº {siteConfig.cadastur.number}, válido de{" "}
+              {new Date(`${siteConfig.cadastur.validFrom}T00:00:00`).toLocaleDateString("pt-BR")} a{" "}
+              {new Date(`${siteConfig.cadastur.validUntil}T00:00:00`).toLocaleDateString("pt-BR")}.
+            </p>
+            <a
+              href="https://www.cadastur.turismo.gov.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center text-sm font-semibold text-teal-700 hover:underline"
+            >
+              Consultar autenticidade no Cadastur →
+            </a>
+          </Reveal>
         </div>
       </section>
 

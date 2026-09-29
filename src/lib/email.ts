@@ -43,6 +43,7 @@ export function buildQuoteEmailText(data: QuoteFormData): string {
   }
   lines.push(`Precisa de seguro viagem: ${data.needsInsurance ? "Sim" : "Não"}`);
   lines.push(`Precisa de transfer: ${data.needsTransfer ? "Sim" : "Não"}`);
+  lines.push(`Precisa de bagagem despachada: ${data.needsCheckedBaggage ? "Sim" : "Não"}`);
 
   lines.push("");
   lines.push(`Interesse em usar pontos/milhas: ${data.wantsToUsePoints ? "Sim" : "Não"}`);
@@ -135,6 +136,7 @@ export function buildQuoteEmailHtml(data: QuoteFormData): string {
     row("Quantidade de quartos", data.needsAccommodation ? data.roomsCount : undefined),
     row("Precisa de seguro viagem", data.needsInsurance),
     row("Precisa de transfer", data.needsTransfer),
+    row("Precisa de bagagem despachada", data.needsCheckedBaggage),
 
     sectionTitle("Pontos e milhas"),
     row("Interesse em usar pontos/milhas", data.wantsToUsePoints),

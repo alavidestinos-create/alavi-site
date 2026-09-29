@@ -16,8 +16,12 @@ no código (buscar por `PENDENTE_`) até serem preenchidos.
 
 ## Jurídico / LGPD
 
-- [ ] Razão social (`src/config/site.ts` → `legal.razaoSocial`)
-- [ ] CNPJ (`src/config/site.ts` → `legal.cnpj`)
+- [x] Razão social (`src/config/site.ts` → `legal.razaoSocial`): ALAVI
+      Destinos e Experiências LTDA
+- [x] CNPJ (`src/config/site.ts` → `legal.cnpj`): 54.045.390/0001-45
+- [x] Registro Cadastur (`src/config/site.ts` → `cadastur`): Agência de
+      Turismo, nº 54.045.390/0001-45, válido 24/09/2026–24/09/2028. Exibido
+      no rodapé, em `/sobre` e no JSON-LD (`taxID`/`legalName`).
 - [ ] Revisão das páginas `/privacidade`, `/termos` e `/cookies` por
       profissional jurídico antes da publicação definitiva
 
