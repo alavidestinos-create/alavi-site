@@ -88,7 +88,7 @@ export function Footer() {
             © {new Date().getFullYear()} {siteConfig.brand.fullName}. Todos os direitos reservados.
           </p>
           <p>
-            {siteConfig.legal.razaoSocial !== "PENDENTE_INFORMAR_RAZAO_SOCIAL" ? `${siteConfig.legal.razaoSocial} — CNPJ ${siteConfig.legal.cnpj}` : "Razão social e CNPJ: a informar"}
+            {siteConfig.legal.razaoSocial} — CNPJ {siteConfig.legal.cnpj}
             {" · "}Cadastur nº {siteConfig.cadastur.number}
           </p>
         </div>

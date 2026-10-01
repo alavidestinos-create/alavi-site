@@ -27,9 +27,7 @@ export default function PrivacidadePage() {
             <h2 className="font-display text-lg font-semibold text-navy-900">1. Quem somos</h2>
             <p className="mt-2">
               Esta Política de Privacidade descreve como a {siteConfig.brand.fullName}
-              {siteConfig.legal.razaoSocial !== "PENDENTE_INFORMAR_RAZAO_SOCIAL"
-                ? ` (${siteConfig.legal.razaoSocial})`
-                : ""}{" "}
+              {` (${siteConfig.legal.razaoSocial})`}{" "}
               coleta, usa e protege os dados pessoais dos visitantes e clientes
               deste site.
             </p>
