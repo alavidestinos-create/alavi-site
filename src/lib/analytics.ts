@@ -13,7 +13,9 @@ type EventName =
   | "quote_form_validation_error"
   | "service_click"
   | "destination_click"
-  | "instagram_click";
+  | "instagram_click"
+  | "article_share_whatsapp"
+  | "article_link_copied";
 
 interface EventPayload {
   [key: string]: string | number | boolean | undefined;

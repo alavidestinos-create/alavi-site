@@ -55,6 +55,9 @@ export const images = {
   blogCapaPadrao: unsplash("1667759318615-757c8ddbfa7a"),
   blogCapaLuaDeMel: unsplash("1759758844140-a4389568d86a"),
   blogCapaFamilia: unsplash("1695425812104-8a9963d58887"),
+  blogCapaZiplock: unsplash("1585687635785-994bda55c78e"),
+  blogCapaBagagem: unsplash("1762965119363-af950b523dca"),
+  blogCapaErrosAeroporto: unsplash("1750941416707-4dff777c67b1"),
 } as const;
 
 export type ImageKey = keyof typeof images;

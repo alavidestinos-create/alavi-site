@@ -19,6 +19,21 @@ export interface BlogPost {
   content: string[];
   /** Opcional: nem todo artigo (principalmente os mais antigos) tem FAQ ainda. */
   faq?: BlogFaqItem[];
+  /**
+   * Opcional: ativa os botões "Compartilhe esta dica" (WhatsApp + Copiar
+   * link) no final do artigo. Mantido fora do padrão visual já existente —
+   * só aparece nos artigos que optarem por isso explicitamente.
+   */
+  shareCta?: boolean;
+  /**
+   * Opcional: tabela comparativa renderizada após o corpo do artigo (ex.:
+   * "o que pode/não pode levar"). Só aparece nos artigos que a definirem —
+   * não afeta o layout dos demais artigos.
+   */
+  table?: {
+    headers: string[];
+    rows: string[][];
+  };
 }
 
 interface RawArticle extends Omit<BlogPost, "coverImage"> {

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CallToAction } from "@/components/ui/CallToAction";
 import { ArticleCard } from "@/components/ui/ArticleCard";
+import { ArticleShareButtons } from "@/components/ui/ArticleShareButtons";
+import { ArticleTable } from "@/components/ui/ArticleTable";
 import { Faq } from "@/components/sections/Faq";
 import { blogPosts, getBlogPostBySlug, getRelatedPosts } from "@/content/blog";
 import { getCategoryLabel } from "@/content/categories";
@@ -87,6 +89,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
     : null;
 
   const relatedPosts = getRelatedPosts(post);
+  const articleUrl = `${siteConfig.url}/guia-do-viajante/${post.slug}`;
 
   return (
     <>
@@ -135,6 +138,10 @@ export default function ArticlePage({ params }: ArticlePageProps) {
               )
             )}
           </div>
+
+          {post.table && <ArticleTable headers={post.table.headers} rows={post.table.rows} />}
+
+          {post.shareCta && <ArticleShareButtons title={post.title} url={articleUrl} />}
         </div>
       </article>
 
