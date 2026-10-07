@@ -25,6 +25,10 @@ export interface BlogPost {
    * só aparece nos artigos que optarem por isso explicitamente.
    */
   shareCta?: boolean;
+  /** Opcional: meta description própria para SEO (senão usa o excerpt). */
+  metaDescription?: string;
+  /** Opcional: palavra-chave principal + secundárias (meta keywords). */
+  keywords?: string[];
   /**
    * Opcional: tabela comparativa renderizada após o corpo do artigo (ex.:
    * "o que pode/não pode levar"). Só aparece nos artigos que a definirem —

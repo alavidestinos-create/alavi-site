@@ -39,6 +39,16 @@ function renderArticleContent(content: string[]) {
       continue;
     }
 
+    if (paragraph.startsWith("## ")) {
+      blocks.push(
+        <h2 key={i} className="pt-4 font-display text-2xl font-semibold leading-snug text-navy-900">
+          {paragraph.slice(3)}
+        </h2>
+      );
+      i += 1;
+      continue;
+    }
+
     if (paragraph.startsWith("☐ ")) {
       const items: string[] = [];
       while (i < content.length && (content[i] as string).startsWith("☐ ")) {
@@ -114,12 +124,13 @@ export function generateMetadata({ params }: ArticlePageProps): Metadata {
   }
   return {
     title: post.title,
-    description: post.excerpt,
+    description: post.metaDescription ?? post.excerpt,
+    ...(post.keywords ? { keywords: post.keywords } : {}),
     alternates: { canonical: `/guia-do-viajante/${post.slug}` },
     openGraph: {
       type: "article",
       title: post.title,
-      description: post.excerpt,
+      description: post.metaDescription ?? post.excerpt,
       url: `${siteConfig.url}/guia-do-viajante/${post.slug}`,
       images: [{ url: post.coverImage }],
     },
