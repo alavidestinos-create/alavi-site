@@ -15,6 +15,94 @@ interface ArticlePageProps {
   params: { slug: string };
 }
 
+/**
+ * Converte o array plano de parágrafos (post.content) em blocos de texto e
+ * listas reais (<ul>/<ol>), em vez de manter marcadores "•"/"☐"/"1." soltos
+ * dentro de <p>. Detecta sequências de parágrafos com esses prefixos e as
+ * agrupa — qualquer parágrafo que não use esses prefixos continua sendo
+ * renderizado exatamente como antes, então nenhum artigo existente muda.
+ */
+function renderArticleContent(content: string[]) {
+  const blocks: JSX.Element[] = [];
+  let i = 0;
+
+  while (i < content.length) {
+    const paragraph = content[i] as string;
+
+    if (i === 0) {
+      blocks.push(
+        <p key={i} className="font-display text-xl italic leading-relaxed text-navy-700 sm:text-2xl">
+          {paragraph}
+        </p>
+      );
+      i += 1;
+      continue;
+    }
+
+    if (paragraph.startsWith("☐ ")) {
+      const items: string[] = [];
+      while (i < content.length && (content[i] as string).startsWith("☐ ")) {
+        items.push((content[i] as string).slice(2));
+        i += 1;
+      }
+      blocks.push(
+        <ul key={`checklist-${i}`} className="space-y-3 rounded-2xl border border-sand-200 bg-sand-50 p-5 sm:p-6">
+          {items.map((item) => (
+            <li key={item} className="flex items-start gap-3 text-base leading-relaxed text-navy-800">
+              <span className="mt-1 h-4 w-4 shrink-0 rounded border-2 border-teal-700" aria-hidden="true" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      );
+      continue;
+    }
+
+    if (paragraph.startsWith("• ")) {
+      const items: string[] = [];
+      while (i < content.length && (content[i] as string).startsWith("• ")) {
+        items.push((content[i] as string).slice(2));
+        i += 1;
+      }
+      blocks.push(
+        <ul key={`bullets-${i}`} className="list-disc space-y-2 pl-5 text-base leading-relaxed text-navy-800 marker:text-teal-700">
+          {items.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      );
+      continue;
+    }
+
+    if (/^\d+\.\s/.test(paragraph)) {
+      const items: string[] = [];
+      while (i < content.length && /^\d+\.\s/.test(content[i] as string)) {
+        items.push((content[i] as string).replace(/^\d+\.\s/, ""));
+        i += 1;
+      }
+      blocks.push(
+        <ol key={`numbered-${i}`} className="list-decimal space-y-3 pl-5 text-base leading-relaxed text-navy-800 marker:font-semibold marker:text-teal-700">
+          {items.map((item) => (
+            <li key={item} className="pl-1">
+              {item}
+            </li>
+          ))}
+        </ol>
+      );
+      continue;
+    }
+
+    blocks.push(
+      <p key={i} className="text-base leading-relaxed text-navy-800">
+        {paragraph}
+      </p>
+    );
+    i += 1;
+  }
+
+  return blocks;
+}
+
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
 }
@@ -125,23 +213,11 @@ export default function ArticlePage({ params }: ArticlePageProps) {
             <Image src={post.coverImage} alt={post.title} fill sizes="(min-width: 1024px) 60vw, 100vw" className="object-cover" priority />
           </div>
 
-          <div className="prose-alavi mt-10 space-y-5">
-            {post.content.map((paragraph, index) =>
-              index === 0 ? (
-                <p key={index} className="font-display text-xl italic leading-relaxed text-navy-700 sm:text-2xl">
-                  {paragraph}
-                </p>
-              ) : (
-                <p key={index} className="text-base leading-relaxed text-navy-800">
-                  {paragraph}
-                </p>
-              )
-            )}
-          </div>
+          <div className="prose-alavi mt-10 space-y-5">{renderArticleContent(post.content)}</div>
 
           {post.table && <ArticleTable headers={post.table.headers} rows={post.table.rows} />}
 
-          {post.shareCta && <ArticleShareButtons title={post.title} url={articleUrl} />}
+          <ArticleShareButtons title={post.title} url={articleUrl} />
         </div>
       </article>
 

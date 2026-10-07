@@ -9,6 +9,7 @@ const routes = [
   "/servicos",
   "/destinos",
   "/disney-orlando",
+  "/cruzeiros",
   "/guia-do-viajante",
   "/pontos-e-milhas",
   "/orcamento",

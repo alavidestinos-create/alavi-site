@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/", label: "Início" },
   { href: "/destinos", label: "Destinos" },
   { href: "/servicos", label: "Serviços" },
+  { href: "/cruzeiros", label: "Cruzeiros" },
   { href: "/guia-do-viajante", label: "Guia do Viajante" },
   { href: "/sobre", label: "Sobre" },
   { href: "/contato", label: "Contato" },

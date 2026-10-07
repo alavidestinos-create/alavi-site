@@ -72,6 +72,7 @@ export const siteConfig = {
     experiencia: (tema: string) =>
       `Olá! Vim pelo site da ALAVI e tenho interesse em uma viagem com o tema "${tema}". Podem me ajudar a montar um roteiro?`,
     pontosMilhas: "Olá! Vim pelo site da ALAVI e gostaria de entender melhor como usar meus pontos ou milhas em uma viagem.",
+    cruzeiros: "Olá! Vim pelo site da ALAVI e gostaria de cotar um cruzeiro (nacional ou internacional). Podem me ajudar?",
     parques: "Olá! Vim pelo site da ALAVI e gostaria de cotar ingressos para os parques da minha viagem.",
     footer: "Olá! Vim pelo site da ALAVI e gostaria de falar com um especialista em viagens.",
     formulario: "Olá! Vim pelo site da ALAVI e gostaria de solicitar um orçamento de viagem.",
