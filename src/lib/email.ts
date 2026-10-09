@@ -1,5 +1,19 @@
-import type { QuoteFormData } from "@/types/quote";
+import { getDestinationLabel, labelFor, type QuoteFormData } from "@/types/quote";
 import { buildClientWhatsAppUrl } from "@/lib/whatsapp";
+
+/** Linhas de texto com os detalhes específicos de cruzeiro (vazio se não for cruzeiro). */
+function cruiseTextLines(data: QuoteFormData): string[] {
+  if (data.interest !== "cruzeiro") return [];
+  const lines: string[] = ["", "— Cruzeiro —"];
+  if (data.cruiseScope) lines.push(`Tipo: ${labelFor("cruiseScope", data.cruiseScope)}`);
+  if (data.cruiseRegions.length > 0) lines.push(`Regiões de interesse: ${data.cruiseRegions.join(", ")}`);
+  if (data.cruiseLines.length > 0) lines.push(`Companhias de interesse: ${data.cruiseLines.join(", ")}`);
+  if (data.cruiseDuration) lines.push(`Duração: ${labelFor("cruiseDuration", data.cruiseDuration)}`);
+  if (data.cabinType) lines.push(`Cabine: ${labelFor("cabinType", data.cabinType)}`);
+  if (data.departurePort) lines.push(`Porto de embarque: ${data.departurePort}`);
+  if (data.cruiseDrinkPackage) lines.push("Interesse em pacote de bebidas: Sim");
+  return lines;
+}
 
 /**
  * Monta o corpo (texto simples) do e-mail de notificacao de um novo pedido
@@ -9,20 +23,28 @@ export function buildQuoteEmailText(data: QuoteFormData): string {
   const lines: string[] = [
     "Novo pedido de orçamento recebido pelo site da ALAVI.",
     "",
+  ];
+
+  if (data.interest) lines.push(`Interesse: ${labelFor("interest", data.interest)}`);
+  lines.push(
     `Nome completo: ${data.fullName}`,
     `WhatsApp: ${data.whatsapp}`,
     `E-mail: ${data.email}`,
     "",
     `Origem: ${data.originCity}`,
-    `Destino: ${data.destination}`,
-  ];
+    `Destino: ${getDestinationLabel(data)}`
+  );
+  if (data.secondDestination) lines.push(`Segunda opção de destino: ${data.secondDestination}`);
 
   if (data.flexibleDates) {
     lines.push("Datas: flexíveis");
+    if (data.travelMonth) lines.push(`Mês/período desejado: ${data.travelMonth}`);
   } else {
     if (data.departureDate) lines.push(`Data de ida: ${data.departureDate}`);
     if (data.returnDate) lines.push(`Data de volta: ${data.returnDate}`);
   }
+  if (data.tripDuration) lines.push(`Duração: ${labelFor("tripDuration", data.tripDuration)}`);
+  lines.push(...cruiseTextLines(data));
 
   const paxParts: string[] = [`${data.adults} adulto(s)`];
   if (data.children) paxParts.push(`${data.children} criança(s)`);
@@ -32,13 +54,19 @@ export function buildQuoteEmailText(data: QuoteFormData): string {
     lines.push(`Idade das crianças: ${data.childrenAges}`);
   }
 
-  if (data.tripType) lines.push(`Tipo de viagem: ${data.tripType}`);
-  if (data.flightClass) lines.push(`Classe de voo: ${data.flightClass}`);
+  if (data.tripType) lines.push(`Tipo de viagem: ${labelFor("tripType", data.tripType)}`);
+  if (data.flightClass && data.interest !== "cruzeiro") {
+    lines.push(`Classe de voo: ${labelFor("flightClass", data.flightClass)}`);
+  }
+  if (data.travelInterests.length > 0) lines.push(`Interesses: ${data.travelInterests.join(", ")}`);
 
   lines.push("");
+  lines.push(`Precisa de passagem aérea: ${data.needsFlights ? "Sim" : "Não"}`);
   lines.push(`Precisa de hospedagem: ${data.needsAccommodation ? "Sim" : "Não"}`);
   if (data.needsAccommodation) {
-    if (data.accommodationStandard) lines.push(`Padrão de hospedagem: ${data.accommodationStandard}`);
+    if (data.accommodationStandard) {
+      lines.push(`Padrão de hospedagem: ${labelFor("accommodationStandard", data.accommodationStandard)}`);
+    }
     if (data.roomsCount) lines.push(`Quantidade de quartos: ${data.roomsCount}`);
   }
   lines.push(`Precisa de seguro viagem: ${data.needsInsurance ? "Sim" : "Não"}`);
@@ -54,6 +82,12 @@ export function buildQuoteEmailText(data: QuoteFormData): string {
 
   if (data.estimatedBudget) lines.push(`\nOrçamento estimado: ${data.estimatedBudget}`);
   if (data.notes) lines.push(`Observações: ${data.notes}`);
+  if (data.preferredContact) {
+    lines.push(`Prefere contato por: ${labelFor("preferredContact", data.preferredContact)}`);
+  }
+  if (data.preferredPeriod) {
+    lines.push(`Melhor período: ${labelFor("preferredPeriod", data.preferredPeriod)}`);
+  }
 
   lines.push("");
   lines.push(`Autoriza contato: ${data.allowContact ? "Sim" : "Não"}`);
@@ -63,7 +97,8 @@ export function buildQuoteEmailText(data: QuoteFormData): string {
 }
 
 export function buildQuoteEmailSubject(data: QuoteFormData): string {
-  return `Novo lead — ${data.fullName} — ${data.destination}`;
+  const prefix = data.interest === "cruzeiro" ? "Novo lead (cruzeiro)" : "Novo lead";
+  return `${prefix} — ${data.fullName} — ${getDestinationLabel(data)}`;
 }
 
 function escapeHtml(value: string): string {
@@ -114,6 +149,9 @@ export function buildQuoteEmailHtml(data: QuoteFormData): string {
   if (data.infants) paxParts.push(`${data.infants} bebê(s)`);
 
   const rows = [
+    sectionTitle("Interesse"),
+    row("O que procura", data.interest ? labelFor("interest", data.interest) : ""),
+
     sectionTitle("Contato"),
     row("Nome completo", data.fullName),
     data.whatsapp ? linkRow("WhatsApp", data.whatsapp, buildClientWhatsAppUrl(data)) : "",
@@ -121,18 +159,43 @@ export function buildQuoteEmailHtml(data: QuoteFormData): string {
 
     sectionTitle("Viagem"),
     row("Origem", data.originCity),
-    row("Destino", data.destination),
+    row("Destino", getDestinationLabel(data)),
+    row("Segunda opção de destino", data.secondDestination),
     row("Datas flexíveis", data.flexibleDates),
+    data.flexibleDates ? row("Mês/período desejado", data.travelMonth) : "",
     !data.flexibleDates ? row("Data de ida", data.departureDate) : "",
     !data.flexibleDates ? row("Data de volta", data.returnDate) : "",
+    row("Duração", data.tripDuration ? labelFor("tripDuration", data.tripDuration) : ""),
     row("Viajantes", paxParts.join(", ")),
     row("Idade das crianças", data.children > 0 ? data.childrenAges : undefined),
-    row("Tipo de viagem", data.tripType),
-    row("Classe de voo", data.flightClass),
+    row("Tipo de viagem", data.tripType ? labelFor("tripType", data.tripType) : ""),
+    data.interest !== "cruzeiro"
+      ? row("Classe de voo", data.flightClass ? labelFor("flightClass", data.flightClass) : "")
+      : "",
+    row("Interesses", data.travelInterests.join(", ")),
+
+    ...(data.interest === "cruzeiro"
+      ? [
+          sectionTitle("Cruzeiro"),
+          row("Tipo", data.cruiseScope ? labelFor("cruiseScope", data.cruiseScope) : ""),
+          row("Regiões de interesse", data.cruiseRegions.join(", ")),
+          row("Companhias de interesse", data.cruiseLines.join(", ")),
+          row("Duração", data.cruiseDuration ? labelFor("cruiseDuration", data.cruiseDuration) : ""),
+          row("Cabine", data.cabinType ? labelFor("cabinType", data.cabinType) : ""),
+          row("Porto de embarque", data.departurePort),
+          row("Pacote de bebidas", data.cruiseDrinkPackage),
+        ]
+      : []),
 
     sectionTitle("Serviços adicionais"),
+    row("Precisa de passagem aérea", data.needsFlights),
     row("Precisa de hospedagem", data.needsAccommodation),
-    row("Padrão de hospedagem", data.needsAccommodation ? data.accommodationStandard : undefined),
+    row(
+      "Padrão de hospedagem",
+      data.needsAccommodation && data.accommodationStandard
+        ? labelFor("accommodationStandard", data.accommodationStandard)
+        : undefined
+    ),
     row("Quantidade de quartos", data.needsAccommodation ? data.roomsCount : undefined),
     row("Precisa de seguro viagem", data.needsInsurance),
     row("Precisa de transfer", data.needsTransfer),
@@ -146,6 +209,8 @@ export function buildQuoteEmailHtml(data: QuoteFormData): string {
     sectionTitle("Orçamento e observações"),
     row("Orçamento estimado", data.estimatedBudget),
     row("Observações", data.notes),
+    row("Prefere contato por", data.preferredContact ? labelFor("preferredContact", data.preferredContact) : ""),
+    row("Melhor período", data.preferredPeriod ? labelFor("preferredPeriod", data.preferredPeriod) : ""),
 
     sectionTitle("Consentimento"),
     row("Autoriza contato", data.allowContact),
@@ -163,7 +228,7 @@ export function buildQuoteEmailHtml(data: QuoteFormData): string {
         <td style="background:#032050;padding:24px 24px;">
           <p style="margin:0;color:#82b0ab;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;">Novo lead — site ALAVI</p>
           <p style="margin:6px 0 0;color:#ffffff;font-size:20px;font-weight:700;">${escapeHtml(data.fullName)}</p>
-          <p style="margin:2px 0 0;color:#c7daeb;font-size:14px;">${escapeHtml(data.originCity)} → ${escapeHtml(data.destination)}</p>
+          <p style="margin:2px 0 0;color:#c7daeb;font-size:14px;">${escapeHtml(data.originCity)} → ${escapeHtml(getDestinationLabel(data))}</p>
         </td>
       </tr>
       <tr>
@@ -198,7 +263,7 @@ export function buildClientConfirmationEmailText(data: QuoteFormData): string {
     "",
     "Recebemos seu pedido de orçamento e em breve um de nossos consultores vai entrar em contato com você.",
     "",
-    `Destino: ${data.destination}`,
+    `Destino: ${getDestinationLabel(data)}`,
   ];
   if (data.originCity) lines.push(`Origem: ${data.originCity}`);
   if (!data.flexibleDates && data.departureDate) lines.push(`Data de ida: ${data.departureDate}`);
@@ -239,7 +304,7 @@ export function buildClientConfirmationEmailHtml(data: QuoteFormData): string {
         <td style="padding:28px;">
           <p style="margin:0 0 16px;color:#032050;font-size:15px;line-height:1.6;">
             Olá${firstName ? `, ${escapeHtml(firstName)}` : ""}! Recebemos seu pedido de orçamento para
-            <strong>${escapeHtml(data.destination)}</strong>${summaryParts.length ? `, ${escapeHtml(summaryParts.join(" "))}` : ""}.
+            <strong>${escapeHtml(getDestinationLabel(data))}</strong>${summaryParts.length ? `, ${escapeHtml(summaryParts.join(" "))}` : ""}.
           </p>
           <p style="margin:0 0 16px;color:#032050;font-size:15px;line-height:1.6;">
             Em breve um de nossos consultores entra em contato para dar continuidade ao seu pedido, sem compromisso.

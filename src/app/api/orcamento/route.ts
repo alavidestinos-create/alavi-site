@@ -158,7 +158,14 @@ function sanitize(input: Record<string, unknown>): Partial<QuoteFormData> {
     const value = input[key];
     const defaultValue = emptyQuoteFormData[key];
 
-    if (typeof defaultValue === "boolean") {
+    if (Array.isArray(defaultValue)) {
+      result[key] = Array.isArray(value)
+        ? value
+            .filter((item): item is string => typeof item === "string")
+            .slice(0, 20)
+            .map((item) => item.slice(0, 100))
+        : defaultValue;
+    } else if (typeof defaultValue === "boolean") {
       result[key] = typeof value === "boolean" ? value : defaultValue;
     } else if (typeof defaultValue === "number") {
       result[key] = typeof value === "number" && Number.isFinite(value) ? value : defaultValue;

@@ -22,6 +22,34 @@ describe("buildQuoteWhatsAppMessage", () => {
     expect(message).not.toContain("Origem:");
   });
 
+  it("inclui detalhes de cruzeiro quando o interesse é cruzeiro", () => {
+    const message = buildQuoteWhatsAppMessage({
+      ...emptyQuoteFormData,
+      interest: "cruzeiro",
+      cruiseRegions: ["Caribe e Bahamas"],
+      cruiseLines: ["Royal Caribbean"],
+      cabinType: "varanda",
+      cruiseDrinkPackage: true,
+      flexibleDates: true,
+      travelMonth: "2027-01",
+    });
+    expect(message).toContain("Interesse: Cruzeiro");
+    expect(message).toContain("Destino: Cruzeiro: Caribe e Bahamas");
+    expect(message).toContain("Royal Caribbean");
+    expect(message).toContain("Cabine: Com varanda");
+    expect(message).toContain("pacote de bebidas");
+    expect(message).toContain("2027-01");
+  });
+
+  it("não inclui campos de cruzeiro em outros tipos de pedido", () => {
+    const message = buildQuoteWhatsAppMessage({
+      ...emptyQuoteFormData,
+      interest: "passagem-aerea",
+      cruiseLines: ["Royal Caribbean"],
+    });
+    expect(message).not.toContain("Royal Caribbean");
+  });
+
   it("inclui contagem de viajantes quando informada", () => {
     const message = buildQuoteWhatsAppMessage({
       ...emptyQuoteFormData,

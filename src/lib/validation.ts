@@ -20,6 +20,10 @@ export function onlyDigits(value: string): string {
 export function validateQuoteForm(data: QuoteFormData): QuoteFormErrors {
   const errors: QuoteFormErrors = {};
 
+  if (!data.interest) {
+    errors.interest = "Selecione o que você está procurando.";
+  }
+
   const fullNameTrimmed = data.fullName.trim();
   const nameParts = fullNameTrimmed.split(/\s+/).filter(Boolean);
   if (fullNameTrimmed.length < 3 || nameParts.length < 2) {
@@ -39,7 +43,12 @@ export function validateQuoteForm(data: QuoteFormData): QuoteFormErrors {
     errors.originCity = "Informe a cidade de origem.";
   }
 
-  if (!data.destination.trim()) {
+  if (data.interest === "cruzeiro") {
+    // Em cruzeiro, o destino pode ser informado por regiões (chips) ou texto livre.
+    if (data.cruiseRegions.length === 0 && !data.destination.trim()) {
+      errors.cruiseRegions = "Escolha ao menos uma região ou informe o destino desejado.";
+    }
+  } else if (!data.destination.trim()) {
     errors.destination = "Informe o destino desejado.";
   }
 

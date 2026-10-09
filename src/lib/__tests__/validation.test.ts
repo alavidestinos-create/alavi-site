@@ -5,6 +5,7 @@ import { emptyQuoteFormData, type QuoteFormData } from "@/types/quote";
 function validData(): QuoteFormData {
   return {
     ...emptyQuoteFormData,
+    interest: "passagem-aerea",
     fullName: "Maria da Silva",
     whatsapp: "5511999999999",
     email: "maria@example.com",
@@ -67,6 +68,32 @@ describe("validateQuoteForm", () => {
   it("exige aceite da política de privacidade", () => {
     const errors = validateQuoteForm({ ...validData(), acceptsPrivacyPolicy: false });
     expect(errors.acceptsPrivacyPolicy).toBeDefined();
+  });
+
+  it("exige que o cliente escolha o que procura", () => {
+    const errors = validateQuoteForm({ ...validData(), interest: "" });
+    expect(errors.interest).toBeDefined();
+  });
+
+  it("em cruzeiro, aceita regiões escolhidas sem destino em texto", () => {
+    const errors = validateQuoteForm({
+      ...validData(),
+      interest: "cruzeiro",
+      destination: "",
+      cruiseRegions: ["Caribe e Bahamas"],
+    });
+    expect(errors.cruiseRegions).toBeUndefined();
+    expect(errors.destination).toBeUndefined();
+  });
+
+  it("em cruzeiro, exige região ou destino", () => {
+    const errors = validateQuoteForm({
+      ...validData(),
+      interest: "cruzeiro",
+      destination: "",
+      cruiseRegions: [],
+    });
+    expect(errors.cruiseRegions).toBeDefined();
   });
 
   it("onlyDigits remove caracteres não numéricos", () => {
