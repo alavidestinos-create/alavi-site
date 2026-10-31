@@ -12,6 +12,7 @@ import {
 } from "@/lib/consent";
 import { isExcludedPath, isTrackingConfigured, trackingConfig } from "@/lib/tracking-config";
 import { trackEvent } from "@/lib/analytics";
+import { clearCookiesForCategories } from "@/lib/cookie-cleanup";
 
 /**
  * Único ponto de carga das ferramentas de medição e marketing.
@@ -183,6 +184,14 @@ export function MarketingTags() {
         // Scripts de terceiros já carregados não são removíveis com segurança:
         // recarrega para que a página volte a rodar sem eles.
         consentRef.current = next;
+        clearCookiesForCategories(
+          {
+            analytics: !!previous && previous.analytics && !next.analytics,
+            marketing: !!previous && previous.marketing && !next.marketing,
+          },
+          document,
+          window.location.hostname
+        );
         window.location.reload();
         return;
       }
