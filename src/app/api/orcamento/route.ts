@@ -8,6 +8,7 @@ import {
   buildQuoteEmailSubject,
   buildQuoteEmailText,
 } from "@/lib/email";
+import { parseTracking, sendLeadToMeta } from "@/lib/meta-capi";
 import { emptyQuoteFormData, type QuoteFormData } from "@/types/quote";
 
 export const runtime = "nodejs";
@@ -57,9 +58,25 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "no_destination_configured" }, { status: 501 });
   }
 
+  const capi = parseTracking((body as Record<string, unknown>).tracking);
+  const reportLead = async () => {
+    // Só depois da entrega confirmada, só com consentimento de Publicidade e
+    // só se a API de Conversões estiver ligada (ver lib/meta-capi.ts).
+    if (!capi) return;
+    await sendLeadToMeta({
+      tracking: capi,
+      email: data.email,
+      phone: data.whatsapp,
+      leadType: data.interest || undefined,
+      clientIp: request.headers.get("x-nf-client-connection-ip") ?? undefined,
+      userAgent: request.headers.get("user-agent") ?? undefined,
+    });
+  };
+
   if (smtpConfigured) {
     try {
       await sendQuoteEmail(data);
+      await reportLead();
       return NextResponse.json({ ok: true, channel: "email" });
     } catch (error) {
       console.error("Falha ao enviar e-mail do orçamento:", error);
@@ -91,6 +108,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "webhook_error" }, { status: 502 });
     }
 
+    await reportLead();
     return NextResponse.json({ ok: true, channel: "webhook" });
   } catch {
     return NextResponse.json({ error: "webhook_unreachable" }, { status: 502 });
