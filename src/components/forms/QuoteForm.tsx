@@ -5,12 +5,18 @@ import { emptyQuoteFormData, type QuoteFormData } from "@/types/quote";
 import { validateQuoteForm, type QuoteFormErrors } from "@/lib/validation";
 import { buildQuoteWhatsAppMessage, buildWhatsAppUrl } from "@/lib/whatsapp";
 import { createEventId, trackEvent } from "@/lib/analytics";
+import { hasMarketingConsent } from "@/lib/consent";
 import { formatCurrencyInput } from "@/lib/utils";
 import { FieldWrapper, fieldClasses } from "@/components/forms/FormField";
 import { ChoiceGroup, type ChoiceOption } from "@/components/forms/ChoiceGroup";
 import Link from "next/link";
 
 type SubmitState = "idle" | "submitting" | "success" | "error" | "unavailable";
+
+function readCookie(name: string): string | undefined {
+  const match = document.cookie.split("; ").find((item) => item.startsWith(`${name}=`));
+  return match ? decodeURIComponent(match.slice(name.length + 1)) : undefined;
+}
 
 const interestOptions: ChoiceOption[] = [
   { value: "passagem-aerea", label: "Passagem aérea", description: "Voos nacionais e internacionais" },
@@ -272,11 +278,26 @@ export function QuoteForm() {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 20000);
 
+    // Mesmo event_id no Pixel (generate_lead) e na API de Conversões do
+    // servidor, para a Meta deduplicar. Só vai ao servidor com consentimento
+    // de Publicidade; sem ele, o servidor não envia nada à Meta.
+    const eventId = createEventId();
+    const marketingConsent = hasMarketingConsent();
+
     try {
       const response = await fetch("/api/orcamento", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          ...data,
+          tracking: {
+            eventId,
+            marketingConsent,
+            fbp: marketingConsent ? readCookie("_fbp") : undefined,
+            fbc: marketingConsent ? readCookie("_fbc") : undefined,
+            sourceUrl: window.location.href,
+          },
+        }),
         signal: controller.signal,
       });
 
@@ -298,7 +319,7 @@ export function QuoteForm() {
       trackEvent("generate_lead", {
         form_name: "orcamento",
         lead_type: leadType,
-        event_id: createEventId(),
+        event_id: eventId,
       });
     } catch {
       // O WhatsApp já foi aberto acima, então o pedido não se perde mesmo
