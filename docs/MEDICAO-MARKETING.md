@@ -2,6 +2,8 @@
 
 Este documento descreve o que está **implementado no código**, o que ainda precisa ser **configurado nas plataformas** (GTM, GA4, Meta, Clarity) e como **validar com dados reais**.
 
+> **Publicação, inventário de contas, contêiner GTM pronto para importar (`docs/gtm/alavi-gtm-container.json`), UTMs, relatórios e sequência de ativação:** ver `docs/PLANO-PUBLICACAO-MEDICAO.md`.
+>
 > Estado atual: toda a infraestrutura está pronta, mas **desligada**. Nenhum ID real foi informado; nenhum script de terceiros é carregado até que (1) um ID seja configurado e (2) o visitante consinta.
 
 ---
