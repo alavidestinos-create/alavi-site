@@ -59,6 +59,11 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
+  // Verificação de domínio da Meta (Business Settings → Domínios). Manter.
+  // O Search Console é verificado por arquivo (public/googleef59b9203ea8d674.html), também a manter.
+  other: {
+    "facebook-domain-verification": "1537oes1vcvqp49e9745oqjjhdlqwr",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
