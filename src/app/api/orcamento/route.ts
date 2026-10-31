@@ -116,7 +116,7 @@ async function sendQuoteEmail(data: QuoteFormData): Promise<void> {
 
   // 1) E-mail do lead para a ALAVI — obrigatório: se falhar, o chamador
   //    ainda pode cair no webhook (ver POST acima), então o erro sobe.
-  await transporter.sendMail({
+  const info = await transporter.sendMail({
     from: `"Site ALAVI" <${process.env.SMTP_USER}>`,
     to,
     replyTo: data.email || undefined,
@@ -124,6 +124,13 @@ async function sendQuoteEmail(data: QuoteFormData): Promise<void> {
     text: buildQuoteEmailText(data),
     html: buildQuoteEmailHtml(data),
   });
+
+  // "ok" só se o servidor SMTP aceitou o destinatário. Isso garante que um
+  // HTTP 200 (e, portanto, o evento generate_lead) corresponda a um lead
+  // realmente entregue ao e-mail da ALAVI, não apenas a uma chamada sem erro.
+  if (!Array.isArray(info?.accepted) || info.accepted.length === 0) {
+    throw new Error("SMTP não aceitou o destinatário do lead");
+  }
 
   // 2) E-mail de confirmação para o próprio cliente — best-effort: se o
   //    cliente digitou um e-mail inválido de um jeito que passou pela

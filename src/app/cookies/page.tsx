@@ -44,23 +44,37 @@ export default function CookiesPage() {
             <h2 className="font-display text-lg font-semibold text-navy-900">3. Cookies de análise (não essenciais)</h2>
             <p className="mt-2">
               Utilizados apenas mediante seu consentimento, para entender como
-              o site é utilizado (por exemplo, por meio do Google Analytics),
-              ajudando a melhorar conteúdo e navegação. Você pode recusar
-              esses cookies a qualquer momento pelo aviso exibido no site.
+              o site é utilizado e melhorar conteúdo e navegação. Podem incluir
+              ferramentas como Google Analytics e Microsoft Clarity (esta
+              última registra a navegação de forma agregada, com campos de
+              formulário e dados pessoais mascarados). Nenhuma dessas
+              ferramentas é carregada antes da sua escolha.
             </p>
           </div>
 
           <div>
-            <h2 className="font-display text-lg font-semibold text-navy-900">4. Como gerenciar cookies</h2>
+            <h2 className="font-display text-lg font-semibold text-navy-900">4. Cookies de publicidade (não essenciais)</h2>
             <p className="mt-2">
-              Além do controle oferecido no próprio site, você também pode
-              gerenciar ou bloquear cookies diretamente nas configurações do
-              seu navegador.
+              Utilizados apenas mediante seu consentimento, para medir a
+              eficácia de anúncios e apresentar publicidade mais relevante, por
+              exemplo por meio do Meta Pixel e de tags do Google Ads. Também
+              não são carregados antes da sua escolha.
             </p>
           </div>
 
           <div>
-            <h2 className="font-display text-lg font-semibold text-navy-900">5. Contato</h2>
+            <h2 className="font-display text-lg font-semibold text-navy-900">5. Como gerenciar cookies</h2>
+            <p className="mt-2">
+              Você pode aceitar, recusar ou personalizar cada categoria no aviso
+              exibido na primeira visita e alterar sua escolha a qualquer
+              momento pelo link &ldquo;Preferências de cookies&rdquo; no rodapé
+              do site. Também é possível gerenciar ou bloquear cookies
+              diretamente nas configurações do seu navegador.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-display text-lg font-semibold text-navy-900">6. Contato</h2>
             <p className="mt-2">
               Em caso de dúvidas sobre o uso de cookies, entre em contato pelo
               e-mail {siteConfig.contact.email}.

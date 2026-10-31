@@ -105,6 +105,7 @@ export const siteConfig = {
     gaId: process.env.NEXT_PUBLIC_GA_ID || "",
     gtmId: process.env.NEXT_PUBLIC_GTM_ID || "",
     metaPixelId: process.env.NEXT_PUBLIC_META_PIXEL_ID || "",
+    clarityId: process.env.NEXT_PUBLIC_CLARITY_ID || "",
   },
 
   // Dados legais (CNPJ, razao social, Cadastur).

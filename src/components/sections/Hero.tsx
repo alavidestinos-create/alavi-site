@@ -42,6 +42,7 @@ export function Hero() {
         </div>
         <a
           href={buildWhatsAppUrl(siteConfig.whatsappMessages.hero)}
+          data-track-source="hero"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-5 inline-block text-sm text-white/70 underline-offset-4 hover:text-white hover:underline"

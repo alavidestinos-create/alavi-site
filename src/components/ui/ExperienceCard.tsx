@@ -17,6 +17,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      data-track-source="experience_card"
       className="group relative block aspect-[3/4] overflow-hidden rounded-2xl shadow-premium transition-all duration-300 hover:-translate-y-1"
     >
       <Image

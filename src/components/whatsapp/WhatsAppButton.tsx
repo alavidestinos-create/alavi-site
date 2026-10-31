@@ -2,7 +2,6 @@
 
 import { cn } from "@/lib/utils";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
-import { trackEvent } from "@/lib/analytics";
 
 interface WhatsAppButtonProps {
   message: string;
@@ -40,7 +39,7 @@ export function WhatsAppButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={() => trackEvent("whatsapp_click", { source })}
+      data-track-source={source}
       className={cn(
         "inline-flex items-center justify-center gap-2 rounded-full font-semibold shadow-soft transition-colors",
         variantClasses[variant],
