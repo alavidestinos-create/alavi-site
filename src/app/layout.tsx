@@ -6,7 +6,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFloatButton } from "@/components/whatsapp/WhatsAppFloatButton";
 import { CookieConsent } from "@/components/cookie/CookieConsent";
-import { Analytics } from "@/components/analytics/Analytics";
+import { MarketingTags } from "@/components/analytics/MarketingTags";
 import { StructuredData } from "@/components/seo/StructuredData";
 
 const manrope = Manrope({
@@ -76,7 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <WhatsAppFloatButton />
         <CookieConsent />
-        <Analytics />
+        <MarketingTags />
         <StructuredData />
       </body>
     </html>

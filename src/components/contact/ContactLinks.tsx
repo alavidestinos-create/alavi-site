@@ -7,7 +7,7 @@ export function ContactLinks({ className }: { className?: string }) {
   return (
     <ul className={className}>
       <li>
-        <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="underline-offset-2 transition-opacity hover:opacity-70 hover:underline">
+        <a href={whatsappHref} data-track-source="contact_links" target="_blank" rel="noopener noreferrer" className="underline-offset-2 transition-opacity hover:opacity-70 hover:underline">
           WhatsApp: {siteConfig.contact.isWhatsappConfigured ? siteConfig.contact.phoneDisplay : "a confirmar"}
         </a>
       </li>

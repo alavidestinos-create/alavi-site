@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "rea
 import { emptyQuoteFormData, type QuoteFormData } from "@/types/quote";
 import { validateQuoteForm, type QuoteFormErrors } from "@/lib/validation";
 import { buildQuoteWhatsAppMessage, buildWhatsAppUrl } from "@/lib/whatsapp";
-import { trackEvent } from "@/lib/analytics";
+import { createEventId, trackEvent } from "@/lib/analytics";
 import { formatCurrencyInput } from "@/lib/utils";
 import { FieldWrapper, fieldClasses } from "@/components/forms/FormField";
 import { ChoiceGroup, type ChoiceOption } from "@/components/forms/ChoiceGroup";
@@ -258,6 +258,13 @@ export function QuoteForm() {
       whatsAppTab.location.href = buildWhatsAppUrl(buildQuoteWhatsAppMessage(data));
     }
 
+    // Eventos SEM dados pessoais. O pedido foi submetido e o cliente foi
+    // encaminhado ao WhatsApp, mas isso ainda NÃO é um lead confirmado: o
+    // generate_lead só é disparado quando o servidor confirma o recebimento.
+    const leadType = data.interest || "nao_informado";
+    trackEvent("quote_form_submit", { form_name: "orcamento", lead_type: leadType });
+    trackEvent("quote_form_whatsapp_handoff", { form_name: "orcamento", lead_type: leadType });
+
     setState("submitting");
 
     // Evita que o formulário fique "travado" em "Enviando..." para sempre
@@ -277,7 +284,7 @@ export function QuoteForm() {
         // Nenhum destino configurado ainda: fluxo esperado enquanto o
         // e-mail/webhook não estão definidos. O WhatsApp já foi aberto acima.
         setState("unavailable");
-        trackEvent("quote_form_submit", { result: "unavailable" });
+        trackEvent("quote_form_error", { form_name: "orcamento", reason: "unavailable" });
         return;
       }
 
@@ -286,12 +293,18 @@ export function QuoteForm() {
       }
 
       setState("success");
-      trackEvent("quote_form_submit", { result: "success", interest: data.interest });
+      // Lead confirmado: resposta de sucesso do servidor. O event_id permite
+      // deduplicar este evento com uma futura API de Conversões.
+      trackEvent("generate_lead", {
+        form_name: "orcamento",
+        lead_type: leadType,
+        event_id: createEventId(),
+      });
     } catch {
       // O WhatsApp já foi aberto acima, então o pedido não se perde mesmo
       // que o envio de e-mail falhe (rede, timeout, servidor fora do ar).
       setState("error");
-      trackEvent("quote_form_submit", { result: "error" });
+      trackEvent("quote_form_error", { form_name: "orcamento", reason: "submit_failed" });
     } finally {
       clearTimeout(timeout);
     }
@@ -344,7 +357,9 @@ export function QuoteForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="space-y-10">
+    // data-clarity-mask: o Microsoft Clarity nunca deve gravar o que o cliente
+    // digita neste formulário (nome, telefone, e-mail, observações).
+    <form onSubmit={handleSubmit} noValidate data-clarity-mask="True" className="space-y-10">
       {state === "error" && (
         <div role="alert" className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700">
           <p>Não foi possível enviar seu pedido agora. Tente novamente em instantes.</p>

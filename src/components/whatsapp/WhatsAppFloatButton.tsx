@@ -2,7 +2,6 @@
 
 import { siteConfig } from "@/config/site";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
-import { trackEvent } from "@/lib/analytics";
 
 export function WhatsAppFloatButton() {
   const href = buildWhatsAppUrl(siteConfig.whatsappMessages.default);
@@ -12,7 +11,7 @@ export function WhatsAppFloatButton() {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={() => trackEvent("whatsapp_click", { source: "float_button" })}
+      data-track-source="float_button"
       aria-label="Falar no WhatsApp"
       className="fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-teal-700 text-white shadow-lg transition-transform hover:scale-105 hover:bg-teal-800 focus-visible:scale-105 sm:bottom-6 sm:right-6"
     >

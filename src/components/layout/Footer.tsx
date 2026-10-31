@@ -3,6 +3,7 @@ import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { ContactLinks } from "@/components/contact/ContactLinks";
 import { WhatsAppButton } from "@/components/whatsapp/WhatsAppButton";
+import { CookiePreferencesButton } from "@/components/cookie/CookiePreferencesButton";
 
 const siteLinks = [
   { href: "/sobre", label: "Sobre a ALAVI" },
@@ -79,6 +80,9 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <CookiePreferencesButton className="text-left text-navy-300 hover:text-teal-300" />
+            </li>
           </ul>
         </div>
       </div>
