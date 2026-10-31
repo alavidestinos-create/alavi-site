@@ -3,8 +3,8 @@
   "exportTime": "2026-10-31 00:00:00",
   "containerVersion": {
     "containerVersionId": "0",
-    "name": "ALAVI - estrutura inicial (tags pausadas)",
-    "description": "Importar com MESCLAR. Tags pausadas ate preencher as 3 variaveis CONST. Ver docs/MEDICAO-MARKETING.md.",
+    "name": "ALAVI - v2 publicada (IDs reais)",
+    "description": "Espelho da versao 2 publicada em 31/10/2026 no GTM-NP7WZPTM. Contem apenas IDs publicos (GA4 G-9B8BHTL48C, Meta Pixel 1111983571550069, Clarity z6aru9zs94); nenhum segredo/token. Importar com MESCLAR ou SUBSTITUIR em um espaco de trabalho e publicar. Reversao: GTM > Versoes > versao 1 (Empty Container) > Publicar.",
     "container": {
       "name": "ALAVI - alavidestinos.com.br",
       "usageContext": [
@@ -30,7 +30,7 @@
           {
             "type": "TEMPLATE",
             "key": "value",
-            "value": "PREENCHER_ID_REAL"
+            "value": "G-9B8BHTL48C"
           }
         ]
       },
@@ -42,7 +42,7 @@
           {
             "type": "TEMPLATE",
             "key": "value",
-            "value": "PREENCHER_ID_REAL"
+            "value": "1111983571550069"
           }
         ]
       },
@@ -54,7 +54,7 @@
           {
             "type": "TEMPLATE",
             "key": "value",
-            "value": "PREENCHER_ID_REAL"
+            "value": "z6aru9zs94"
           }
         ]
       },
@@ -391,7 +391,7 @@
           }
         },
         "tagFiringOption": "ONCE_PER_EVENT",
-        "paused": true,
+        "paused": false,
         "blockingTriggerId": [
           "30"
         ],
@@ -454,7 +454,7 @@
           }
         },
         "tagFiringOption": "ONCE_PER_EVENT",
-        "paused": true,
+        "paused": false,
         "blockingTriggerId": [
           "30"
         ],
@@ -496,7 +496,7 @@
           }
         },
         "tagFiringOption": "ONCE_PER_EVENT",
-        "paused": true,
+        "paused": false,
         "blockingTriggerId": [
           "30"
         ],
@@ -574,7 +574,7 @@
           }
         },
         "tagFiringOption": "ONCE_PER_EVENT",
-        "paused": true,
+        "paused": false,
         "blockingTriggerId": [
           "30"
         ],
@@ -652,7 +652,7 @@
           }
         },
         "tagFiringOption": "ONCE_PER_EVENT",
-        "paused": true,
+        "paused": false,
         "blockingTriggerId": [
           "30"
         ],
@@ -730,7 +730,7 @@
           }
         },
         "tagFiringOption": "ONCE_PER_EVENT",
-        "paused": true,
+        "paused": false,
         "blockingTriggerId": [
           "30"
         ],
@@ -772,7 +772,7 @@
           }
         },
         "tagFiringOption": "ONCE_PER_EVENT",
-        "paused": true,
+        "paused": false,
         "blockingTriggerId": [
           "30"
         ],
@@ -809,7 +809,7 @@
           }
         },
         "tagFiringOption": "ONCE_PER_EVENT",
-        "paused": true,
+        "paused": false,
         "blockingTriggerId": [
           "30"
         ],
@@ -846,7 +846,7 @@
           }
         },
         "tagFiringOption": "ONCE_PER_EVENT",
-        "paused": true,
+        "paused": false,
         "blockingTriggerId": [
           "30"
         ],
@@ -883,7 +883,7 @@
           }
         },
         "tagFiringOption": "ONCE_PER_EVENT",
-        "paused": true,
+        "paused": false,
         "blockingTriggerId": [
           "30"
         ],
@@ -920,7 +920,7 @@
           }
         },
         "tagFiringOption": "ONCE_PER_EVENT",
-        "paused": true,
+        "paused": false,
         "blockingTriggerId": [
           "30"
         ],
@@ -957,7 +957,7 @@
           }
         },
         "tagFiringOption": "ONCE_PER_EVENT",
-        "paused": true,
+        "paused": false,
         "blockingTriggerId": [
           "30"
         ],
