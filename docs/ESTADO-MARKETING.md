@@ -66,3 +66,24 @@ Para ligar (ação sua, direto no Netlify, sem passar o token em conversa):
 ## Fora do escopo, intocado
 
 Bio, link e qualquer dado do Instagram.
+
+---
+
+## Atualização — SEO local, domínios duplicados e proteção contra bots
+
+### Concluído
+- **Domínio canônico único (301):** `alavi-site.netlify.app`, `alavidestinos.com` e `www.alavidestinos.com` (http e https) redirecionam 301 para `https://alavidestinos.com.br` (bloco no fim do `netlify.toml`, `force = true`). Verificado em produção. **Desfazer:** remover o bloco e fazer novo deploy. O Google ainda pode mostrar URLs antigas do netlify.app por alguns dias/semanas até reindexar.
+- **Perfil da Empresa no Google (perfil verificado, loja 03503273126397264600):** categoria principal alterada de "Agência de turismo" para **"Agência de viagens"**, com "Agência de turismo" como adicional; **Instagram** adicionado em perfis de redes sociais (somente o link público no Google; nada foi alterado no Instagram); **área de cobertura** = Passo Fundo (RS) e Rio Grande do Sul. As três edições ficam "pendentes" até o Google revisar (normalmente ~10 min). Site do perfil já era `https://alavidestinos.com.br/`; horários e WhatsApp já corretos.
+- **Dados estruturados (JSON-LD TravelAgency):** CEP 99025-002, `areaServed` e `knowsAbout` (consistência NAP com o Perfil). Título/descrição já usam "Agência de Viagens em Passo Fundo".
+- **Proteção contra bots (antes de anúncios):** `src/lib/bot-detection.ts`. Bots/automação (UA de bot/headless ou `navigator.webdriver`) **não carregam GTM/GA4/Meta/Clarity** (não entram em métricas, públicos nem remarketing); a API `/api/orcamento` responde 403 a clientes sem UA de navegador ou com UA de script/bot; `robots.txt` bloqueia `/api/` e rastreadores AhrefsBot, SemrushBot, MJ12bot, DotBot e Bytespider. **Desfazer:** reverter o PR #3.
+
+### Bloqueado / ação humana
+- **Perfil duplicado não verificado** (loja 04789423906161103247, "Verificação obrigatória", mesmo endereço sem a sala): duplicidade pode prejudicar o ranking. Opções: concluir a verificação (vídeo/código, só o dono pode) e depois **mesclar/remover**; ou solicitar a remoção do duplicado. Não foi apagado nada.
+- **Cliques inválidos em anúncios (quando houver campanha):** o site só filtra bots de forma simples; a proteção principal é do Google Ads (filtro automático de cliques inválidos). Ao criar campanhas: desativar parceiros de pesquisa/Display se não necessários, excluir IPs internos, acompanhar "cliques inválidos" na coluna de relatórios, definir orçamento diário baixo no início. Para proteção forte (WAF), o caminho é Cloudflare gratuito na frente do domínio (exige alterar DNS; ação do dono).
+- **Fotos reais, publicações (posts) e pedido de avaliações** no Perfil: dependem de ativos do dono (fotos da agência/equipe, link de avaliação do Perfil). Quanto mais avaliações e fotos recentes, melhor o ranking local.
+- **Data de abertura** do Perfil: não preenchida (não foi encontrada fonte confiável; usar a data do CNPJ).
+
+### Opcional
+- Cadastrar `https://alavidestinos.com.br` e enviar o sitemap no Search Console (propriedade de domínio) e usar "Remoções" para as URLs antigas do netlify.app.
+- Vincular Search Console ↔ GA4 e Clarity ↔ GA4.
+- Investigar as 4 sessões "google / cpc" no GA4: a conta Google Ads "ALAVI DESTINOS" não tem campanhas; provável origem é link com UTM/auto-tag antigo ou tráfego automatizado. Conferir a dimensão "Nome do host" completa no relatório.
