@@ -7,3 +7,36 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Domínio canônico: https://alavidestinos.com.br. Os endereços abaixo duplicavam o site no Google.
+# Para desfazer, remova este bloco e refaça o deploy.
+
+[[redirects]]
+  from = "https://alavi-site.netlify.app/*"
+  to = "https://alavidestinos.com.br/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://alavidestinos.com/*"
+  to = "https://alavidestinos.com.br/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.alavidestinos.com/*"
+  to = "https://alavidestinos.com.br/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://alavidestinos.com/*"
+  to = "https://alavidestinos.com.br/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.alavidestinos.com/*"
+  to = "https://alavidestinos.com.br/:splat"
+  status = 301
+  force = true
