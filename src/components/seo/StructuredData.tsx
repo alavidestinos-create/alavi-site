@@ -21,8 +21,16 @@ export function StructuredData() {
       streetAddress: addressDetails.streetAddress,
       addressLocality: addressDetails.city,
       addressRegion: addressDetails.state,
+      // Mesmo CEP do Perfil da Empresa no Google (consistência NAP).
+      postalCode: "99025-002",
       addressCountry: addressDetails.country,
     },
+    areaServed: [
+      { "@type": "City", name: "Passo Fundo" },
+      { "@type": "AdministrativeArea", name: "Rio Grande do Sul" },
+      { "@type": "Country", name: "Brasil" },
+    ],
+    knowsAbout: ["Passagens aéreas", "Classe executiva", "Pacotes de viagem", "Roteiros personalizados", "Cruzeiros", "Seguro viagem"],
     openingHours: ["Mo-Fr 09:30-18:00", "Sa 09:30-12:00"],
     sameAs: [siteConfig.social.instagramUrl].filter(Boolean),
   };
