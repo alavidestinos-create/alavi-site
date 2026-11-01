@@ -13,6 +13,7 @@ import {
 import { isExcludedPath, isTrackingConfigured, trackingConfig } from "@/lib/tracking-config";
 import { trackEvent } from "@/lib/analytics";
 import { clearCookiesForCategories } from "@/lib/cookie-cleanup";
+import { isLikelyBrowserBot } from "@/lib/bot-detection";
 
 /**
  * Único ponto de carga das ferramentas de medição e marketing.
@@ -141,6 +142,8 @@ export function MarketingTags() {
     if (!isTrackingConfigured) return;
     if (isExcludedPath(window.location.pathname)) return;
     if (!state.analytics && !state.marketing) return;
+    // Bots/automação não entram em métricas, públicos nem em remarketing.
+    if (isLikelyBrowserBot(navigator)) return;
 
     if (trackingConfig.usesGtm) {
       loadGtm(trackingConfig.gtmId);
