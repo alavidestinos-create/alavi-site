@@ -9,6 +9,7 @@ import {
   buildQuoteEmailText,
 } from "@/lib/email";
 import { parseTracking, sendLeadToMeta } from "@/lib/meta-capi";
+import { isBotUserAgent } from "@/lib/bot-detection";
 import { emptyQuoteFormData, type QuoteFormData } from "@/types/quote";
 
 export const runtime = "nodejs";
@@ -31,6 +32,11 @@ export const runtime = "nodejs";
  * fallback de continuar o pedido diretamente pelo WhatsApp.
  */
 export async function POST(request: Request) {
+  // Camada anti-spam: scripts/bots (sem User-Agent de navegador) não geram lead.
+  if (isBotUserAgent(request.headers.get("user-agent"))) {
+    return NextResponse.json({ error: "forbidden" }, { status: 403 });
+  }
+
   let body: unknown;
 
   try {
