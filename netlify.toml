@@ -11,6 +11,14 @@
 # Domínio canônico: https://alavidestinos.com.br. Os endereços abaixo duplicavam o site no Google.
 # Para desfazer, remova este bloco e refaça o deploy.
 
+# Exceção temporária: mantém acessível o arquivo de verificação do Search Console no netlify.app
+# (necessário para pedir a remoção das URLs antigas do índice). Pode ser removida depois.
+[[redirects]]
+  from = "https://alavi-site.netlify.app/googleef59b9203ea8d674.html"
+  to = "/googleef59b9203ea8d674.html"
+  status = 200
+  force = true
+
 [[redirects]]
   from = "https://alavi-site.netlify.app/*"
   to = "https://alavidestinos.com.br/:splat"
