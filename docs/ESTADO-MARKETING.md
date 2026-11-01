@@ -87,3 +87,9 @@ Bio, link e qualquer dado do Instagram.
 - Cadastrar `https://alavidestinos.com.br` e enviar o sitemap no Search Console (propriedade de domínio) e usar "Remoções" para as URLs antigas do netlify.app.
 - Vincular Search Console ↔ GA4 e Clarity ↔ GA4.
 - Investigar as 4 sessões "google / cpc" no GA4: a conta Google Ads "ALAVI DESTINOS" não tem campanhas; provável origem é link com UTM/auto-tag antigo ou tráfego automatizado. Conferir a dimensão "Nome do host" completa no relatório.
+
+### Search Console (conta alavidestinos@gmail.com)
+- Propriedades criadas e verificadas pelo arquivo HTML `public/googleef59b9203ea8d674.html` (**não remover**): `https://alavidestinos.com.br/` (sitemap.xml enviado, 92 URLs) e `https://alavi-site.netlify.app/`.
+- **Remoção temporária (~6 meses)** de todas as URLs do prefixo `https://alavi-site.netlify.app/` solicitada em "Remoções" (os 301 garantem a saída definitiva). Para desfazer: Search Console → Remoções → cancelar a solicitação.
+- `netlify.toml` tem uma exceção que mantém o arquivo de verificação acessível em netlify.app (regra `status = 200` antes dos 301). **Manter** enquanto a propriedade netlify.app for usada.
+- O Google pode levar de horas a alguns dias para trocar o resultado já exibido; o nome "Netlify" some junto com a URL antiga.
