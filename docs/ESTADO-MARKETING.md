@@ -19,6 +19,7 @@ Conta Google de referência: alavidestinos@gmail.com (dona do GTM, GA4, Ads e Se
 
 ## Concluído e validado
 
+- Looker Studio: relatório "ALAVI - Painel de medição" (conta alavidestinos@gmail.com, fonte GA4 "ALAVI - site"), com cartões de Visualizações, Sessões, Usuários ativos e Eventos principais, tabela de eventos (page_view, whatsapp_click, quote_form_*, generate_lead) e tabela de origem/mídia por sessões. Link: https://datastudio.google.com/reporting/ce8cd6b4-b5a9-4750-b750-74eee030b901 . Está privado (não compartilhado); compartilhe só com quem precisar. Eventos principais aparece 0 até o GA4 contar `generate_lead` depois de marcado como evento-chave.
 - GTM como único ponto de carga; GA4, Meta e Clarity só dentro do contêiner (sem duplicidade). 12 tags ativas, todas com consentimento por categoria e bloqueio de /admin, /painel, /crm, /api. `docs/gtm/alavi-gtm-container.json` espelha a versão 2 publicada (IDs reais, sem segredos; arquivo de importação, não export da interface).
 - Banner e cookies (produção, visitante novo): antes da escolha, nenhuma requisição de terceiros e nenhum cookie. Aceitar todos: `_ga`, `_ga_9B8BHTL48C`, `_clck`, `_clsk`, `_fbp`. Retirar só Publicidade: `_fbp` apagado, sem requisições ao Meta, Análise mantida. Recusar tudo: cookies apagados.
 - GA4: eventos chegam no Tempo real; `generate_lead` marcado como evento-chave.
@@ -54,9 +55,8 @@ Para ligar (ação sua, direto no Netlify, sem passar o token em conversa):
 
 ## Bloqueado (exige ação sua)
 
-1. Looker Studio: o conector GA4 já lista a conta "ALAVI DESTINOS E EXPERIENCIAS LTDA" e a propriedade "ALAVI - site", mas o Data Studio exige aceitar os Termos de Serviço (país, empresa, caixa de aceite). Ação mínima: abrir https://datastudio.google.com/reporting/create com alavidestinos@gmail.com, aceitar os termos, escolher Google Analytics → ALAVI - site → Adicionar. Depois o painel segue `docs/PLANO-PUBLICACAO-MEDICAO.md`.
-2. API de Conversões: depende de gerar o token de acesso no Meta e colá-lo no Netlify (seção acima). Sem isso permanece desligada.
-3. Clarity: confirmar com uma sessão humana (a automação é classificada como bot e não gera gravação) que a gravação aparece e que os campos de formulário estão mascarados.
+1. API de Conversões: depende de gerar o token de acesso no Meta e colá-lo no Netlify (seção acima). Sem isso permanece desligada.
+2. Clarity: confirmar com uma sessão humana (a automação é classificada como bot e não gera gravação) que a gravação aparece e que os campos de formulário estão mascarados.
 
 ## Opcional
 
